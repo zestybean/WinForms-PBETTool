@@ -1,7 +1,7 @@
 ﻿
 namespace PBET
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         ///  Required designer variable.
@@ -57,6 +57,12 @@ namespace PBET
             this.clearCartBtn = new System.Windows.Forms.Button();
             this.submitBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.downtimeLbl = new System.Windows.Forms.Label();
+            this.scrapLbl = new System.Windows.Forms.Label();
+            this.varLbl = new System.Windows.Forms.Label();
+            this.actualLbl = new System.Windows.Forms.Label();
+            this.goalLbl = new System.Windows.Forms.Label();
+            this.hrLbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,12 +70,6 @@ namespace PBET
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.hrLbl = new System.Windows.Forms.Label();
-            this.goalLbl = new System.Windows.Forms.Label();
-            this.actualLbl = new System.Windows.Forms.Label();
-            this.varLbl = new System.Windows.Forms.Label();
-            this.scrapLbl = new System.Windows.Forms.Label();
-            this.downtimeLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,7 +84,7 @@ namespace PBET
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -98,52 +98,61 @@ namespace PBET
             this.dataGridView1.Location = new System.Drawing.Point(12, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(661, 465);
+            this.dataGridView1.Size = new System.Drawing.Size(659, 465);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
+            this.dataGridViewTextBoxColumn1.FillWeight = 85.27919F;
             this.dataGridViewTextBoxColumn1.HeaderText = "Hour";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
+            this.dataGridViewTextBoxColumn2.FillWeight = 85.27919F;
             this.dataGridViewTextBoxColumn2.HeaderText = "Goal";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.FillWeight = 85.27919F;
             this.dataGridViewTextBoxColumn3.HeaderText = "Actual";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
+            this.dataGridViewTextBoxColumn4.FillWeight = 85.27919F;
             this.dataGridViewTextBoxColumn4.HeaderText = "Variance";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // SequencePart
             // 
+            this.SequencePart.FillWeight = 85.27919F;
             this.SequencePart.HeaderText = "Part Number";
             this.SequencePart.Name = "SequencePart";
             // 
             // Scrap
             // 
+            this.Scrap.FillWeight = 85.27919F;
             this.Scrap.HeaderText = "Scrap Qty";
             this.Scrap.Name = "Scrap";
             // 
             // Downtime
             // 
+            this.Downtime.FillWeight = 85.27919F;
             this.Downtime.HeaderText = "Downtime Minutes";
             this.Downtime.Name = "Downtime";
             // 
             // Comments
             // 
+            this.Comments.FillWeight = 85.27919F;
             this.Comments.HeaderText = "Comments";
             this.Comments.Name = "Comments";
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -169,10 +178,10 @@ namespace PBET
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PBET.Properties.Resources.ckt_logo_white300;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(293, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -181,6 +190,7 @@ namespace PBET
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Location = new System.Drawing.Point(12, 92);
@@ -193,7 +203,7 @@ namespace PBET
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TimeIn,
@@ -201,7 +211,7 @@ namespace PBET
             this.Quantity,
             this.PartColor,
             this.Rework});
-            this.dataGridView2.Location = new System.Drawing.Point(679, 21);
+            this.dataGridView2.Location = new System.Drawing.Point(677, 21);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
             this.dataGridView2.Size = new System.Drawing.Size(547, 465);
@@ -263,11 +273,12 @@ namespace PBET
             this.addHourBtn.TabIndex = 6;
             this.addHourBtn.Text = "Add Hour";
             this.addHourBtn.UseVisualStyleBackColor = false;
+            this.addHourBtn.Click += new System.EventHandler(this.addHourBtn_Click);
             // 
             // addCartBtn
             // 
             this.addCartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addCartBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.addCartBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.addCartBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addCartBtn.ForeColor = System.Drawing.Color.White;
             this.addCartBtn.Location = new System.Drawing.Point(691, 605);
@@ -305,7 +316,9 @@ namespace PBET
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.downtimeLbl);
             this.panel3.Controls.Add(this.scrapLbl);
             this.panel3.Controls.Add(this.varLbl);
@@ -323,6 +336,78 @@ namespace PBET
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(673, 201);
             this.panel3.TabIndex = 2;
+            // 
+            // downtimeLbl
+            // 
+            this.downtimeLbl.AutoSize = true;
+            this.downtimeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.downtimeLbl.ForeColor = System.Drawing.Color.White;
+            this.downtimeLbl.Location = new System.Drawing.Point(493, 79);
+            this.downtimeLbl.Name = "downtimeLbl";
+            this.downtimeLbl.Size = new System.Drawing.Size(19, 27);
+            this.downtimeLbl.TabIndex = 12;
+            this.downtimeLbl.Text = "-";
+            this.downtimeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scrapLbl
+            // 
+            this.scrapLbl.AutoSize = true;
+            this.scrapLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.scrapLbl.ForeColor = System.Drawing.Color.White;
+            this.scrapLbl.Location = new System.Drawing.Point(414, 79);
+            this.scrapLbl.Name = "scrapLbl";
+            this.scrapLbl.Size = new System.Drawing.Size(19, 27);
+            this.scrapLbl.TabIndex = 11;
+            this.scrapLbl.Text = "-";
+            this.scrapLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // varLbl
+            // 
+            this.varLbl.AutoSize = true;
+            this.varLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.varLbl.ForeColor = System.Drawing.Color.White;
+            this.varLbl.Location = new System.Drawing.Point(302, 79);
+            this.varLbl.Name = "varLbl";
+            this.varLbl.Size = new System.Drawing.Size(19, 27);
+            this.varLbl.TabIndex = 10;
+            this.varLbl.Text = "-";
+            this.varLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // actualLbl
+            // 
+            this.actualLbl.AutoSize = true;
+            this.actualLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.actualLbl.ForeColor = System.Drawing.Color.White;
+            this.actualLbl.Location = new System.Drawing.Point(210, 79);
+            this.actualLbl.Name = "actualLbl";
+            this.actualLbl.Size = new System.Drawing.Size(19, 27);
+            this.actualLbl.TabIndex = 9;
+            this.actualLbl.Text = "-";
+            this.actualLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // goalLbl
+            // 
+            this.goalLbl.AutoSize = true;
+            this.goalLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.goalLbl.ForeColor = System.Drawing.Color.White;
+            this.goalLbl.Location = new System.Drawing.Point(135, 79);
+            this.goalLbl.Name = "goalLbl";
+            this.goalLbl.Size = new System.Drawing.Size(19, 27);
+            this.goalLbl.TabIndex = 8;
+            this.goalLbl.Text = "-";
+            this.goalLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // hrLbl
+            // 
+            this.hrLbl.AutoSize = true;
+            this.hrLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.hrLbl.ForeColor = System.Drawing.Color.White;
+            this.hrLbl.Location = new System.Drawing.Point(50, 79);
+            this.hrLbl.Name = "hrLbl";
+            this.hrLbl.Size = new System.Drawing.Size(19, 27);
+            this.hrLbl.TabIndex = 7;
+            this.hrLbl.Text = "-";
+            this.hrLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -408,79 +493,7 @@ namespace PBET
             this.label2.Text = "Summary:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // hrLbl
-            // 
-            this.hrLbl.AutoSize = true;
-            this.hrLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.hrLbl.ForeColor = System.Drawing.Color.White;
-            this.hrLbl.Location = new System.Drawing.Point(50, 79);
-            this.hrLbl.Name = "hrLbl";
-            this.hrLbl.Size = new System.Drawing.Size(19, 27);
-            this.hrLbl.TabIndex = 7;
-            this.hrLbl.Text = "-";
-            this.hrLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // goalLbl
-            // 
-            this.goalLbl.AutoSize = true;
-            this.goalLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.goalLbl.ForeColor = System.Drawing.Color.White;
-            this.goalLbl.Location = new System.Drawing.Point(135, 79);
-            this.goalLbl.Name = "goalLbl";
-            this.goalLbl.Size = new System.Drawing.Size(19, 27);
-            this.goalLbl.TabIndex = 8;
-            this.goalLbl.Text = "-";
-            this.goalLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // actualLbl
-            // 
-            this.actualLbl.AutoSize = true;
-            this.actualLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.actualLbl.ForeColor = System.Drawing.Color.White;
-            this.actualLbl.Location = new System.Drawing.Point(210, 79);
-            this.actualLbl.Name = "actualLbl";
-            this.actualLbl.Size = new System.Drawing.Size(19, 27);
-            this.actualLbl.TabIndex = 9;
-            this.actualLbl.Text = "-";
-            this.actualLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // varLbl
-            // 
-            this.varLbl.AutoSize = true;
-            this.varLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.varLbl.ForeColor = System.Drawing.Color.White;
-            this.varLbl.Location = new System.Drawing.Point(302, 79);
-            this.varLbl.Name = "varLbl";
-            this.varLbl.Size = new System.Drawing.Size(19, 27);
-            this.varLbl.TabIndex = 10;
-            this.varLbl.Text = "-";
-            this.varLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scrapLbl
-            // 
-            this.scrapLbl.AutoSize = true;
-            this.scrapLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.scrapLbl.ForeColor = System.Drawing.Color.White;
-            this.scrapLbl.Location = new System.Drawing.Point(414, 79);
-            this.scrapLbl.Name = "scrapLbl";
-            this.scrapLbl.Size = new System.Drawing.Size(19, 27);
-            this.scrapLbl.TabIndex = 11;
-            this.scrapLbl.Text = "-";
-            this.scrapLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // downtimeLbl
-            // 
-            this.downtimeLbl.AutoSize = true;
-            this.downtimeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.downtimeLbl.ForeColor = System.Drawing.Color.White;
-            this.downtimeLbl.Location = new System.Drawing.Point(493, 79);
-            this.downtimeLbl.Name = "downtimeLbl";
-            this.downtimeLbl.Size = new System.Drawing.Size(19, 27);
-            this.downtimeLbl.TabIndex = 12;
-            this.downtimeLbl.Text = "-";
-            this.downtimeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -492,12 +505,11 @@ namespace PBET
             this.Controls.Add(this.addHourBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PBET";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -518,14 +530,6 @@ namespace PBET
         private System.Windows.Forms.DataGridViewTextBoxColumn Goal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Actual;
         private System.Windows.Forms.DataGridViewTextBoxColumn Variance;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SequencePart;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Scrap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Downtime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comments;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeIn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
@@ -550,6 +554,14 @@ namespace PBET
         private System.Windows.Forms.Label actualLbl;
         private System.Windows.Forms.Label goalLbl;
         private System.Windows.Forms.Label hrLbl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SequencePart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Scrap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Downtime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comments;
     }
 }
 

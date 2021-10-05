@@ -6,7 +6,6 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Debug\net5.0-windows\PBET.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Debug\net5.0-windows\ref\PBET.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Debug\net5.0-windows\PBET.pdb
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.csproj.AssemblyReference.cache
-C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.Form1.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.csproj.GenerateResource.cache
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AssemblyInfoInputs.cache
@@ -17,3 +16,5 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\ref\PBET.dl
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.pdb
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.genruntimeconfig.cache
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.Properties.Resources.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AddHourPopUp.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.MainWindow.resources
