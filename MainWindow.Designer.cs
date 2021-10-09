@@ -29,6 +29,18 @@ namespace PBET
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,11 +55,6 @@ namespace PBET
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.TimeIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PartColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rework = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Hour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Goal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Actual = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +77,12 @@ namespace PBET
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.TimeIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PartSequence = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PartColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rework = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,48 +116,64 @@ namespace PBET
             // 
             // dataGridViewTextBoxColumn1
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn1.FillWeight = 85.27919F;
             this.dataGridViewTextBoxColumn1.HeaderText = "Hour";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn2.FillWeight = 85.27919F;
             this.dataGridViewTextBoxColumn2.HeaderText = "Goal";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn3.FillWeight = 85.27919F;
             this.dataGridViewTextBoxColumn3.HeaderText = "Actual";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn4.FillWeight = 85.27919F;
             this.dataGridViewTextBoxColumn4.HeaderText = "Variance";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // SequencePart
             // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SequencePart.DefaultCellStyle = dataGridViewCellStyle5;
             this.SequencePart.FillWeight = 85.27919F;
             this.SequencePart.HeaderText = "Part Number";
             this.SequencePart.Name = "SequencePart";
             // 
             // Scrap
             // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Scrap.DefaultCellStyle = dataGridViewCellStyle6;
             this.Scrap.FillWeight = 85.27919F;
             this.Scrap.HeaderText = "Scrap Qty";
             this.Scrap.Name = "Scrap";
             // 
             // Downtime
             // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Downtime.DefaultCellStyle = dataGridViewCellStyle7;
             this.Downtime.FillWeight = 85.27919F;
             this.Downtime.HeaderText = "Downtime Minutes";
             this.Downtime.Name = "Downtime";
             // 
             // Comments
             // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Comments.DefaultCellStyle = dataGridViewCellStyle8;
             this.Comments.FillWeight = 85.27919F;
             this.Comments.HeaderText = "Comments";
             this.Comments.Name = "Comments";
@@ -208,6 +237,7 @@ namespace PBET
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TimeIn,
             this.Description,
+            this.PartSequence,
             this.Quantity,
             this.PartColor,
             this.Rework});
@@ -216,31 +246,6 @@ namespace PBET
             this.dataGridView2.RowTemplate.Height = 25;
             this.dataGridView2.Size = new System.Drawing.Size(547, 465);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // TimeIn
-            // 
-            this.TimeIn.HeaderText = "TimeIn";
-            this.TimeIn.Name = "TimeIn";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Part Description";
-            this.Description.Name = "Description";
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            // 
-            // PartColor
-            // 
-            this.PartColor.HeaderText = "Color";
-            this.PartColor.Name = "PartColor";
-            // 
-            // Rework
-            // 
-            this.Rework.HeaderText = "Rework";
-            this.Rework.Name = "Rework";
             // 
             // Hour
             // 
@@ -493,6 +498,44 @@ namespace PBET
             this.label2.Text = "Summary:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // TimeIn
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TimeIn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.TimeIn.HeaderText = "TimeIn";
+            this.TimeIn.Name = "TimeIn";
+            // 
+            // Description
+            // 
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Description.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Description.HeaderText = "Part Description";
+            this.Description.Name = "Description";
+            // 
+            // PartSequence
+            // 
+            this.PartSequence.HeaderText = "Part Sequence";
+            this.PartSequence.Name = "PartSequence";
+            // 
+            // Quantity
+            // 
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // PartColor
+            // 
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PartColor.DefaultCellStyle = dataGridViewCellStyle12;
+            this.PartColor.HeaderText = "Color";
+            this.PartColor.Name = "PartColor";
+            // 
+            // Rework
+            // 
+            this.Rework.HeaderText = "Rework";
+            this.Rework.Name = "Rework";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -530,11 +573,6 @@ namespace PBET
         private System.Windows.Forms.DataGridViewTextBoxColumn Goal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Actual;
         private System.Windows.Forms.DataGridViewTextBoxColumn Variance;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TimeIn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PartColor;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Rework;
         private System.Windows.Forms.Button addHourBtn;
         private System.Windows.Forms.Button addCartBtn;
         private System.Windows.Forms.Button clearCartBtn;
@@ -562,6 +600,12 @@ namespace PBET
         private System.Windows.Forms.DataGridViewTextBoxColumn Scrap;
         private System.Windows.Forms.DataGridViewTextBoxColumn Downtime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comments;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TimeIn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PartSequence;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PartColor;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Rework;
     }
 }
 
