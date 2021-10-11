@@ -107,6 +107,9 @@ namespace PBET
             addHourPopUp.Dispose();
         }
 
+        /// <summary>
+        /// SUBMIT 
+        /// </summary>
         private void submitBtn_Click(object sender, EventArgs e)
         {
             hoursTable.Clear();
