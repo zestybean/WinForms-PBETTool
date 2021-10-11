@@ -23,7 +23,6 @@ namespace PBET
 
             this.hoursTable = new DataTable("hoursTable");
             this.cartsTable = new DataTable("cartsTable");
-           
             
             DataColumn hourCol1 = new DataColumn("Hour", typeof(string));
             DataColumn hourCol2 = new DataColumn("Goal", typeof(string));
@@ -57,15 +56,17 @@ namespace PBET
             this.cartsTable.Columns.Add(cartCol5);
             this.cartsTable.Columns.Add(cartCol6);
 
-            this.hoursTable.ReadXml("temp.xml");
+            this.hoursTable.ReadXml("temp1.xml");
+            this.cartsTable.ReadXml("temp2.xml");
+
             this.dataGridView1.DataSource = this.hoursTable;
             this.dataGridView2.DataSource = this.cartsTable;
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {   
-       
-            this.hoursTable.WriteXml("temp.xml");
+            this.hoursTable.WriteXml("temp1.xml");
+            this.cartsTable.WriteXml("temp2.xml");
         }
 
 
@@ -106,15 +107,13 @@ namespace PBET
             addHourPopUp.Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void submitBtn_Click(object sender, EventArgs e)
         {
-            
-
-           
-           
+            hoursTable.Clear();
+            cartsTable.Clear();
+            hoursTable.WriteXml("temp1.xml");
+            cartsTable.WriteXml("temp2.xml");
         }
-
-        
     }
 
     
