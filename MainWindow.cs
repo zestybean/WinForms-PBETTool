@@ -108,7 +108,7 @@ namespace PBET
         }
 
         /// <summary>
-        /// SUBMIT 
+        /// SUBMIT  BUTTON
         /// </summary>
         private void submitBtn_Click(object sender, EventArgs e)
         {
@@ -116,6 +116,14 @@ namespace PBET
             cartsTable.Clear();
             hoursTable.WriteXml("temp1.xml");
             cartsTable.WriteXml("temp2.xml");
+        }
+
+        /// <summary>
+        /// CLEAR CART BUTTON
+        /// </summary>
+        private void clearCartBtn_Click(object sender, EventArgs e)
+        {
+            cartsTable.Rows.Add("Clear", "Clear", "Clear", "Clear", 0, false);
         }
     }
 

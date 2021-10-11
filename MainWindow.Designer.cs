@@ -200,6 +200,7 @@ namespace PBET
             this.clearCartBtn.TabIndex = 8;
             this.clearCartBtn.Text = "Clear Cart";
             this.clearCartBtn.UseVisualStyleBackColor = false;
+            this.clearCartBtn.Click += new System.EventHandler(this.clearCartBtn_Click);
             // 
             // submitBtn
             // 
