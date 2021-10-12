@@ -1,12 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <hoursTable>
-    <Hour>11:50 AM</Hour>
-  </hoursTable>
-  <hoursTable>
-    <Hour>11:51 AM</Hour>
-  </hoursTable>
-  <hoursTable>
-    <Hour>11:51 AM</Hour>
+    <Hour>16:11 PM</Hour>
   </hoursTable>
 </DocumentElement>

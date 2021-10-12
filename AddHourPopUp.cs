@@ -12,6 +12,9 @@ namespace PBET
 {
     public partial class AddHourPopUp : Form
     {
+        string downtimeReason = "";
+        string scrapReason = "";
+
         public AddHourPopUp()
         {
             InitializeComponent();
@@ -31,6 +34,33 @@ namespace PBET
         private void submitBtn_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+        
+
+        /// <summary>
+        /// DOWNTIME MENU
+        /// </summary>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            downtimeReason = button.Text;
+            downtimeReasonTxtBox.Text = downtimeReason;
+        }
+
+        /// <summary>
+        /// SCRAP MENU
+        /// </summary>
+        private void button36_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            scrapReason = button.Text;
+            scrapReasonTxtBox.Text = scrapReason;
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            downtimeReasonTxtBox.Text = "";
+            scrapReasonTxtBox.Text = "";
         }
     }
 }
