@@ -16,5 +16,21 @@ namespace PBET
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// CANCEL BTN
+        /// </summary>
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
+
+        /// <summary>
+        /// SUB BTN
+        /// </summary>
+        private void submitBtn_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

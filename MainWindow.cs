@@ -97,7 +97,7 @@ namespace PBET
 
             if(addHourPopUp.ShowDialog(this) == DialogResult.OK)
             {
-
+               hoursTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"));
             } else
             {
                 //Cancel

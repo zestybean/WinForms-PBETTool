@@ -30,24 +30,24 @@ namespace PBET
         private void InitializeComponent()
         {
             this.submitBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.seqTxtBox = new System.Windows.Forms.TextBox();
             this.commentTxtBox = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.goalTxtBox = new System.Windows.Forms.NumericUpDown();
+            this.actualTxtBox = new System.Windows.Forms.NumericUpDown();
+            this.scrapTxtBox = new System.Windows.Forms.NumericUpDown();
+            this.downTxtBox = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.dtReasonBtn1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.goalTxtBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actualTxtBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scrapTxtBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downTxtBox)).BeginInit();
             this.SuspendLayout();
             // 
             // submitBtn
@@ -62,19 +62,21 @@ namespace PBET
             this.submitBtn.TabIndex = 7;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = false;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
-            // button1
+            // cancelBtn
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(10, 371);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 54);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = false;
+            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelBtn.BackColor = System.Drawing.Color.Tomato;
+            this.cancelBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cancelBtn.ForeColor = System.Drawing.Color.White;
+            this.cancelBtn.Location = new System.Drawing.Point(10, 371);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(259, 54);
+            this.cancelBtn.TabIndex = 8;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // seqTxtBox
             // 
@@ -92,41 +94,61 @@ namespace PBET
             this.commentTxtBox.Size = new System.Drawing.Size(239, 33);
             this.commentTxtBox.TabIndex = 6;
             // 
-            // numericUpDown1
+            // goalTxtBox
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown1.Location = new System.Drawing.Point(10, 72);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(71, 31);
-            this.numericUpDown1.TabIndex = 1;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.goalTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.goalTxtBox.Location = new System.Drawing.Point(10, 72);
+            this.goalTxtBox.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.goalTxtBox.Name = "goalTxtBox";
+            this.goalTxtBox.Size = new System.Drawing.Size(71, 31);
+            this.goalTxtBox.TabIndex = 1;
+            this.goalTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown2
+            // actualTxtBox
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown2.Location = new System.Drawing.Point(87, 72);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(71, 31);
-            this.numericUpDown2.TabIndex = 2;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.actualTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.actualTxtBox.Location = new System.Drawing.Point(87, 72);
+            this.actualTxtBox.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.actualTxtBox.Name = "actualTxtBox";
+            this.actualTxtBox.Size = new System.Drawing.Size(71, 31);
+            this.actualTxtBox.TabIndex = 2;
+            this.actualTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown3
+            // scrapTxtBox
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown3.Location = new System.Drawing.Point(409, 70);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(71, 31);
-            this.numericUpDown3.TabIndex = 4;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.scrapTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.scrapTxtBox.Location = new System.Drawing.Point(409, 70);
+            this.scrapTxtBox.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.scrapTxtBox.Name = "scrapTxtBox";
+            this.scrapTxtBox.Size = new System.Drawing.Size(71, 31);
+            this.scrapTxtBox.TabIndex = 4;
+            this.scrapTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown4
+            // downTxtBox
             // 
-            this.numericUpDown4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown4.Location = new System.Drawing.Point(486, 71);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(71, 31);
-            this.numericUpDown4.TabIndex = 5;
-            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.downTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.downTxtBox.Location = new System.Drawing.Point(486, 71);
+            this.downTxtBox.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.downTxtBox.Name = "downTxtBox";
+            this.downTxtBox.Size = new System.Drawing.Size(71, 31);
+            this.downTxtBox.TabIndex = 5;
+            this.downTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -188,18 +210,18 @@ namespace PBET
             this.label6.TabIndex = 24;
             this.label6.Text = "Comments/Downtime\r\nReason\r\n";
             // 
-            // button2
+            // dtReasonBtn1
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(288, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(259, 54);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Submit\r\n";
-            this.button2.UseVisualStyleBackColor = false;
+            this.dtReasonBtn1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtReasonBtn1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.dtReasonBtn1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtReasonBtn1.ForeColor = System.Drawing.Color.White;
+            this.dtReasonBtn1.Location = new System.Drawing.Point(288, 191);
+            this.dtReasonBtn1.Name = "dtReasonBtn1";
+            this.dtReasonBtn1.Size = new System.Drawing.Size(259, 54);
+            this.dtReasonBtn1.TabIndex = 25;
+            this.dtReasonBtn1.Text = "Submit\r\n";
+            this.dtReasonBtn1.UseVisualStyleBackColor = false;
             // 
             // AddHourPopUp
             // 
@@ -207,20 +229,20 @@ namespace PBET
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 437);
             this.ControlBox = false;
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dtReasonBtn1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.downTxtBox);
+            this.Controls.Add(this.scrapTxtBox);
+            this.Controls.Add(this.actualTxtBox);
+            this.Controls.Add(this.goalTxtBox);
             this.Controls.Add(this.commentTxtBox);
             this.Controls.Add(this.seqTxtBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.submitBtn);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -228,10 +250,10 @@ namespace PBET
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Pace Board Hour";
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goalTxtBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actualTxtBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scrapTxtBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downTxtBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,19 +262,19 @@ namespace PBET
         #endregion
 
         private System.Windows.Forms.Button submitBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.TextBox seqTxtBox;
         private System.Windows.Forms.TextBox commentTxtBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown goalTxtBox;
+        private System.Windows.Forms.NumericUpDown actualTxtBox;
+        private System.Windows.Forms.NumericUpDown scrapTxtBox;
+        private System.Windows.Forms.NumericUpDown downTxtBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button dtReasonBtn1;
     }
 }
