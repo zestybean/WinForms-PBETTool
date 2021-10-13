@@ -12,8 +12,13 @@ namespace PBET
 {
     public partial class AddHourPopUp : Form
     {
-        string downtimeReason = "";
-        string scrapReason = "";
+        public int goal = 0;
+        public int actual = 0;
+        public string sequence = "";
+        public int scrap = 0;
+        public int downtime = 0;
+        public string downtimeReason = "";
+        public string scrapReason = "";
 
         public AddHourPopUp()
         {
@@ -57,10 +62,43 @@ namespace PBET
             scrapReasonTxtBox.Text = scrapReason;
         }
 
+        /// <summary>
+        /// CLEAR REASONS
+        /// </summary>
         private void clearBtn_Click(object sender, EventArgs e)
         {
             downtimeReasonTxtBox.Text = "";
             scrapReasonTxtBox.Text = "";
+        }
+
+        /// <summary>
+        /// HOUR FORM
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void goalTxtBox_ValueChanged(object sender, EventArgs e)
+        {
+            goal = Convert.ToInt32(goalTxtBox.Value);
+        }
+
+        private void actualTxtBox_ValueChanged(object sender, EventArgs e)
+        {
+            actual = Convert.ToInt32(actualTxtBox.Value);
+        }
+
+        private void seqTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            sequence = seqTxtBox.Text;
+        }
+
+        private void scrapTxtBox_ValueChanged(object sender, EventArgs e)
+        {
+            scrap = Convert.ToInt32(scrapTxtBox.Value);
+        }
+
+        private void downTxtBox_ValueChanged(object sender, EventArgs e)
+        {
+            downtime = Convert.ToInt32(downTxtBox.Value);
         }
     }
 }

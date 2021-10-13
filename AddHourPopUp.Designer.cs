@@ -129,6 +129,7 @@ namespace PBET
             this.seqTxtBox.Name = "seqTxtBox";
             this.seqTxtBox.Size = new System.Drawing.Size(239, 33);
             this.seqTxtBox.TabIndex = 3;
+            this.seqTxtBox.TextChanged += new System.EventHandler(this.seqTxtBox_TextChanged);
             // 
             // downtimeReasonTxtBox
             // 
@@ -152,6 +153,7 @@ namespace PBET
             this.goalTxtBox.Size = new System.Drawing.Size(71, 31);
             this.goalTxtBox.TabIndex = 1;
             this.goalTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.goalTxtBox.ValueChanged += new System.EventHandler(this.goalTxtBox_ValueChanged);
             // 
             // actualTxtBox
             // 
@@ -166,6 +168,7 @@ namespace PBET
             this.actualTxtBox.Size = new System.Drawing.Size(71, 31);
             this.actualTxtBox.TabIndex = 2;
             this.actualTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.actualTxtBox.ValueChanged += new System.EventHandler(this.actualTxtBox_ValueChanged);
             // 
             // scrapTxtBox
             // 
@@ -180,6 +183,7 @@ namespace PBET
             this.scrapTxtBox.Size = new System.Drawing.Size(71, 31);
             this.scrapTxtBox.TabIndex = 4;
             this.scrapTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.scrapTxtBox.ValueChanged += new System.EventHandler(this.scrapTxtBox_ValueChanged);
             // 
             // downTxtBox
             // 
@@ -194,6 +198,7 @@ namespace PBET
             this.downTxtBox.Size = new System.Drawing.Size(71, 31);
             this.downTxtBox.TabIndex = 5;
             this.downTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.downTxtBox.ValueChanged += new System.EventHandler(this.downTxtBox_ValueChanged);
             // 
             // label1
             // 
