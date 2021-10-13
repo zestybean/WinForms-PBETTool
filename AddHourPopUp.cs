@@ -38,7 +38,15 @@ namespace PBET
         /// </summary>
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            if(scrap > 0 && downtimeReasonTxtBox.Text == "")
+            {
+                downtimeReasonTxtBox.BackColor = Color.Red;
+            } else
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+
+           
         }
         
 

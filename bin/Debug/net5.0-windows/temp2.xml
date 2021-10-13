@@ -14,7 +14,7 @@
     <Part_x0020_Sequence>Clear</Part_x0020_Sequence>
     <Quantity>Clear</Quantity>
     <Color>0</Color>
-    <Rework>false</Rework>
+    <Rework>true</Rework>
   </cartsTable>
   <cartsTable>
     <Time_x0020_In>Clear</Time_x0020_In>
@@ -30,6 +30,6 @@
     <Part_x0020_Sequence>Clear</Part_x0020_Sequence>
     <Quantity>Clear</Quantity>
     <Color>0</Color>
-    <Rework>false</Rework>
+    <Rework>true</Rework>
   </cartsTable>
 </DocumentElement>
