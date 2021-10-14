@@ -20,9 +20,10 @@ namespace PBET
         public string downtimeReason = "";
         public string scrapReason = "";
 
-        public AddHourPopUp()
+        public AddHourPopUp(int goal)
         {
             InitializeComponent();
+            goalTxtBox.Value = goal;
         }
 
         /// <summary>
@@ -38,9 +39,12 @@ namespace PBET
         /// </summary>
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            if(scrap > 0 && downtimeReasonTxtBox.Text == "")
+            if(scrap > 0 && scrapReasonTxtBox.Text == "")
             {
-                downtimeReasonTxtBox.BackColor = Color.Red;
+                scrapReasonTxtBox.BackColor = Color.Tomato;
+            } else if (downtime > 0 && downtimeReasonTxtBox.Text == "")
+            {
+                downtimeReasonTxtBox.BackColor = Color.Tomato;
             } else
             {
                 this.DialogResult = DialogResult.OK;
@@ -58,6 +62,7 @@ namespace PBET
             Button button = sender as Button;
             downtimeReason = button.Text;
             downtimeReasonTxtBox.Text = downtimeReason;
+            downtimeReasonTxtBox.BackColor = SystemColors.Control;
         }
 
         /// <summary>
@@ -68,6 +73,7 @@ namespace PBET
             Button button = sender as Button;
             scrapReason = button.Text;
             scrapReasonTxtBox.Text = scrapReason;
+            scrapReasonTxtBox.BackColor = SystemColors.Control;
         }
 
         /// <summary>

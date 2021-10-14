@@ -15,21 +15,32 @@ namespace PBET
         private DataTable hoursTable;
         private DataTable cartsTable;
 
+        List<string> hoursColStrings = new List<string> { "Hour", "Goal", "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason" };
+        List<string> cartColStrings = new List<string> { "Time In", "Part Description", "Part Sequence", "Quantity", "Color", "Rework" };
+
         public MainWindow()
         {
             InitializeComponent();
             FormStyles();
 
-
             this.hoursTable = new DataTable("hoursTable");
             this.cartsTable = new DataTable("cartsTable");
 
-            List<string> hoursColStrings = new List<string> { "Hour", "Goal" , "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason"};
-            List<string> cartColStrings = new List<string> { "Time In", "Part Description", "Part Sequence", "Quantity", "Color", "Rework"};
+            
 
             for(int i = 0; i < hoursColStrings.Count; i++)
             {
-                DataColumn hourCol = new DataColumn(hoursColStrings[i], typeof(string));
+                DataColumn hourCol;
+
+                if(hoursColStrings[i] == "Goal" || hoursColStrings[i] == "Scrap")
+                {
+                    hourCol = new DataColumn(hoursColStrings[i], typeof(double));
+                } else
+                {
+                    hourCol = new DataColumn(hoursColStrings[i], typeof(string));
+                }
+
+                
                 this.hoursTable.Columns.Add(hourCol);
             }
 
@@ -62,9 +73,7 @@ namespace PBET
             this.cartsTable.WriteXml("temp2.xml");
         }
 
-
-
-
+      
 
         private void FormStyles()
         {
@@ -86,11 +95,11 @@ namespace PBET
         /// </summary>
         private void addHourBtn_Click(object sender, EventArgs e)
         {
-            AddHourPopUp addHourPopUp = new AddHourPopUp();
+            AddHourPopUp addHourPopUp = new AddHourPopUp(0);
 
             if(addHourPopUp.ShowDialog(this) == DialogResult.OK)
             {
-                //Calc variance here
+                
 
                 //"Hour", "Goal" , "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason"
                 hoursTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), addHourPopUp.goal, addHourPopUp.actual, 0, addHourPopUp.sequence, 
@@ -121,6 +130,33 @@ namespace PBET
         private void clearCartBtn_Click(object sender, EventArgs e)
         {
             cartsTable.Rows.Add("Clear", "Clear", "Clear", "Clear", 0, false);
+        }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //THIS IS TO SUM IN THE SUMMARY
+            scrapLbl.Text = hoursTable.Compute("Sum(Scrap)", "").ToString();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            //WORKS
+            int goal = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[1].Value);
+
+            AddHourPopUp addHourPopUp = new AddHourPopUp(goal);
+
+            if (addHourPopUp.ShowDialog(this) == DialogResult.OK)
+            {
+
+
+                //"Hour", "Goal" , "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason"
+                hoursTable.Rows[e.RowIndex]["Goal"] = addHourPopUp.goal;
+            }
+            else
+            {
+                //Cancel
+            }
         }
     }
 

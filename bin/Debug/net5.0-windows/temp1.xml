@@ -1,69 +1,47 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <hoursTable>
-    <Hour>10:21 AM</Hour>
-    <Goal>10</Goal>
+    <Hour>14:52 PM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime_x0020__x0028_Minutes_x0029_>0</Downtime_x0020__x0028_Minutes_x0029_>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>14:52 PM</Hour>
+    <Goal>3</Goal>
     <Actual>10</Actual>
     <Variance>0</Variance>
-    <Part_x0020_Number>TEST</Part_x0020_Number>
-    <Scrap>10</Scrap>
+    <Part_x0020_Number />
+    <Scrap>1</Scrap>
     <Downtime_x0020__x0028_Minutes_x0029_>10</Downtime_x0020__x0028_Minutes_x0029_>
-    <Scrap_x0020_Reason>S09 - Pulling</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason>D132 - Color Change</Downtime_x0020_Reason>
+    <Scrap_x0020_Reason>S02 - Short</Scrap_x0020_Reason>
+    <Downtime_x0020_Reason>D100 - Material Handler</Downtime_x0020_Reason>
   </hoursTable>
   <hoursTable>
-    <Hour>z</Hour>
+    <Hour>15:35 PM</Hour>
     <Goal>100</Goal>
-    <Actual>100</Actual>
-    <Variance>0</Variance>
-    <Part_x0020_Number>TEST</Part_x0020_Number>
-    <Scrap>10</Scrap>
-    <Downtime_x0020__x0028_Minutes_x0029_>200</Downtime_x0020__x0028_Minutes_x0029_>
-    <Scrap_x0020_Reason>S08 - Startup</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason>D510 - Maintenance</Downtime_x0020_Reason>
-  </hoursTable>
-  <hoursTable>
-    <Hour>10:47 AM</Hour>
-    <Goal>0</Goal>
     <Actual>0</Actual>
     <Variance>0</Variance>
     <Part_x0020_Number />
-    <Scrap>0</Scrap>
-    <Downtime_x0020__x0028_Minutes_x0029_>0</Downtime_x0020__x0028_Minutes_x0029_>
-    <Scrap_x0020_Reason />
-    <Downtime_x0020_Reason />
-  </hoursTable>
-  <hoursTable>
-    <Hour>10:47 AM</Hour>
-    <Goal>0</Goal>
-    <Actual>0</Actual>
-    <Variance>0</Variance>
-    <Part_x0020_Number />
-    <Scrap>0</Scrap>
-    <Downtime_x0020__x0028_Minutes_x0029_>0</Downtime_x0020__x0028_Minutes_x0029_>
-    <Scrap_x0020_Reason />
-    <Downtime_x0020_Reason />
-  </hoursTable>
-  <hoursTable>
-    <Hour>10:48 AM</Hour>
-    <Goal>0</Goal>
-    <Actual>0</Actual>
-    <Variance>0</Variance>
-    <Part_x0020_Number />
-    <Scrap>0</Scrap>
+    <Scrap>9</Scrap>
     <Downtime_x0020__x0028_Minutes_x0029_>0</Downtime_x0020__x0028_Minutes_x0029_>
     <Scrap_x0020_Reason>S01 - Flash</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason>D101 - PUR Problems</Downtime_x0020_Reason>
+    <Downtime_x0020_Reason>D500 - Mold Change</Downtime_x0020_Reason>
   </hoursTable>
   <hoursTable>
-    <Hour>14:01 PM</Hour>
+    <Hour>15:35 PM</Hour>
     <Goal>0</Goal>
     <Actual>0</Actual>
     <Variance>0</Variance>
     <Part_x0020_Number />
-    <Scrap>4</Scrap>
+    <Scrap>8</Scrap>
     <Downtime_x0020__x0028_Minutes_x0029_>0</Downtime_x0020__x0028_Minutes_x0029_>
-    <Scrap_x0020_Reason />
-    <Downtime_x0020_Reason>D132 - Color Change</Downtime_x0020_Reason>
+    <Scrap_x0020_Reason>S08 - Startup</Scrap_x0020_Reason>
+    <Downtime_x0020_Reason>D548 - ME/Robot</Downtime_x0020_Reason>
   </hoursTable>
 </DocumentElement>
