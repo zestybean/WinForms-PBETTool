@@ -14,13 +14,14 @@ namespace PBET
     {
         public int goal;
         public int actual;
+        public int variance;
         public string sequence;
         public int scrap;
         public int downtime;
         public string downtimeReason;
         public string scrapReason;
 
-        public AddHourPopUp(int goal, int actual, string sequence, int scrap, int downtime, string scrapReason, string downtimeReason)
+        public AddHourPopUp(int goal, int actual,string sequence, int scrap, int downtime, string scrapReason, string downtimeReason)
         {
             InitializeComponent();
 
@@ -63,6 +64,7 @@ namespace PBET
                 downtimeReasonTxtBox.BackColor = Color.Tomato;
             } else
             {
+                this.variance = actual - goal;
                 this.DialogResult = DialogResult.OK;
             }
 

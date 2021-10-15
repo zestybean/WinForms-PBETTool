@@ -1,47 +1,14 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <hoursTable>
-    <Hour>09:32 AM</Hour>
-    <Goal>10</Goal>
-    <Actual>10</Actual>
-    <Variance>0</Variance>
-    <Part_x0020_Number>3303/222w</Part_x0020_Number>
+    <Hour>10:28 AM</Hour>
+    <Goal>2</Goal>
+    <Actual>1</Actual>
+    <Variance>-1</Variance>
+    <Part_x0020_Number />
     <Scrap>0</Scrap>
     <Downtime>0</Downtime>
-  </hoursTable>
-  <hoursTable>
-    <Hour>09:32 AM</Hour>
-    <Goal>30</Goal>
-    <Actual>30</Actual>
-    <Variance>0</Variance>
-    <Part_x0020_Number>303/202www</Part_x0020_Number>
-    <Scrap>18</Scrap>
-    <Downtime>0</Downtime>
-    <Scrap_x0020_Reason>S01 - Flash</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason>D132 - Color Change</Downtime_x0020_Reason>
-  </hoursTable>
-  <hoursTable>
-    <Hour>09:41 AM</Hour>
-    <Goal>0</Goal>
-    <Actual>0</Actual>
-    <Variance>0</Variance>
-    <Scrap>3</Scrap>
-    <Downtime>0</Downtime>
-  </hoursTable>
-  <hoursTable>
-    <Hour>09:43 AM</Hour>
-    <Goal>0</Goal>
-    <Actual>0</Actual>
-    <Variance>0</Variance>
-    <Scrap>0</Scrap>
-    <Downtime>0</Downtime>
-  </hoursTable>
-  <hoursTable>
-    <Hour>09:43 AM</Hour>
-    <Goal>0</Goal>
-    <Actual>0</Actual>
-    <Variance>0</Variance>
-    <Scrap>0</Scrap>
-    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
   </hoursTable>
 </DocumentElement>

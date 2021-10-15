@@ -30,7 +30,7 @@ namespace PBET
             {
                 DataColumn hourCol;
 
-                if(hoursColStrings[i] == "Goal" || hoursColStrings[i] == "Actual" || hoursColStrings[i] == "Scrap" || hoursColStrings[i] == "Downtime")
+                if(hoursColStrings[i] == "Goal" || hoursColStrings[i] == "Actual" || hoursColStrings[i] == "Variance" || hoursColStrings[i] == "Scrap" || hoursColStrings[i] == "Downtime")
                 {
                     hourCol = new DataColumn(hoursColStrings[i], typeof(double));
                 } else
@@ -73,8 +73,10 @@ namespace PBET
 
         private void calcSummaryLabels()
         {
+            hrLbl.Text = dataGridView1.RowCount.ToString();
             goalLbl.Text = hoursTable.Compute("Sum(Goal)", "").ToString();
             actualLbl.Text = hoursTable.Compute("Sum(Actual)", "").ToString();
+            varLbl.Text = hoursTable.Compute("Sum(Variance)", "").ToString();
             scrapLbl.Text = hoursTable.Compute("Sum(Scrap)", "").ToString();
             downtimeLbl.Text = hoursTable.Compute("Sum(Downtime)", "").ToString();
         }
@@ -104,10 +106,8 @@ namespace PBET
 
             if(addHourPopUp.ShowDialog(this) == DialogResult.OK)
             {
-                
-
                 //"Hour", "Goal" , "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason"
-                hoursTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), addHourPopUp.goal, addHourPopUp.actual, 0, addHourPopUp.sequence, 
+                hoursTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), addHourPopUp.goal, addHourPopUp.actual, addHourPopUp.variance, addHourPopUp.sequence, 
                     addHourPopUp.scrap, addHourPopUp.downtime, addHourPopUp.scrapReason, addHourPopUp.downtimeReason);
             } else
             {
@@ -138,6 +138,12 @@ namespace PBET
         }
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //THIS IS TO SUM IN THE SUMMARY
+            calcSummaryLabels();
+        }
+
+        private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             //THIS IS TO SUM IN THE SUMMARY
             calcSummaryLabels();
@@ -176,6 +182,8 @@ namespace PBET
                 //Cancel
             }
         }
+
+        
     }
 
     
