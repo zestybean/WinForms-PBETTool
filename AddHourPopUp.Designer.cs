@@ -134,7 +134,7 @@ namespace PBET
             // downtimeReasonTxtBox
             // 
             this.downtimeReasonTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.downtimeReasonTxtBox.Location = new System.Drawing.Point(583, 45);
+            this.downtimeReasonTxtBox.Location = new System.Drawing.Point(583, 105);
             this.downtimeReasonTxtBox.Name = "downtimeReasonTxtBox";
             this.downtimeReasonTxtBox.ReadOnly = true;
             this.downtimeReasonTxtBox.Size = new System.Drawing.Size(239, 33);
@@ -254,7 +254,7 @@ namespace PBET
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(583, 20);
+            this.label6.Location = new System.Drawing.Point(583, 80);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 23);
             this.label6.TabIndex = 24;
@@ -837,7 +837,7 @@ namespace PBET
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(583, 84);
+            this.label7.Location = new System.Drawing.Point(583, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 23);
             this.label7.TabIndex = 27;
@@ -846,7 +846,7 @@ namespace PBET
             // scrapReasonTxtBox
             // 
             this.scrapReasonTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.scrapReasonTxtBox.Location = new System.Drawing.Point(583, 109);
+            this.scrapReasonTxtBox.Location = new System.Drawing.Point(583, 47);
             this.scrapReasonTxtBox.Name = "scrapReasonTxtBox";
             this.scrapReasonTxtBox.ReadOnly = true;
             this.scrapReasonTxtBox.Size = new System.Drawing.Size(239, 33);

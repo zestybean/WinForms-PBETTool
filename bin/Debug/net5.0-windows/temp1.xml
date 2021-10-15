@@ -1,47 +1,47 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <hoursTable>
-    <Hour>14:52 PM</Hour>
-    <Goal>0</Goal>
-    <Actual>0</Actual>
-    <Variance>0</Variance>
-    <Part_x0020_Number />
-    <Scrap>0</Scrap>
-    <Downtime_x0020__x0028_Minutes_x0029_>0</Downtime_x0020__x0028_Minutes_x0029_>
-    <Scrap_x0020_Reason />
-    <Downtime_x0020_Reason />
-  </hoursTable>
-  <hoursTable>
-    <Hour>14:52 PM</Hour>
-    <Goal>3</Goal>
+    <Hour>09:32 AM</Hour>
+    <Goal>10</Goal>
     <Actual>10</Actual>
     <Variance>0</Variance>
-    <Part_x0020_Number />
-    <Scrap>1</Scrap>
-    <Downtime_x0020__x0028_Minutes_x0029_>10</Downtime_x0020__x0028_Minutes_x0029_>
-    <Scrap_x0020_Reason>S02 - Short</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason>D100 - Material Handler</Downtime_x0020_Reason>
+    <Part_x0020_Number>3303/222w</Part_x0020_Number>
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
   </hoursTable>
   <hoursTable>
-    <Hour>15:35 PM</Hour>
-    <Goal>100</Goal>
-    <Actual>0</Actual>
+    <Hour>09:32 AM</Hour>
+    <Goal>30</Goal>
+    <Actual>30</Actual>
     <Variance>0</Variance>
-    <Part_x0020_Number />
-    <Scrap>9</Scrap>
-    <Downtime_x0020__x0028_Minutes_x0029_>0</Downtime_x0020__x0028_Minutes_x0029_>
+    <Part_x0020_Number>303/202www</Part_x0020_Number>
+    <Scrap>18</Scrap>
+    <Downtime>0</Downtime>
     <Scrap_x0020_Reason>S01 - Flash</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason>D500 - Mold Change</Downtime_x0020_Reason>
+    <Downtime_x0020_Reason>D132 - Color Change</Downtime_x0020_Reason>
   </hoursTable>
   <hoursTable>
-    <Hour>15:35 PM</Hour>
+    <Hour>09:41 AM</Hour>
     <Goal>0</Goal>
     <Actual>0</Actual>
     <Variance>0</Variance>
-    <Part_x0020_Number />
-    <Scrap>8</Scrap>
-    <Downtime_x0020__x0028_Minutes_x0029_>0</Downtime_x0020__x0028_Minutes_x0029_>
-    <Scrap_x0020_Reason>S08 - Startup</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason>D548 - ME/Robot</Downtime_x0020_Reason>
+    <Scrap>3</Scrap>
+    <Downtime>0</Downtime>
+  </hoursTable>
+  <hoursTable>
+    <Hour>09:43 AM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+  </hoursTable>
+  <hoursTable>
+    <Hour>09:43 AM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
   </hoursTable>
 </DocumentElement>

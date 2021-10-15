@@ -15,7 +15,7 @@ namespace PBET
         private DataTable hoursTable;
         private DataTable cartsTable;
 
-        List<string> hoursColStrings = new List<string> { "Hour", "Goal", "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason" };
+        List<string> hoursColStrings = new List<string> { "Hour", "Goal", "Actual", "Variance", "Part Number", "Scrap", "Downtime", "Scrap Reason", "Downtime Reason" };
         List<string> cartColStrings = new List<string> { "Time In", "Part Description", "Part Sequence", "Quantity", "Color", "Rework" };
 
         public MainWindow()
@@ -26,13 +26,11 @@ namespace PBET
             this.hoursTable = new DataTable("hoursTable");
             this.cartsTable = new DataTable("cartsTable");
 
-            
-
             for(int i = 0; i < hoursColStrings.Count; i++)
             {
                 DataColumn hourCol;
 
-                if(hoursColStrings[i] == "Goal" || hoursColStrings[i] == "Scrap")
+                if(hoursColStrings[i] == "Goal" || hoursColStrings[i] == "Actual" || hoursColStrings[i] == "Scrap" || hoursColStrings[i] == "Downtime")
                 {
                     hourCol = new DataColumn(hoursColStrings[i], typeof(double));
                 } else
@@ -73,6 +71,13 @@ namespace PBET
             this.cartsTable.WriteXml("temp2.xml");
         }
 
+        private void calcSummaryLabels()
+        {
+            goalLbl.Text = hoursTable.Compute("Sum(Goal)", "").ToString();
+            actualLbl.Text = hoursTable.Compute("Sum(Actual)", "").ToString();
+            scrapLbl.Text = hoursTable.Compute("Sum(Scrap)", "").ToString();
+            downtimeLbl.Text = hoursTable.Compute("Sum(Downtime)", "").ToString();
+        }
       
 
         private void FormStyles()
@@ -95,7 +100,7 @@ namespace PBET
         /// </summary>
         private void addHourBtn_Click(object sender, EventArgs e)
         {
-            AddHourPopUp addHourPopUp = new AddHourPopUp(0);
+            AddHourPopUp addHourPopUp = new AddHourPopUp(0, 0, "", 0, 0, "", "");
 
             if(addHourPopUp.ShowDialog(this) == DialogResult.OK)
             {
@@ -135,7 +140,7 @@ namespace PBET
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             //THIS IS TO SUM IN THE SUMMARY
-            scrapLbl.Text = hoursTable.Compute("Sum(Scrap)", "").ToString();
+            calcSummaryLabels();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -143,15 +148,28 @@ namespace PBET
            
             //WORKS
             int goal = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[1].Value);
+            int actual = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[2].Value);
+            string sequence = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            int scrap = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[5].Value);
+            int downtime = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[6].Value);
+            string scrapReason = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            string downtimeReason = this.dataGridView1.CurrentRow.Cells[8].Value.ToString();
 
-            AddHourPopUp addHourPopUp = new AddHourPopUp(goal);
+            AddHourPopUp addHourPopUp = new AddHourPopUp(goal, actual, sequence, scrap, downtime, scrapReason, downtimeReason);
 
             if (addHourPopUp.ShowDialog(this) == DialogResult.OK)
             {
-
-
                 //"Hour", "Goal" , "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason"
                 hoursTable.Rows[e.RowIndex]["Goal"] = addHourPopUp.goal;
+                hoursTable.Rows[e.RowIndex]["Actual"] = addHourPopUp.actual;
+                hoursTable.Rows[e.RowIndex]["Part Number"] = addHourPopUp.sequence;
+                hoursTable.Rows[e.RowIndex]["Scrap"] = addHourPopUp.scrap;
+                hoursTable.Rows[e.RowIndex]["Downtime"] = addHourPopUp.downtime;
+                hoursTable.Rows[e.RowIndex]["Scrap Reason"] = addHourPopUp.scrapReason;
+                hoursTable.Rows[e.RowIndex]["Downtime Reason"] = addHourPopUp.downtimeReason;
+
+                calcSummaryLabels();
+
             }
             else
             {

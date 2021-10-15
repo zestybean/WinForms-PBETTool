@@ -12,18 +12,34 @@ namespace PBET
 {
     public partial class AddHourPopUp : Form
     {
-        public int goal = 0;
-        public int actual = 0;
-        public string sequence = "";
-        public int scrap = 0;
-        public int downtime = 0;
-        public string downtimeReason = "";
-        public string scrapReason = "";
+        public int goal;
+        public int actual;
+        public string sequence;
+        public int scrap;
+        public int downtime;
+        public string downtimeReason;
+        public string scrapReason;
 
-        public AddHourPopUp(int goal)
+        public AddHourPopUp(int goal, int actual, string sequence, int scrap, int downtime, string scrapReason, string downtimeReason)
         {
             InitializeComponent();
+
+            this.goal = goal;
+            this.actual = actual;
+            this.sequence = sequence;
+            this.scrap = scrap;
+            this.downtime = downtime;
+            this.downtimeReason = downtimeReason;
+            this.scrapReason = scrapReason;
+
             goalTxtBox.Value = goal;
+            actualTxtBox.Value = actual;
+            seqTxtBox.Text = sequence;
+            scrapTxtBox.Value = scrap;
+            downTxtBox.Value = downtime;
+            scrapReasonTxtBox.Text = scrapReason;
+            downtimeReasonTxtBox.Text = downtimeReason;
+
         }
 
         /// <summary>
