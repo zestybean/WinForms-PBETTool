@@ -1,10 +1,65 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <hoursTable>
-    <Hour>10:28 AM</Hour>
-    <Goal>2</Goal>
-    <Actual>1</Actual>
-    <Variance>-1</Variance>
+    <Hour>14:38 PM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>14:38 PM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>14:38 PM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>14:38 PM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>14:38 PM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>14:38 PM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
     <Part_x0020_Number />
     <Scrap>0</Scrap>
     <Downtime>0</Downtime>

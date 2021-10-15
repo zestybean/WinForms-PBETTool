@@ -168,6 +168,7 @@ namespace PBET
                 //"Hour", "Goal" , "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason"
                 hoursTable.Rows[e.RowIndex]["Goal"] = addHourPopUp.goal;
                 hoursTable.Rows[e.RowIndex]["Actual"] = addHourPopUp.actual;
+                hoursTable.Rows[e.RowIndex]["Variance"] = addHourPopUp.variance;
                 hoursTable.Rows[e.RowIndex]["Part Number"] = addHourPopUp.sequence;
                 hoursTable.Rows[e.RowIndex]["Scrap"] = addHourPopUp.scrap;
                 hoursTable.Rows[e.RowIndex]["Downtime"] = addHourPopUp.downtime;

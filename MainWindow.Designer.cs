@@ -58,12 +58,15 @@ namespace PBET
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -176,7 +179,10 @@ namespace PBET
             // 
             // addHourBtn
             // 
-            this.addHourBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.addHourBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.addHourBtn.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.addHourBtn.FlatAppearance.BorderSize = 3;
+            this.addHourBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addHourBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addHourBtn.ForeColor = System.Drawing.Color.White;
             this.addHourBtn.Location = new System.Drawing.Point(12, 605);
@@ -190,7 +196,10 @@ namespace PBET
             // addCartBtn
             // 
             this.addCartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addCartBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addCartBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.addCartBtn.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.addCartBtn.FlatAppearance.BorderSize = 3;
+            this.addCartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addCartBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addCartBtn.ForeColor = System.Drawing.Color.White;
             this.addCartBtn.Location = new System.Drawing.Point(691, 605);
@@ -203,7 +212,10 @@ namespace PBET
             // clearCartBtn
             // 
             this.clearCartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clearCartBtn.BackColor = System.Drawing.Color.DarkOrchid;
+            this.clearCartBtn.BackColor = System.Drawing.Color.MediumPurple;
+            this.clearCartBtn.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.clearCartBtn.FlatAppearance.BorderSize = 3;
+            this.clearCartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearCartBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clearCartBtn.ForeColor = System.Drawing.Color.White;
             this.clearCartBtn.Location = new System.Drawing.Point(993, 605);
@@ -217,7 +229,10 @@ namespace PBET
             // submitBtn
             // 
             this.submitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.submitBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.submitBtn.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.submitBtn.FlatAppearance.BorderColor = System.Drawing.Color.DarkOliveGreen;
+            this.submitBtn.FlatAppearance.BorderSize = 3;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
             this.submitBtn.Location = new System.Drawing.Point(993, 875);
@@ -230,7 +245,8 @@ namespace PBET
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.downtimeLbl);
@@ -246,9 +262,9 @@ namespace PBET
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(12, 728);
+            this.panel3.Location = new System.Drawing.Point(12, 665);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(673, 201);
+            this.panel3.Size = new System.Drawing.Size(673, 264);
             this.panel3.TabIndex = 2;
             // 
             // downtimeLbl
@@ -402,16 +418,40 @@ namespace PBET
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 29);
+            this.label2.Size = new System.Drawing.Size(171, 29);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Summary:";
+            this.label2.Text = "Hour Summary:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Location = new System.Drawing.Point(691, 665);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(561, 180);
+            this.panel4.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(3, 1);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(163, 29);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Cart Summary:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 941);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.clearCartBtn);
@@ -431,6 +471,8 @@ namespace PBET
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -465,6 +507,8 @@ namespace PBET
         private System.Windows.Forms.Label actualLbl;
         private System.Windows.Forms.Label goalLbl;
         private System.Windows.Forms.Label hrLbl;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label9;
     }
 }
 

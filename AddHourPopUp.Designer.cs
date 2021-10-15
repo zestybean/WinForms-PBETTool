@@ -98,13 +98,16 @@ namespace PBET
             // 
             this.submitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.submitBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.submitBtn.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.submitBtn.FlatAppearance.BorderSize = 3;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
             this.submitBtn.Location = new System.Drawing.Point(563, 371);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(259, 54);
             this.submitBtn.TabIndex = 7;
-            this.submitBtn.Text = "Submit";
+            this.submitBtn.Text = "Save";
             this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
@@ -112,6 +115,9 @@ namespace PBET
             // 
             this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelBtn.BackColor = System.Drawing.Color.Tomato;
+            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.cancelBtn.FlatAppearance.BorderSize = 3;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
             this.cancelBtn.Location = new System.Drawing.Point(10, 371);
@@ -154,6 +160,8 @@ namespace PBET
             this.goalTxtBox.TabIndex = 1;
             this.goalTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.goalTxtBox.ValueChanged += new System.EventHandler(this.goalTxtBox_ValueChanged);
+            this.goalTxtBox.Click += new System.EventHandler(this.numUpDownEnter);
+            this.goalTxtBox.Enter += new System.EventHandler(this.numUpDownEnter);
             // 
             // actualTxtBox
             // 
@@ -169,6 +177,8 @@ namespace PBET
             this.actualTxtBox.TabIndex = 2;
             this.actualTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.actualTxtBox.ValueChanged += new System.EventHandler(this.actualTxtBox_ValueChanged);
+            this.actualTxtBox.Click += new System.EventHandler(this.numUpDownEnter);
+            this.actualTxtBox.Enter += new System.EventHandler(this.numUpDownEnter);
             // 
             // scrapTxtBox
             // 
@@ -184,6 +194,8 @@ namespace PBET
             this.scrapTxtBox.TabIndex = 4;
             this.scrapTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.scrapTxtBox.ValueChanged += new System.EventHandler(this.scrapTxtBox_ValueChanged);
+            this.scrapTxtBox.Click += new System.EventHandler(this.numUpDownEnter);
+            this.scrapTxtBox.Enter += new System.EventHandler(this.numUpDownEnter);
             // 
             // downTxtBox
             // 
@@ -199,6 +211,8 @@ namespace PBET
             this.downTxtBox.TabIndex = 5;
             this.downTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.downTxtBox.ValueChanged += new System.EventHandler(this.downTxtBox_ValueChanged);
+            this.downTxtBox.Click += new System.EventHandler(this.numUpDownEnter);
+            this.downTxtBox.Enter += new System.EventHandler(this.numUpDownEnter);
             // 
             // label1
             // 
@@ -856,11 +870,14 @@ namespace PBET
             // 
             this.clearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.clearBtn.BackColor = System.Drawing.Color.Coral;
-            this.clearBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
+            this.clearBtn.FlatAppearance.BorderSize = 3;
+            this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearBtn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clearBtn.ForeColor = System.Drawing.Color.White;
             this.clearBtn.Location = new System.Drawing.Point(735, 148);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(87, 38);
+            this.clearBtn.Size = new System.Drawing.Size(87, 42);
             this.clearBtn.TabIndex = 28;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = false;

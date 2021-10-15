@@ -99,6 +99,9 @@ namespace PBET
         /// </summary>
         private void clearBtn_Click(object sender, EventArgs e)
         {
+            this.downtimeReason = "";
+            this.scrapReason = "";
+
             downtimeReasonTxtBox.Text = "";
             scrapReasonTxtBox.Text = "";
         }
@@ -131,6 +134,15 @@ namespace PBET
         private void downTxtBox_ValueChanged(object sender, EventArgs e)
         {
             downtime = Convert.ToInt32(downTxtBox.Value);
+        }
+
+        //HIGLIGHT NUM UP DOWN ON CLICK OR TAB
+        private void numUpDownEnter(object sender, EventArgs e)
+        {
+            if (sender is NumericUpDown)
+            {
+                (sender as NumericUpDown).Select(0, (sender as NumericUpDown).Text.Length);
+            }
         }
     }
 }
