@@ -50,9 +50,12 @@ namespace PBET
                 {
                      cartCol = new DataColumn(cartColStrings[i], typeof(bool));
                 }
-                else
+                else if (cartColStrings[i] == "Quantity")
                 {
-                     cartCol = new DataColumn(cartColStrings[i], typeof(string));
+                    cartCol = new DataColumn(cartColStrings[i], typeof(double));
+                } else
+                {
+                    cartCol = new DataColumn(cartColStrings[i], typeof(string));
                 }
                 
                 this.cartsTable.Columns.Add(cartCol);
@@ -134,7 +137,7 @@ namespace PBET
         /// </summary>
         private void clearCartBtn_Click(object sender, EventArgs e)
         {
-            cartsTable.Rows.Add("Clear", "Clear", "Clear", "Clear", 0, false);
+            cartsTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), "Clear", "Clear", "Clear", 0, false);
         }
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
