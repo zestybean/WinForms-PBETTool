@@ -18,3 +18,4 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.genrun
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.Properties.Resources.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AddHourPopUp.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.MainWindow.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AddCartPopUp.resources

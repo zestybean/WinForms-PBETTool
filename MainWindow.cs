@@ -132,13 +132,7 @@ namespace PBET
             cartsTable.WriteXml("temp2.xml");
         }
 
-        /// <summary>
-        /// CLEAR CART BUTTON
-        /// </summary>
-        private void clearCartBtn_Click(object sender, EventArgs e)
-        {
-            cartsTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), "Clear", "Clear", "Clear", 0, false);
-        }
+        
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
@@ -152,6 +146,8 @@ namespace PBET
             calcSummaryLabels();
         }
 
+
+        //THIS IS FOR EDITING CELLS 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
            
@@ -187,7 +183,33 @@ namespace PBET
             }
         }
 
-        
+        /// <summary>
+        /// ADD CART BUTTON
+        /// </summary>
+        private void addCartBtn_Click(object sender, EventArgs e)
+        {
+            AddCartPopUp addCartPopUp = new AddCartPopUp();
+
+            if (addCartPopUp.ShowDialog(this) == DialogResult.OK)
+            {
+               
+            }
+            else
+            {
+                //Cancel
+            }
+
+            //Destroy pop up
+            addCartPopUp.Dispose();
+        }
+
+        /// <summary>
+        /// CLEAR CART BUTTON
+        /// </summary>
+        private void clearCartBtn_Click(object sender, EventArgs e)
+        {
+            cartsTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), "Clear", "Clear", 0, "Clear", false);
+        }
     }
 
     

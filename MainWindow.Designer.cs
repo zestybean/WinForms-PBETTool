@@ -153,7 +153,9 @@ namespace PBET
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(677, 21);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(547, 465);
             this.dataGridView2.TabIndex = 1;
             // 
@@ -208,6 +210,7 @@ namespace PBET
             this.addCartBtn.TabIndex = 7;
             this.addCartBtn.Text = "Add Cart";
             this.addCartBtn.UseVisualStyleBackColor = false;
+            this.addCartBtn.Click += new System.EventHandler(this.addCartBtn_Click);
             // 
             // clearCartBtn
             // 
