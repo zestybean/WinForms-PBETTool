@@ -188,11 +188,11 @@ namespace PBET
         /// </summary>
         private void addCartBtn_Click(object sender, EventArgs e)
         {
-            AddCartPopUp addCartPopUp = new AddCartPopUp();
+            AddCartPopUp addCartPopUp = new AddCartPopUp("", "", 0, "", false);
 
             if (addCartPopUp.ShowDialog(this) == DialogResult.OK)
             {
-               
+                cartsTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), addCartPopUp.partDescription, addCartPopUp.partNumber, addCartPopUp.partQuantity, addCartPopUp.partColor, addCartPopUp.partRework);
             }
             else
             {
@@ -209,6 +209,36 @@ namespace PBET
         private void clearCartBtn_Click(object sender, EventArgs e)
         {
             cartsTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), "Clear", "Clear", 0, "Clear", false);
+        }
+
+        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            //WORKS
+            string description = this.dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            string sequence = this.dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            int quantity = Convert.ToInt32(this.dataGridView2.CurrentRow.Cells[3].Value);
+            string color = this.dataGridView2.CurrentRow.Cells[4].Value.ToString();
+            bool rework = Convert.ToBoolean(this.dataGridView2.CurrentRow.Cells[5].Value);
+
+            AddCartPopUp addHourPopUp = new AddCartPopUp(description, sequence, quantity, color, rework);
+
+            if (addHourPopUp.ShowDialog(this) == DialogResult.OK)
+            {
+                //"Time In", "Part Description", "Part Sequence", "Quantity", "Color", "Rework"
+                cartsTable.Rows[e.RowIndex]["Part Description"] = addHourPopUp.partDescription;
+                cartsTable.Rows[e.RowIndex]["Part Sequence"] = addHourPopUp.partNumber;
+                cartsTable.Rows[e.RowIndex]["Quantity"] = addHourPopUp.partQuantity;
+                cartsTable.Rows[e.RowIndex]["Color"] = addHourPopUp.partColor;
+                cartsTable.Rows[e.RowIndex]["Rework"] = addHourPopUp.partRework;
+
+                calcSummaryLabels();
+
+            }
+            else
+            {
+                //Cancel
+            }
         }
     }
 

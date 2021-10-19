@@ -109,8 +109,6 @@ namespace PBET
         /// <summary>
         /// HOUR FORM
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void goalTxtBox_ValueChanged(object sender, EventArgs e)
         {
             goal = Convert.ToInt32(goalTxtBox.Value);
