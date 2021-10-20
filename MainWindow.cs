@@ -23,6 +23,8 @@ namespace PBET
             InitializeComponent();
             FormStyles();
 
+           
+
             this.hoursTable = new DataTable("hoursTable");
             this.cartsTable = new DataTable("cartsTable");
 
@@ -66,6 +68,18 @@ namespace PBET
 
             this.dataGridView1.DataSource = this.hoursTable;
             this.dataGridView2.DataSource = this.cartsTable;
+
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            foreach (DataGridViewColumn column in dataGridView2.Columns)
+            {
+
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
