@@ -38,11 +38,19 @@ namespace PBET
         /// <param name="e"></param>
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            Settings.Default["Machine"] = machineName;
-            Settings.Default.Save();
+            errorLbl.Visible = false;
 
-            this.DialogResult = DialogResult.OK;
+            if(password == "adminPBET")
+            {
+                Settings.Default["Machine"] = machineName;
+                Settings.Default.Save();
 
+                this.DialogResult = DialogResult.OK;
+            } else
+            {
+                errorLbl.Text = "Invalid password";
+                errorLbl.Visible = true;
+            }
         }
 
         /// <summary>

@@ -128,6 +128,7 @@ namespace PBET
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.Size = new System.Drawing.Size(239, 33);
             this.passwordTxtBox.TabIndex = 21;
+            this.passwordTxtBox.UseSystemPasswordChar = true;
             this.passwordTxtBox.TextChanged += new System.EventHandler(this.passwordTxtBox_TextChanged);
             // 
             // errorLbl
@@ -146,6 +147,7 @@ namespace PBET
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(700, 366);
             this.ControlBox = false;
             this.Controls.Add(this.errorLbl);
