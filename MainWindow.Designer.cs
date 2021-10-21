@@ -33,6 +33,7 @@ namespace PBET
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.adminPanelBtn = new System.Windows.Forms.Button();
             this.machineNameLbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -113,6 +114,7 @@ namespace PBET
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.adminPanelBtn);
             this.panel1.Controls.Add(this.machineNameLbl);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -122,15 +124,28 @@ namespace PBET
             this.panel1.Size = new System.Drawing.Size(1264, 81);
             this.panel1.TabIndex = 4;
             // 
+            // adminPanelBtn
+            // 
+            this.adminPanelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminPanelBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.adminPanelBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adminPanelBtn.BackgroundImage")));
+            this.adminPanelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.adminPanelBtn.Location = new System.Drawing.Point(1218, 8);
+            this.adminPanelBtn.Name = "adminPanelBtn";
+            this.adminPanelBtn.Size = new System.Drawing.Size(43, 38);
+            this.adminPanelBtn.TabIndex = 2;
+            this.adminPanelBtn.UseVisualStyleBackColor = false;
+            this.adminPanelBtn.Click += new System.EventHandler(this.adminPanelBtn_Click);
+            // 
             // machineNameLbl
             // 
             this.machineNameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.machineNameLbl.AutoSize = true;
-            this.machineNameLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.machineNameLbl.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.machineNameLbl.ForeColor = System.Drawing.Color.White;
-            this.machineNameLbl.Location = new System.Drawing.Point(1026, 26);
+            this.machineNameLbl.Location = new System.Drawing.Point(976, 21);
             this.machineNameLbl.Name = "machineNameLbl";
-            this.machineNameLbl.Size = new System.Drawing.Size(53, 29);
+            this.machineNameLbl.Size = new System.Drawing.Size(63, 36);
             this.machineNameLbl.TabIndex = 15;
             this.machineNameLbl.Text = "Test";
             this.machineNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,7 +156,7 @@ namespace PBET
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(913, 26);
+            this.label10.Location = new System.Drawing.Point(863, 26);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 29);
             this.label10.TabIndex = 14;
@@ -546,6 +561,7 @@ namespace PBET
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label machineNameLbl;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button adminPanelBtn;
     }
 }
 

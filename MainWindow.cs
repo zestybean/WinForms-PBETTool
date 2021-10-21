@@ -255,6 +255,20 @@ namespace PBET
                 //Cancel
             }
         }
+
+        private void adminPanelBtn_Click(object sender, EventArgs e)
+        {
+            AdminPopUp adminPopUp = new AdminPopUp();
+
+            if (adminPopUp.ShowDialog(this) == DialogResult.OK)
+            {
+                machineNameLbl.Text = adminPopUp.machineName;
+            }
+            else
+            {
+                //Cancel
+            }
+        }
     }
 
     
