@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBET.Properties;
 
 namespace PBET
 {
@@ -23,7 +24,7 @@ namespace PBET
             InitializeComponent();
             FormStyles();
 
-           
+            machineNameLbl.Text = Settings.Default["Machine"].ToString();
 
             this.hoursTable = new DataTable("hoursTable");
             this.cartsTable = new DataTable("cartsTable");

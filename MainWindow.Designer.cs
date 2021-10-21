@@ -33,6 +33,8 @@ namespace PBET
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.machineNameLbl = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -111,12 +113,40 @@ namespace PBET
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.machineNameLbl);
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, -5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 81);
             this.panel1.TabIndex = 4;
+            // 
+            // machineNameLbl
+            // 
+            this.machineNameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.machineNameLbl.AutoSize = true;
+            this.machineNameLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.machineNameLbl.ForeColor = System.Drawing.Color.White;
+            this.machineNameLbl.Location = new System.Drawing.Point(1026, 26);
+            this.machineNameLbl.Name = "machineNameLbl";
+            this.machineNameLbl.Size = new System.Drawing.Size(53, 29);
+            this.machineNameLbl.TabIndex = 15;
+            this.machineNameLbl.Text = "Test";
+            this.machineNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(913, 26);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(107, 29);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Machine:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -470,6 +500,7 @@ namespace PBET
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -513,6 +544,8 @@ namespace PBET
         private System.Windows.Forms.Label hrLbl;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label machineNameLbl;
+        private System.Windows.Forms.Label label10;
     }
 }
 
