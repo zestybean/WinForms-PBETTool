@@ -94,12 +94,20 @@ namespace PBET
 
         private void calcSummaryLabels()
         {
+            //HOUR SUMMARY
             hrLbl.Text = dataGridView1.RowCount.ToString();
             goalLbl.Text = hoursTable.Compute("Sum(Goal)", "").ToString();
             actualLbl.Text = hoursTable.Compute("Sum(Actual)", "").ToString();
             varLbl.Text = hoursTable.Compute("Sum(Variance)", "").ToString();
             scrapLbl.Text = hoursTable.Compute("Sum(Scrap)", "").ToString();
             downtimeLbl.Text = hoursTable.Compute("Sum(Downtime)", "").ToString();
+
+            //CART SUMMARY
+            cartsLbl.Text = dataGridView2.RowCount.ToString();
+            quantityLbl.Text = cartsTable.Compute("Sum(Quantity)", "").ToString();
+            reworkLbl.Text = cartsTable.Compute("Sum(Rework)", "").ToString();
+
+
         }
       
 
@@ -154,15 +162,41 @@ namespace PBET
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            //THIS IS TO SUM IN THE SUMMARY
+            //UPDATE SUMMARY
             calcSummaryLabels();
         }
 
         private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            //THIS IS TO SUM IN THE SUMMARY
+            //UPDATE SUMMARY
             calcSummaryLabels();
         }
+
+        private void dataGridView2_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //UPDATE SUMMARY
+            calcSummaryLabels();
+        }
+
+        private void dataGridView2_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            //UPDATE SUMMARY
+            calcSummaryLabels();
+        }
+
+        /// <summary>
+        /// DELETE ROW BUTTONS
+        /// </summary>
+        private void deleteHourRowBtn_Click(object sender, EventArgs e)
+        {
+            deleteRowConfirm(dataGridView1);
+        }
+        private void deleteCartRowBtn_Click(object sender, EventArgs e)
+        {
+            deleteRowConfirm(dataGridView2);
+        }
+
+        
 
 
         //THIS IS FOR EDITING CELLS 
@@ -291,16 +325,8 @@ namespace PBET
                 //Cancel
             }
         }
-        
-        private void deleteHourRowBtn_Click(object sender, EventArgs e)
-        {
-            deleteRowConfirm(dataGridView1);
-        }
-        private void deleteCartRowBtn_Click(object sender, EventArgs e)
-        {
-            deleteRowConfirm(dataGridView2);
-        }
 
+        
     }
 
 

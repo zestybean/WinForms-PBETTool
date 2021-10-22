@@ -11,4 +11,26 @@
     <Scrap_x0020_Reason />
     <Downtime_x0020_Reason />
   </hoursTable>
+  <hoursTable>
+    <Hour>14:34 PM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>14:35 PM</Hour>
+    <Goal>0</Goal>
+    <Actual>0</Actual>
+    <Variance>0</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
 </DocumentElement>
