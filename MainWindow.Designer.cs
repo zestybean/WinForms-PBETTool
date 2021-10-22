@@ -38,6 +38,8 @@ namespace PBET
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.deleteHourRowBtn = new System.Windows.Forms.Button();
+            this.deleteCartRowBtn = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Hour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Goal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +77,7 @@ namespace PBET
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -82,7 +85,8 @@ namespace PBET
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersHeight = 38;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Location = new System.Drawing.Point(12, 21);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -179,6 +183,8 @@ namespace PBET
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.deleteHourRowBtn);
+            this.panel2.Controls.Add(this.deleteCartRowBtn);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Location = new System.Drawing.Point(12, 92);
@@ -186,15 +192,47 @@ namespace PBET
             this.panel2.Size = new System.Drawing.Size(1240, 507);
             this.panel2.TabIndex = 5;
             // 
+            // deleteHourRowBtn
+            // 
+            this.deleteHourRowBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.deleteHourRowBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteHourRowBtn.BackgroundImage")));
+            this.deleteHourRowBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.deleteHourRowBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.deleteHourRowBtn.FlatAppearance.BorderSize = 2;
+            this.deleteHourRowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteHourRowBtn.Location = new System.Drawing.Point(12, 21);
+            this.deleteHourRowBtn.Name = "deleteHourRowBtn";
+            this.deleteHourRowBtn.Size = new System.Drawing.Size(42, 41);
+            this.deleteHourRowBtn.TabIndex = 17;
+            this.deleteHourRowBtn.UseVisualStyleBackColor = false;
+            this.deleteHourRowBtn.Click += new System.EventHandler(this.deleteHourRowBtn_Click);
+            // 
+            // deleteCartRowBtn
+            // 
+            this.deleteCartRowBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteCartRowBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.deleteCartRowBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteCartRowBtn.BackgroundImage")));
+            this.deleteCartRowBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.deleteCartRowBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.deleteCartRowBtn.FlatAppearance.BorderSize = 2;
+            this.deleteCartRowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteCartRowBtn.Location = new System.Drawing.Point(677, 21);
+            this.deleteCartRowBtn.Name = "deleteCartRowBtn";
+            this.deleteCartRowBtn.Size = new System.Drawing.Size(42, 41);
+            this.deleteCartRowBtn.TabIndex = 16;
+            this.deleteCartRowBtn.UseVisualStyleBackColor = false;
+            this.deleteCartRowBtn.Click += new System.EventHandler(this.deleteCartRowBtn_Click);
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AllowUserToResizeColumns = false;
             this.dataGridView2.AllowUserToResizeRows = false;
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(677, 21);
             this.dataGridView2.Name = "dataGridView2";
@@ -562,6 +600,9 @@ namespace PBET
         private System.Windows.Forms.Label machineNameLbl;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button adminPanelBtn;
+        private System.Windows.Forms.Button deleteRowBtn;
+        private System.Windows.Forms.Button deleteCartRowBtn;
+        private System.Windows.Forms.Button deleteHourRowBtn;
     }
 }
 

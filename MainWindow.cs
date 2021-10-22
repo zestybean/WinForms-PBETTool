@@ -49,6 +49,8 @@ namespace PBET
             {
                 DataColumn cartCol;
 
+
+
                 if(cartColStrings[i] == "Rework")
                 {
                      cartCol = new DataColumn(cartColStrings[i], typeof(bool));
@@ -56,7 +58,8 @@ namespace PBET
                 else if (cartColStrings[i] == "Quantity")
                 {
                     cartCol = new DataColumn(cartColStrings[i], typeof(double));
-                } else
+                }
+                else
                 {
                     cartCol = new DataColumn(cartColStrings[i], typeof(string));
                 }
@@ -165,6 +168,7 @@ namespace PBET
         //THIS IS FOR EDITING CELLS 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
            
             //WORKS
             int goal = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[1].Value);
@@ -256,6 +260,24 @@ namespace PBET
             }
         }
 
+        private void deleteRowConfirm(DataGridView gridView)
+        {
+            var confirmResult = MessageBox.Show("Are you sure you want to delete selected rows?", "DELETE ROW", MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                //Yes
+                foreach (DataGridViewRow row in gridView.SelectedRows)
+                {
+                    gridView.Rows.RemoveAt(row.Index);
+                }
+            }
+            else
+            {
+                //No
+            }
+        }
+
         private void adminPanelBtn_Click(object sender, EventArgs e)
         {
             AdminPopUp adminPopUp = new AdminPopUp();
@@ -269,7 +291,17 @@ namespace PBET
                 //Cancel
             }
         }
+        
+        private void deleteHourRowBtn_Click(object sender, EventArgs e)
+        {
+            deleteRowConfirm(dataGridView1);
+        }
+        private void deleteCartRowBtn_Click(object sender, EventArgs e)
+        {
+            deleteRowConfirm(dataGridView2);
+        }
+
     }
 
-    
+
 }

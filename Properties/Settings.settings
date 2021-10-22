@@ -5,5 +5,8 @@
     <Setting Name="Machine" Type="System.String" Scope="User">
       <Value Profile="(Default)">None</Value>
     </Setting>
+    <Setting Name="AppVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1.0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
