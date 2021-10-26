@@ -13,26 +13,37 @@ namespace PBET
 {
     public partial class MainWindow : Form
     {
+        //INIT
         private DataTable hoursTable;
         private DataTable cartsTable;
 
+        //Data for each of the data grid views on the main screen
         List<string> hoursColStrings = new List<string> { "Hour", "Goal", "Actual", "Variance", "Part Number", "Scrap", "Downtime", "Scrap Reason", "Downtime Reason" };
         List<string> cartColStrings = new List<string> { "Time In", "Part Description", "Part Sequence", "Quantity", "Color", "Rework" };
 
+        //CONSTRUCTOR
         public MainWindow()
         {
             InitializeComponent();
             FormStyles();
 
+            //Grab the machine name from the settings
+            //at the start of the application
+            //you can edit this setting using the admin panel in settings
             machineNameLbl.Text = Settings.Default["Machine"].ToString();
 
+            //Datagridview table inits
             this.hoursTable = new DataTable("hoursTable");
             this.cartsTable = new DataTable("cartsTable");
 
+            //Loop through each string and assign each column, data type included
+            //HOURS
             for(int i = 0; i < hoursColStrings.Count; i++)
             {
                 DataColumn hourCol;
 
+                //Some of the strings represent different data types
+                //Depending on the strings, strings and doubles
                 if(hoursColStrings[i] == "Goal" || hoursColStrings[i] == "Actual" || hoursColStrings[i] == "Variance" || hoursColStrings[i] == "Scrap" || hoursColStrings[i] == "Downtime")
                 {
                     hourCol = new DataColumn(hoursColStrings[i], typeof(double));
@@ -40,18 +51,21 @@ namespace PBET
                 {
                     hourCol = new DataColumn(hoursColStrings[i], typeof(string));
                 }
-
                 
+                //Finally add the column
                 this.hoursTable.Columns.Add(hourCol);
             }
 
+            //Loop through each string and assign each column, data type included
+            //CARTS
             for (int i = 0; i < cartColStrings.Count; i++)
             {
                 DataColumn cartCol;
 
-
-
-                if(cartColStrings[i] == "Rework")
+                //Some of the strings represent different data types
+                //Depending on the strings, strings, double and bool for
+                //the rework check boxes
+                if (cartColStrings[i] == "Rework")
                 {
                      cartCol = new DataColumn(cartColStrings[i], typeof(bool));
                 }
@@ -63,22 +77,29 @@ namespace PBET
                 {
                     cartCol = new DataColumn(cartColStrings[i], typeof(string));
                 }
-                
+
+                //Finally add the column
                 this.cartsTable.Columns.Add(cartCol);
             }
 
+            //After the columns are created 
+            //Attempt to retrieve data if any
+            //from the temp data data files
             this.hoursTable.ReadXml("temp1.xml");
             this.cartsTable.ReadXml("temp2.xml");
 
+            //Finally assign the datagridview data source to the
+            //data grid view to visualize the data
             this.dataGridView1.DataSource = this.hoursTable;
             this.dataGridView2.DataSource = this.cartsTable;
 
+            //This prevents the columns from being sorted by the users
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
 
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-
+            //This prevents the columns from being sorted by the users
             foreach (DataGridViewColumn column in dataGridView2.Columns)
             {
 
@@ -88,6 +109,8 @@ namespace PBET
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {   
+            //When the application is closing
+            //save the data to the temp files
             this.hoursTable.WriteXml("temp1.xml");
             this.cartsTable.WriteXml("temp2.xml");
         }
@@ -105,7 +128,7 @@ namespace PBET
             //CART SUMMARY
             cartsLbl.Text = dataGridView2.RowCount.ToString();
             quantityLbl.Text = cartsTable.Compute("Sum(Quantity)", "").ToString();
-            reworkLbl.Text = cartsTable.Compute("Sum(Rework)", "").ToString();
+            //reworkLbl.Text = cartsTable.Compute("Sum(Rework)", "").ToString();
 
 
         }
@@ -199,11 +222,19 @@ namespace PBET
         
 
 
-        //THIS IS FOR EDITING CELLS 
+        
+        /// <summary>
+        /// EDIT ROWS IN HOUR DATA GRID
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-           
+            //This prevents users from editing the headers
+            //in the columns which crashes the application
+            if (e.RowIndex == -1)
+                return;
+
             //WORKS
             int goal = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[1].Value);
             int actual = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells[2].Value);
@@ -264,9 +295,14 @@ namespace PBET
             cartsTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), "Clear", "Clear", 0, "Clear", false);
         }
 
+        /// <summary>
+        /// EDIT ROWS IN CART DATA GRID
+        /// </summary>
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (e.RowIndex == -1)
+                return;
+
             //WORKS
             string description = this.dataGridView2.CurrentRow.Cells[1].Value.ToString();
             string sequence = this.dataGridView2.CurrentRow.Cells[2].Value.ToString();
