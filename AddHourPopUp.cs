@@ -56,19 +56,24 @@ namespace PBET
         /// </summary>
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            if(goal < 1)
+            {
+                goalTxtBox.BackColor = Color.Tomato;
+                return;
+            }
+
+
             if(scrap > 0 && scrapReasonTxtBox.Text == "")
             {
                 scrapReasonTxtBox.BackColor = Color.Tomato;
+                return;
             } else if (downtime > 0 && downtimeReasonTxtBox.Text == "")
             {
                 downtimeReasonTxtBox.BackColor = Color.Tomato;
-            } else
-            {
-                this.variance = actual - goal;
-                this.DialogResult = DialogResult.OK;
-            }
-
-           
+                return;
+            } 
+            this.variance = actual - goal;
+            this.DialogResult = DialogResult.OK;
         }
         
 

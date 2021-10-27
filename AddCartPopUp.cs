@@ -81,6 +81,19 @@ namespace PBET
         /// </summary>
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            if(partDescription == string.Empty)
+            {
+                partDescTxtBox.BackColor = Color.Tomato;
+                return;
+            } if (quantityTxtBox.Value < 1)
+            {
+                quantityTxtBox.BackColor = Color.Tomato;
+                return;
+            }  if (partColor == string.Empty)
+            {
+                colorTxtBox.BackColor = Color.Tomato;
+                return;
+            }
             this.DialogResult = DialogResult.OK;
         }
 
@@ -89,6 +102,7 @@ namespace PBET
         /// </summary>
         private void partDescTxtBox_TextChanged(object sender, EventArgs e)
         {
+
             this.partDescription = partDescTxtBox.Text;
         }
 
@@ -99,11 +113,13 @@ namespace PBET
 
         private void quantityTxtBox_ValueChanged(object sender, EventArgs e)
         {
+            quantityTxtBox.BackColor = Color.White;
             this.partQuantity = Convert.ToInt32(quantityTxtBox.Value);
         }
 
         private void colorTxtBox_TextChanged(object sender, EventArgs e)
         {
+            colorTxtBox.BackColor = Color.White;
             this.partColor = colorTxtBox.Text;
         }
 

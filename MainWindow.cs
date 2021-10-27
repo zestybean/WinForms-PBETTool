@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBET.Properties;
+using ClosedXML.Excel;
 
 namespace PBET
 {
@@ -134,9 +135,7 @@ namespace PBET
             //CART SUMMARY
             cartsLbl.Text = dataGridView2.RowCount.ToString();
             quantityLbl.Text = cartsTable.Compute("Sum(Quantity)", "").ToString();
-            reworkLbl.Text = cartsTable.Compute("Sum(Rework)", "Rework = true").ToString();
-
-
+            reworkLbl.Text = cartsTable.Select("Rework = True").Count().ToString();
         }
       
         //Style of the column grid view headers
@@ -181,6 +180,15 @@ namespace PBET
         /// </summary>
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            var workbook = new XLWorkbook();
+
+            workbook.Worksheets.Add(hoursTable, "HRxHR Parts");
+            workbook.Worksheets.Add(cartsTable, "HRxHR Carts");
+
+            workbook.SaveAs($@"C:\Test\Temp.xlsx");
+
+            //CLEAR EVERYTHING
+            //DONE WITH SHIFT
             hoursTable.Clear();
             cartsTable.Clear();
             hoursTable.WriteXml("temp1.xml");

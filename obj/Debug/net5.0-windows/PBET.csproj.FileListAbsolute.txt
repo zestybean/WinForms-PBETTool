@@ -20,3 +20,7 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AddHou
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.MainWindow.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AddCartPopUp.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AdminPopUp.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Debug\net5.0-windows\ClosedXML.dll
+C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Debug\net5.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Debug\net5.0-windows\ExcelNumberFormat.dll
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.csproj.CopyComplete

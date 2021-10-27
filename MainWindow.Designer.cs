@@ -64,13 +64,13 @@ namespace PBET
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.reworkLbl = new System.Windows.Forms.Label();
+            this.quantityLbl = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.cartsLbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.quantityLbl = new System.Windows.Forms.Label();
-            this.reworkLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -369,9 +369,9 @@ namespace PBET
             this.downtimeLbl.ForeColor = System.Drawing.Color.White;
             this.downtimeLbl.Location = new System.Drawing.Point(493, 79);
             this.downtimeLbl.Name = "downtimeLbl";
-            this.downtimeLbl.Size = new System.Drawing.Size(19, 27);
+            this.downtimeLbl.Size = new System.Drawing.Size(23, 27);
             this.downtimeLbl.TabIndex = 12;
-            this.downtimeLbl.Text = "-";
+            this.downtimeLbl.Text = "0";
             this.downtimeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // scrapLbl
@@ -381,9 +381,9 @@ namespace PBET
             this.scrapLbl.ForeColor = System.Drawing.Color.White;
             this.scrapLbl.Location = new System.Drawing.Point(414, 79);
             this.scrapLbl.Name = "scrapLbl";
-            this.scrapLbl.Size = new System.Drawing.Size(19, 27);
+            this.scrapLbl.Size = new System.Drawing.Size(23, 27);
             this.scrapLbl.TabIndex = 11;
-            this.scrapLbl.Text = "-";
+            this.scrapLbl.Text = "0";
             this.scrapLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // varLbl
@@ -393,9 +393,9 @@ namespace PBET
             this.varLbl.ForeColor = System.Drawing.Color.White;
             this.varLbl.Location = new System.Drawing.Point(302, 79);
             this.varLbl.Name = "varLbl";
-            this.varLbl.Size = new System.Drawing.Size(19, 27);
+            this.varLbl.Size = new System.Drawing.Size(23, 27);
             this.varLbl.TabIndex = 10;
-            this.varLbl.Text = "-";
+            this.varLbl.Text = "0";
             this.varLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // actualLbl
@@ -405,9 +405,9 @@ namespace PBET
             this.actualLbl.ForeColor = System.Drawing.Color.White;
             this.actualLbl.Location = new System.Drawing.Point(210, 79);
             this.actualLbl.Name = "actualLbl";
-            this.actualLbl.Size = new System.Drawing.Size(19, 27);
+            this.actualLbl.Size = new System.Drawing.Size(23, 27);
             this.actualLbl.TabIndex = 9;
-            this.actualLbl.Text = "-";
+            this.actualLbl.Text = "0";
             this.actualLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // goalLbl
@@ -417,9 +417,9 @@ namespace PBET
             this.goalLbl.ForeColor = System.Drawing.Color.White;
             this.goalLbl.Location = new System.Drawing.Point(135, 79);
             this.goalLbl.Name = "goalLbl";
-            this.goalLbl.Size = new System.Drawing.Size(19, 27);
+            this.goalLbl.Size = new System.Drawing.Size(23, 27);
             this.goalLbl.TabIndex = 8;
-            this.goalLbl.Text = "-";
+            this.goalLbl.Text = "0";
             this.goalLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // hrLbl
@@ -429,9 +429,9 @@ namespace PBET
             this.hrLbl.ForeColor = System.Drawing.Color.White;
             this.hrLbl.Location = new System.Drawing.Point(50, 79);
             this.hrLbl.Name = "hrLbl";
-            this.hrLbl.Size = new System.Drawing.Size(19, 27);
+            this.hrLbl.Size = new System.Drawing.Size(23, 27);
             this.hrLbl.TabIndex = 7;
-            this.hrLbl.Text = "-";
+            this.hrLbl.Text = "0";
             this.hrLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -535,6 +535,54 @@ namespace PBET
             this.panel4.Size = new System.Drawing.Size(561, 180);
             this.panel4.TabIndex = 10;
             // 
+            // reworkLbl
+            // 
+            this.reworkLbl.AutoSize = true;
+            this.reworkLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.reworkLbl.ForeColor = System.Drawing.Color.White;
+            this.reworkLbl.Location = new System.Drawing.Point(301, 79);
+            this.reworkLbl.Name = "reworkLbl";
+            this.reworkLbl.Size = new System.Drawing.Size(23, 27);
+            this.reworkLbl.TabIndex = 17;
+            this.reworkLbl.Text = "0";
+            this.reworkLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // quantityLbl
+            // 
+            this.quantityLbl.AutoSize = true;
+            this.quantityLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.quantityLbl.ForeColor = System.Drawing.Color.White;
+            this.quantityLbl.Location = new System.Drawing.Point(185, 79);
+            this.quantityLbl.Name = "quantityLbl";
+            this.quantityLbl.Size = new System.Drawing.Size(23, 27);
+            this.quantityLbl.TabIndex = 16;
+            this.quantityLbl.Text = "0";
+            this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(301, 52);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 27);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Rework";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(185, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(93, 27);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Quantity";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // cartsLbl
             // 
             this.cartsLbl.AutoSize = true;
@@ -542,9 +590,9 @@ namespace PBET
             this.cartsLbl.ForeColor = System.Drawing.Color.White;
             this.cartsLbl.Location = new System.Drawing.Point(90, 79);
             this.cartsLbl.Name = "cartsLbl";
-            this.cartsLbl.Size = new System.Drawing.Size(19, 27);
+            this.cartsLbl.Size = new System.Drawing.Size(23, 27);
             this.cartsLbl.TabIndex = 13;
-            this.cartsLbl.Text = "-";
+            this.cartsLbl.Text = "0";
             this.cartsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -570,54 +618,6 @@ namespace PBET
             this.label9.TabIndex = 13;
             this.label9.Text = "Cart Summary:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(185, 52);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 27);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Quantity";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(301, 52);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 27);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Rework";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // quantityLbl
-            // 
-            this.quantityLbl.AutoSize = true;
-            this.quantityLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.quantityLbl.ForeColor = System.Drawing.Color.White;
-            this.quantityLbl.Location = new System.Drawing.Point(185, 79);
-            this.quantityLbl.Name = "quantityLbl";
-            this.quantityLbl.Size = new System.Drawing.Size(19, 27);
-            this.quantityLbl.TabIndex = 16;
-            this.quantityLbl.Text = "-";
-            this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // reworkLbl
-            // 
-            this.reworkLbl.AutoSize = true;
-            this.reworkLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.reworkLbl.ForeColor = System.Drawing.Color.White;
-            this.reworkLbl.Location = new System.Drawing.Point(301, 79);
-            this.reworkLbl.Name = "reworkLbl";
-            this.reworkLbl.Size = new System.Drawing.Size(19, 27);
-            this.reworkLbl.TabIndex = 17;
-            this.reworkLbl.Text = "-";
-            this.reworkLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainWindow
             // 
@@ -686,7 +686,6 @@ namespace PBET
         private System.Windows.Forms.Label machineNameLbl;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button adminPanelBtn;
-        private System.Windows.Forms.Button deleteRowBtn;
         private System.Windows.Forms.Button deleteCartRowBtn;
         private System.Windows.Forms.Button deleteHourRowBtn;
         private System.Windows.Forms.Label cartsLbl;
