@@ -61,10 +61,18 @@ namespace PBET
             this.label8 = new System.Windows.Forms.Label();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.submitBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityTxtBox)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -400,7 +408,7 @@ namespace PBET
             // quantityTxtBox
             // 
             this.quantityTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.quantityTxtBox.Location = new System.Drawing.Point(281, 492);
+            this.quantityTxtBox.Location = new System.Drawing.Point(572, 462);
             this.quantityTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.quantityTxtBox.Maximum = new decimal(new int[] {
             500,
@@ -418,7 +426,7 @@ namespace PBET
             // seqTxtBox
             // 
             this.seqTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.seqTxtBox.Location = new System.Drawing.Point(281, 422);
+            this.seqTxtBox.Location = new System.Drawing.Point(322, 462);
             this.seqTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.seqTxtBox.Name = "seqTxtBox";
             this.seqTxtBox.Size = new System.Drawing.Size(239, 33);
@@ -428,7 +436,7 @@ namespace PBET
             // colorTxtBox
             // 
             this.colorTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.colorTxtBox.Location = new System.Drawing.Point(391, 492);
+            this.colorTxtBox.Location = new System.Drawing.Point(659, 462);
             this.colorTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.colorTxtBox.Name = "colorTxtBox";
             this.colorTxtBox.Size = new System.Drawing.Size(129, 33);
@@ -438,13 +446,14 @@ namespace PBET
             // reworkChkBox
             // 
             this.reworkChkBox.AutoSize = true;
-            this.reworkChkBox.BackColor = System.Drawing.Color.Plum;
+            this.reworkChkBox.BackColor = System.Drawing.Color.LightSeaGreen;
             this.reworkChkBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.reworkChkBox.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.reworkChkBox.FlatAppearance.BorderSize = 3;
             this.reworkChkBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
             this.reworkChkBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.reworkChkBox.Location = new System.Drawing.Point(338, 542);
+            this.reworkChkBox.ForeColor = System.Drawing.Color.Transparent;
+            this.reworkChkBox.Location = new System.Drawing.Point(355, 543);
             this.reworkChkBox.Margin = new System.Windows.Forms.Padding(0);
             this.reworkChkBox.Name = "reworkChkBox";
             this.reworkChkBox.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -458,7 +467,7 @@ namespace PBET
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(281, 395);
+            this.label5.Location = new System.Drawing.Point(322, 435);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 23);
@@ -469,7 +478,7 @@ namespace PBET
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(391, 461);
+            this.label6.Location = new System.Drawing.Point(659, 431);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 23);
@@ -480,7 +489,7 @@ namespace PBET
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(281, 333);
+            this.label7.Location = new System.Drawing.Point(12, 436);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 23);
@@ -490,7 +499,7 @@ namespace PBET
             // partDescTxtBox
             // 
             this.partDescTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.partDescTxtBox.Location = new System.Drawing.Point(281, 359);
+            this.partDescTxtBox.Location = new System.Drawing.Point(12, 462);
             this.partDescTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.partDescTxtBox.Name = "partDescTxtBox";
             this.partDescTxtBox.ReadOnly = true;
@@ -502,7 +511,7 @@ namespace PBET
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(281, 461);
+            this.label8.Location = new System.Drawing.Point(572, 431);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 23);
@@ -518,7 +527,7 @@ namespace PBET
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(12, 584);
+            this.cancelBtn.Location = new System.Drawing.Point(12, 543);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(259, 54);
             this.cancelBtn.TabIndex = 58;
@@ -535,7 +544,7 @@ namespace PBET
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(529, 584);
+            this.submitBtn.Location = new System.Drawing.Point(529, 543);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(259, 54);
             this.submitBtn.TabIndex = 59;
@@ -543,12 +552,123 @@ namespace PBET
             this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 33);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "OTHER:";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SlateGray;
+            this.panel4.Controls.Add(this.button19);
+            this.panel4.Controls.Add(this.button18);
+            this.panel4.Controls.Add(this.button17);
+            this.panel4.Controls.Add(this.button16);
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Location = new System.Drawing.Point(12, 324);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(776, 98);
+            this.panel4.TabIndex = 48;
+            // 
+            // button19
+            // 
+            this.button19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button19.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button19.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button19.FlatAppearance.BorderSize = 3;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button19.ForeColor = System.Drawing.Color.White;
+            this.button19.Location = new System.Drawing.Point(612, 33);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(142, 62);
+            this.button19.TabIndex = 52;
+            this.button19.Text = "Test Samples";
+            this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button18
+            // 
+            this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button18.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button18.FlatAppearance.BorderSize = 3;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button18.ForeColor = System.Drawing.Color.White;
+            this.button18.Location = new System.Drawing.Point(464, 33);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(142, 62);
+            this.button18.TabIndex = 51;
+            this.button18.Text = "PROSTAR Front";
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button17
+            // 
+            this.button17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button17.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button17.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button17.FlatAppearance.BorderSize = 3;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button17.ForeColor = System.Drawing.Color.White;
+            this.button17.Location = new System.Drawing.Point(316, 33);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(142, 62);
+            this.button17.TabIndex = 50;
+            this.button17.Text = "PROSTAR Rear";
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button16
+            // 
+            this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button16.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button16.FlatAppearance.BorderSize = 3;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button16.ForeColor = System.Drawing.Color.White;
+            this.button16.Location = new System.Drawing.Point(168, 33);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(142, 62);
+            this.button16.TabIndex = 49;
+            this.button16.Text = "PROSTAR Fender";
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button4.FlatAppearance.BorderSize = 3;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(20, 33);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(142, 62);
+            this.button4.TabIndex = 48;
+            this.button4.Text = "PROSTAR Bumper";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
             // AddCartPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 650);
+            this.ClientSize = new System.Drawing.Size(800, 609);
             this.ControlBox = false;
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.label8);
@@ -576,6 +696,8 @@ namespace PBET
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityTxtBox)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -615,5 +737,12 @@ namespace PBET
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button4;
     }
 }

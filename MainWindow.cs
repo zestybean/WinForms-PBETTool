@@ -17,6 +17,9 @@ namespace PBET
         private DataTable hoursTable;
         private DataTable cartsTable;
 
+        //POPUP TEMPS
+
+
         //Data for each of the data grid views on the main screen
         List<string> hoursColStrings = new List<string> { "Hour", "Goal", "Actual", "Variance", "Part Number", "Scrap", "Downtime", "Scrap Reason", "Downtime Reason" };
         List<string> cartColStrings = new List<string> { "Time In", "Part Description", "Part Sequence", "Quantity", "Color", "Rework" };
@@ -115,6 +118,9 @@ namespace PBET
             this.cartsTable.WriteXml("temp2.xml");
         }
 
+        //Calculates the data grid view tables
+        //and displays the computed values
+        //in the summary section
         private void calcSummaryLabels()
         {
             //HOUR SUMMARY
@@ -128,12 +134,12 @@ namespace PBET
             //CART SUMMARY
             cartsLbl.Text = dataGridView2.RowCount.ToString();
             quantityLbl.Text = cartsTable.Compute("Sum(Quantity)", "").ToString();
-            //reworkLbl.Text = cartsTable.Compute("Sum(Rework)", "").ToString();
+            reworkLbl.Text = cartsTable.Compute("Sum(Rework)", "Rework = true").ToString();
 
 
         }
       
-
+        //Style of the column grid view headers
         private void FormStyles()
         {
             dataGridView1.EnableHeadersVisualStyles = false;
@@ -300,6 +306,8 @@ namespace PBET
         /// </summary>
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            //This prevents users from editing the headers
+            //in the columns which crashes the application
             if (e.RowIndex == -1)
                 return;
 
@@ -330,6 +338,8 @@ namespace PBET
             }
         }
 
+        //This displays a confirmation box 
+        //when the user deletes a row
         private void deleteRowConfirm(DataGridView gridView)
         {
             var confirmResult = MessageBox.Show("Are you sure you want to delete selected rows?", "DELETE ROW", MessageBoxButtons.YesNo);
@@ -348,6 +358,9 @@ namespace PBET
             }
         }
 
+        //This displays an admin panel
+        //used for changing app settings
+        //needs admin password
         private void adminPanelBtn_Click(object sender, EventArgs e)
         {
             AdminPopUp adminPopUp = new AdminPopUp();
