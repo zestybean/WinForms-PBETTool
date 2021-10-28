@@ -180,19 +180,28 @@ namespace PBET
         /// </summary>
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            var workbook = new XLWorkbook();
+            SubmitPopUp submitPopUp = new SubmitPopUp();
 
-            workbook.Worksheets.Add(hoursTable, "HRxHR Parts");
-            workbook.Worksheets.Add(cartsTable, "HRxHR Carts");
+            if (submitPopUp.ShowDialog(this) == DialogResult.OK)
+            {
+                var workbook = new XLWorkbook();
 
-            workbook.SaveAs($@"C:\Test\Temp.xlsx");
+                workbook.Worksheets.Add(hoursTable, "HRxHR Parts");
+                workbook.Worksheets.Add(cartsTable, "HRxHR Carts");
 
-            //CLEAR EVERYTHING
-            //DONE WITH SHIFT
-            hoursTable.Clear();
-            cartsTable.Clear();
-            hoursTable.WriteXml("temp1.xml");
-            cartsTable.WriteXml("temp2.xml");
+                workbook.SaveAs($@"C:\Test\Temp.xlsx");
+
+                //CLEAR EVERYTHING
+                //DONE WITH SHIFT
+                hoursTable.Clear();
+                cartsTable.Clear();
+                hoursTable.WriteXml("temp1.xml");
+                cartsTable.WriteXml("temp2.xml");
+            }
+            else
+            {
+                //Cancel
+            }
         }
 
         

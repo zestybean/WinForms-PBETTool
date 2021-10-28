@@ -23,4 +23,4 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AdminP
 C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Debug\net5.0-windows\ClosedXML.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Debug\net5.0-windows\DocumentFormat.OpenXml.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Debug\net5.0-windows\ExcelNumberFormat.dll
-C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.csproj.CopyComplete
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.SubmitPopUp.resources
