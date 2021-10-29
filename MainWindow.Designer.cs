@@ -71,6 +71,14 @@ namespace PBET
             this.cartsLbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.availLbl = new System.Windows.Forms.Label();
+            this.perfLbl = new System.Windows.Forms.Label();
+            this.qualLbl = new System.Windows.Forms.Label();
+            this.oeeLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -344,6 +352,14 @@ namespace PBET
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.oeeLbl);
+            this.panel3.Controls.Add(this.qualLbl);
+            this.panel3.Controls.Add(this.perfLbl);
+            this.panel3.Controls.Add(this.availLbl);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.downtimeLbl);
             this.panel3.Controls.Add(this.scrapLbl);
             this.panel3.Controls.Add(this.varLbl);
@@ -619,6 +635,102 @@ namespace PBET
             this.label9.Text = "Cart Summary:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(50, 152);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 27);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Availability";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(169, 152);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(131, 27);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Performance";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Calibri", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(302, 152);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 27);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "Quality";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Calibri", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(493, 152);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(49, 27);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "OEE";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // availLbl
+            // 
+            this.availLbl.AutoSize = true;
+            this.availLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.availLbl.ForeColor = System.Drawing.Color.White;
+            this.availLbl.Location = new System.Drawing.Point(50, 179);
+            this.availLbl.Name = "availLbl";
+            this.availLbl.Size = new System.Drawing.Size(23, 27);
+            this.availLbl.TabIndex = 17;
+            this.availLbl.Text = "0";
+            this.availLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // perfLbl
+            // 
+            this.perfLbl.AutoSize = true;
+            this.perfLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.perfLbl.ForeColor = System.Drawing.Color.White;
+            this.perfLbl.Location = new System.Drawing.Point(169, 179);
+            this.perfLbl.Name = "perfLbl";
+            this.perfLbl.Size = new System.Drawing.Size(23, 27);
+            this.perfLbl.TabIndex = 18;
+            this.perfLbl.Text = "0";
+            this.perfLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // qualLbl
+            // 
+            this.qualLbl.AutoSize = true;
+            this.qualLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.qualLbl.ForeColor = System.Drawing.Color.White;
+            this.qualLbl.Location = new System.Drawing.Point(302, 179);
+            this.qualLbl.Name = "qualLbl";
+            this.qualLbl.Size = new System.Drawing.Size(23, 27);
+            this.qualLbl.TabIndex = 19;
+            this.qualLbl.Text = "0";
+            this.qualLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // oeeLbl
+            // 
+            this.oeeLbl.AutoSize = true;
+            this.oeeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.oeeLbl.ForeColor = System.Drawing.Color.White;
+            this.oeeLbl.Location = new System.Drawing.Point(493, 179);
+            this.oeeLbl.Name = "oeeLbl";
+            this.oeeLbl.Size = new System.Drawing.Size(23, 27);
+            this.oeeLbl.TabIndex = 20;
+            this.oeeLbl.Text = "0";
+            this.oeeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -694,6 +806,14 @@ namespace PBET
         private System.Windows.Forms.Label quantityLbl;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label oeeLbl;
+        private System.Windows.Forms.Label qualLbl;
+        private System.Windows.Forms.Label perfLbl;
+        private System.Windows.Forms.Label availLbl;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label12;
     }
 }
 

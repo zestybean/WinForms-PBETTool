@@ -18,8 +18,12 @@ namespace PBET
         private DataTable hoursTable;
         private DataTable cartsTable;
 
-        //POPUP TEMPS
+        //HOUR POPUP TEMPS
+        private int goalHourTemp = 0;
+        private string seqHourTemp = "";
 
+        //CART POPUP TEMPS
+        private string colorCartTemp = "";
 
         //Data for each of the data grid views on the main screen
         List<string> hoursColStrings = new List<string> { "Hour", "Goal", "Actual", "Variance", "Part Number", "Scrap", "Downtime", "Scrap Reason", "Downtime Reason" };
@@ -30,7 +34,6 @@ namespace PBET
         {
             InitializeComponent();
             FormStyles();
-
             //Grab the machine name from the settings
             //at the start of the application
             //you can edit this setting using the admin panel in settings
@@ -124,20 +127,79 @@ namespace PBET
         //in the summary section
         private void calcSummaryLabels()
         {
+            double performance = 0.0;
+            double availability = 0.0;
+            double quality = 0.0;
+            double oee = 0.0;
+
+            
+
             //HOUR SUMMARY
             hrLbl.Text = dataGridView1.RowCount.ToString();
-            goalLbl.Text = hoursTable.Compute("Sum(Goal)", "").ToString();
-            actualLbl.Text = hoursTable.Compute("Sum(Actual)", "").ToString();
-            varLbl.Text = hoursTable.Compute("Sum(Variance)", "").ToString();
-            scrapLbl.Text = hoursTable.Compute("Sum(Scrap)", "").ToString();
-            downtimeLbl.Text = hoursTable.Compute("Sum(Downtime)", "").ToString();
+            goalLbl.Text = tableComputedSum(hoursTable, "Goal");
+            actualLbl.Text = tableComputedSum(hoursTable, "Actual");
+            varLbl.Text = tableComputedSum(hoursTable, "Variance");
+            scrapLbl.Text = tableComputedSum(hoursTable, "Scrap");
+            downtimeLbl.Text = tableComputedSum(hoursTable, "Downtime");
 
             //CART SUMMARY
             cartsLbl.Text = dataGridView2.RowCount.ToString();
             quantityLbl.Text = cartsTable.Compute("Sum(Quantity)", "").ToString();
             reworkLbl.Text = cartsTable.Select("Rework = True").Count().ToString();
+
+            //CALC OEE
+            double goal = Convert.ToInt32(goalLbl.Text);
+            double actual = Convert.ToInt32(actualLbl.Text);
+            double downtime = Convert.ToInt32(downtimeLbl.Text);
+            double scrap = Convert.ToInt32(scrapLbl.Text);
+
+            
+
+            if(goal > 0)
+            {
+                performance = (actual / goal) * 100.0;
+                availability = (1.0 - (downtime / 480.0)) * 100.0;
+
+                perfLbl.Text = String.Format("{0:F2}%", performance);
+                availLbl.Text = String.Format("{0:F2}%", availability);
+
+                if (scrap > 0)
+                {
+                    quality = (1.0 - (scrap / actual)) * 100.0;
+                    oee = ((quality / 100.0) * (performance / 100.0) * (availability / 100.0)) * 100.0;
+
+                    qualLbl.Text = String.Format("{0:F2}%", quality);
+                    oeeLbl.Text = String.Format("{0:F2}%", oee);
+                }
+                else
+                {
+                    qualLbl.Text = "0";
+                    oeeLbl.Text = "0";
+                }
+            } else
+            {
+                perfLbl.Text = "0";
+                availLbl.Text = "0";
+                qualLbl.Text = "0";
+                oeeLbl.Text = "0";
+            }
+
+           
+
         }
-      
+
+        //BS function that returns 0 to avoid crashes
+        private string tableComputedSum(DataTable table, string val)
+        {
+            string stringSum = table.Compute($"Sum({val})", string.Empty).ToString() ?? "0";
+
+            if(stringSum == "" || stringSum == string.Empty){
+                stringSum = "0";
+            }
+
+            return stringSum;
+        }
+
         //Style of the column grid view headers
         private void FormStyles()
         {
@@ -159,10 +221,14 @@ namespace PBET
         /// </summary>
         private void addHourBtn_Click(object sender, EventArgs e)
         {
-            AddHourPopUp addHourPopUp = new AddHourPopUp(0, 0, "", 0, 0, "", "");
+            AddHourPopUp addHourPopUp = new AddHourPopUp(goalHourTemp, 0, seqHourTemp, 0, 0, "", "");
 
             if(addHourPopUp.ShowDialog(this) == DialogResult.OK)
             {
+                //Backup the temps
+                goalHourTemp = addHourPopUp.goal;
+                seqHourTemp = addHourPopUp.sequence;
+
                 //"Hour", "Goal" , "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason"
                 hoursTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), addHourPopUp.goal, addHourPopUp.actual, addHourPopUp.variance, addHourPopUp.sequence, 
                     addHourPopUp.scrap, addHourPopUp.downtime, addHourPopUp.scrapReason, addHourPopUp.downtimeReason);
@@ -197,6 +263,7 @@ namespace PBET
                 cartsTable.Clear();
                 hoursTable.WriteXml("temp1.xml");
                 cartsTable.WriteXml("temp2.xml");
+
             }
             else
             {
@@ -249,8 +316,6 @@ namespace PBET
         /// <summary>
         /// EDIT ROWS IN HOUR DATA GRID
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //This prevents users from editing the headers
@@ -283,6 +348,7 @@ namespace PBET
 
                 calcSummaryLabels();
 
+
             }
             else
             {
@@ -295,10 +361,13 @@ namespace PBET
         /// </summary>
         private void addCartBtn_Click(object sender, EventArgs e)
         {
-            AddCartPopUp addCartPopUp = new AddCartPopUp("", "", 0, "", false);
+            AddCartPopUp addCartPopUp = new AddCartPopUp("", "", 0, colorCartTemp, false);
 
             if (addCartPopUp.ShowDialog(this) == DialogResult.OK)
             {
+                //Backup color temp
+                colorCartTemp = addCartPopUp.partColor;  
+
                 cartsTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), addCartPopUp.partDescription, addCartPopUp.partNumber, addCartPopUp.partQuantity, addCartPopUp.partColor, addCartPopUp.partRework);
             }
             else
