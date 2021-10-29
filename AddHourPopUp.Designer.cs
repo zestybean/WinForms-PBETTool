@@ -200,6 +200,11 @@ namespace PBET
             // downTxtBox
             // 
             this.downTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.downTxtBox.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.downTxtBox.Location = new System.Drawing.Point(486, 71);
             this.downTxtBox.Maximum = new decimal(new int[] {
             500,

@@ -461,7 +461,12 @@ namespace PBET
             }
         }
 
-        
+        private void autoSaveTimer_Tick(object sender, EventArgs e)
+        {
+            //SAVE every 20min
+            this.hoursTable.WriteXml("temp1.xml");
+            this.cartsTable.WriteXml("temp2.xml");
+        }
     }
 
 
