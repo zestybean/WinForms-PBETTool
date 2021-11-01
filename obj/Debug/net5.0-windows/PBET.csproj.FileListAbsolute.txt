@@ -19,8 +19,8 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.Genera
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AssemblyInfoInputs.cache
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.AssemblyInfo.cs
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.csproj.CoreCompileInputs.cache
-C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.csproj.CopyComplete
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\ref\PBET.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.pdb
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.genruntimeconfig.cache
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net5.0-windows\PBET.csproj.AssemblyReference.cache

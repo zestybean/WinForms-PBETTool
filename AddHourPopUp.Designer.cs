@@ -101,11 +101,11 @@ namespace PBET
             this.submitBtn.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.submitBtn.FlatAppearance.BorderSize = 3;
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(563, 371);
+            this.submitBtn.Location = new System.Drawing.Point(613, 438);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(259, 54);
+            this.submitBtn.Size = new System.Drawing.Size(222, 47);
             this.submitBtn.TabIndex = 7;
             this.submitBtn.Text = "Save";
             this.submitBtn.UseVisualStyleBackColor = false;
@@ -118,11 +118,11 @@ namespace PBET
             this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.cancelBtn.FlatAppearance.BorderSize = 3;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cancelBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(10, 371);
+            this.cancelBtn.Location = new System.Drawing.Point(12, 438);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(259, 54);
+            this.cancelBtn.Size = new System.Drawing.Size(222, 47);
             this.cancelBtn.TabIndex = 8;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -130,33 +130,33 @@ namespace PBET
             // 
             // seqTxtBox
             // 
-            this.seqTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.seqTxtBox.Location = new System.Drawing.Point(164, 69);
+            this.seqTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.seqTxtBox.Location = new System.Drawing.Point(154, 82);
             this.seqTxtBox.Name = "seqTxtBox";
-            this.seqTxtBox.Size = new System.Drawing.Size(239, 33);
+            this.seqTxtBox.Size = new System.Drawing.Size(205, 33);
             this.seqTxtBox.TabIndex = 3;
             this.seqTxtBox.TextChanged += new System.EventHandler(this.seqTxtBox_TextChanged);
             // 
             // downtimeReasonTxtBox
             // 
-            this.downtimeReasonTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.downtimeReasonTxtBox.Location = new System.Drawing.Point(583, 105);
+            this.downtimeReasonTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.downtimeReasonTxtBox.Location = new System.Drawing.Point(628, 104);
             this.downtimeReasonTxtBox.Name = "downtimeReasonTxtBox";
             this.downtimeReasonTxtBox.ReadOnly = true;
-            this.downtimeReasonTxtBox.Size = new System.Drawing.Size(239, 33);
+            this.downtimeReasonTxtBox.Size = new System.Drawing.Size(205, 33);
             this.downtimeReasonTxtBox.TabIndex = 6;
             // 
             // goalTxtBox
             // 
-            this.goalTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.goalTxtBox.Location = new System.Drawing.Point(10, 72);
+            this.goalTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F);
+            this.goalTxtBox.Location = new System.Drawing.Point(22, 84);
             this.goalTxtBox.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.goalTxtBox.Name = "goalTxtBox";
-            this.goalTxtBox.Size = new System.Drawing.Size(71, 31);
+            this.goalTxtBox.Size = new System.Drawing.Size(61, 31);
             this.goalTxtBox.TabIndex = 1;
             this.goalTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.goalTxtBox.ValueChanged += new System.EventHandler(this.goalTxtBox_ValueChanged);
@@ -165,15 +165,15 @@ namespace PBET
             // 
             // actualTxtBox
             // 
-            this.actualTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.actualTxtBox.Location = new System.Drawing.Point(87, 72);
+            this.actualTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F);
+            this.actualTxtBox.Location = new System.Drawing.Point(88, 84);
             this.actualTxtBox.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.actualTxtBox.Name = "actualTxtBox";
-            this.actualTxtBox.Size = new System.Drawing.Size(71, 31);
+            this.actualTxtBox.Size = new System.Drawing.Size(61, 31);
             this.actualTxtBox.TabIndex = 2;
             this.actualTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.actualTxtBox.ValueChanged += new System.EventHandler(this.actualTxtBox_ValueChanged);
@@ -182,15 +182,15 @@ namespace PBET
             // 
             // scrapTxtBox
             // 
-            this.scrapTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.scrapTxtBox.Location = new System.Drawing.Point(409, 71);
+            this.scrapTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F);
+            this.scrapTxtBox.Location = new System.Drawing.Point(364, 84);
             this.scrapTxtBox.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.scrapTxtBox.Name = "scrapTxtBox";
-            this.scrapTxtBox.Size = new System.Drawing.Size(71, 31);
+            this.scrapTxtBox.Size = new System.Drawing.Size(61, 31);
             this.scrapTxtBox.TabIndex = 4;
             this.scrapTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.scrapTxtBox.ValueChanged += new System.EventHandler(this.scrapTxtBox_ValueChanged);
@@ -199,20 +199,20 @@ namespace PBET
             // 
             // downTxtBox
             // 
-            this.downTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.downTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F);
             this.downTxtBox.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.downTxtBox.Location = new System.Drawing.Point(486, 71);
+            this.downTxtBox.Location = new System.Drawing.Point(430, 84);
             this.downTxtBox.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.downTxtBox.Name = "downTxtBox";
-            this.downTxtBox.Size = new System.Drawing.Size(71, 31);
+            this.downTxtBox.Size = new System.Drawing.Size(61, 31);
             this.downTxtBox.TabIndex = 5;
             this.downTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.downTxtBox.ValueChanged += new System.EventHandler(this.downTxtBox_ValueChanged);
@@ -222,8 +222,8 @@ namespace PBET
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(10, 45);
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(22, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 23);
             this.label1.TabIndex = 19;
@@ -232,8 +232,8 @@ namespace PBET
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(87, 45);
+            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(88, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 23);
             this.label2.TabIndex = 20;
@@ -242,8 +242,8 @@ namespace PBET
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(164, 45);
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(154, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(197, 23);
             this.label3.TabIndex = 21;
@@ -252,8 +252,8 @@ namespace PBET
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(409, 45);
+            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(364, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 23);
             this.label4.TabIndex = 22;
@@ -262,8 +262,8 @@ namespace PBET
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(485, 22);
+            this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(429, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 46);
             this.label5.TabIndex = 23;
@@ -272,8 +272,8 @@ namespace PBET
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(583, 80);
+            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(628, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 23);
             this.label6.TabIndex = 24;
@@ -283,11 +283,11 @@ namespace PBET
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(10, 109);
+            this.tabControl1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.tabControl1.Location = new System.Drawing.Point(13, 143);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(571, 256);
+            this.tabControl1.Size = new System.Drawing.Size(696, 266);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 25;
             // 
@@ -313,24 +313,24 @@ namespace PBET
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tabPage1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.tabPage1.ForeColor = System.Drawing.Color.White;
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(563, 220);
+            this.tabPage1.Size = new System.Drawing.Size(688, 230);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Downtime Reason";
             // 
             // button14
             // 
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button14.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button14.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button14.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(380, 178);
+            this.button14.Location = new System.Drawing.Point(520, 94);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(184, 28);
+            this.button14.Size = new System.Drawing.Size(165, 40);
             this.button14.TabIndex = 43;
             this.button14.Text = "D601 - Lack of Training";
             this.button14.UseVisualStyleBackColor = false;
@@ -339,12 +339,12 @@ namespace PBET
             // button15
             // 
             this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button15.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button15.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(380, 144);
+            this.button15.Location = new System.Drawing.Point(520, 49);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(184, 28);
+            this.button15.Size = new System.Drawing.Size(165, 40);
             this.button15.TabIndex = 42;
             this.button15.Text = "D600 - Waiting Insp.";
             this.button15.UseVisualStyleBackColor = false;
@@ -353,12 +353,12 @@ namespace PBET
             // button16
             // 
             this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button16.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button16.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(380, 110);
+            this.button16.Location = new System.Drawing.Point(520, 3);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(184, 28);
+            this.button16.Size = new System.Drawing.Size(165, 40);
             this.button16.TabIndex = 41;
             this.button16.Text = "D554 - Clean Up";
             this.button16.UseVisualStyleBackColor = false;
@@ -368,11 +368,11 @@ namespace PBET
             // 
             this.button17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button17.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(380, 76);
+            this.button17.Location = new System.Drawing.Point(348, 186);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(184, 28);
+            this.button17.Size = new System.Drawing.Size(165, 40);
             this.button17.TabIndex = 40;
             this.button17.Text = "D548 - ME/Robot";
             this.button17.UseVisualStyleBackColor = false;
@@ -382,11 +382,11 @@ namespace PBET
             // 
             this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button18.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(380, 42);
+            this.button18.Location = new System.Drawing.Point(348, 3);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(184, 28);
+            this.button18.Size = new System.Drawing.Size(165, 40);
             this.button18.TabIndex = 39;
             this.button18.Text = "D547 - Lack of Parts";
             this.button18.UseVisualStyleBackColor = false;
@@ -396,11 +396,11 @@ namespace PBET
             // 
             this.button19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button19.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button19.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(380, 8);
+            this.button19.Location = new System.Drawing.Point(348, 140);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(184, 28);
+            this.button19.Size = new System.Drawing.Size(165, 40);
             this.button19.TabIndex = 38;
             this.button19.Text = "D545 - Break";
             this.button19.UseVisualStyleBackColor = false;
@@ -409,12 +409,12 @@ namespace PBET
             // button8
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.BackColor = System.Drawing.Color.SteelBlue;
-            this.button8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(191, 178);
+            this.button8.Location = new System.Drawing.Point(348, 94);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(184, 28);
+            this.button8.Size = new System.Drawing.Size(165, 40);
             this.button8.TabIndex = 37;
             this.button8.Text = "D542 - Waiting Mold Ch.";
             this.button8.UseVisualStyleBackColor = false;
@@ -423,12 +423,12 @@ namespace PBET
             // button9
             // 
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.BackColor = System.Drawing.Color.SteelBlue;
-            this.button9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(191, 144);
+            this.button9.Location = new System.Drawing.Point(349, 49);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(184, 28);
+            this.button9.Size = new System.Drawing.Size(165, 40);
             this.button9.TabIndex = 36;
             this.button9.Text = "D541 - Waiting On Heats";
             this.button9.UseVisualStyleBackColor = false;
@@ -437,12 +437,12 @@ namespace PBET
             // button10
             // 
             this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button10.BackColor = System.Drawing.Color.SteelBlue;
-            this.button10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(191, 110);
+            this.button10.Location = new System.Drawing.Point(177, 186);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(184, 28);
+            this.button10.Size = new System.Drawing.Size(165, 40);
             this.button10.TabIndex = 35;
             this.button10.Text = "D510 - Maintenance";
             this.button10.UseVisualStyleBackColor = false;
@@ -451,12 +451,12 @@ namespace PBET
             // button11
             // 
             this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button11.BackColor = System.Drawing.Color.SteelBlue;
-            this.button11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button11.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(191, 76);
+            this.button11.Location = new System.Drawing.Point(177, 140);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(184, 28);
+            this.button11.Size = new System.Drawing.Size(165, 40);
             this.button11.TabIndex = 34;
             this.button11.Text = "D506 - StartUp";
             this.button11.UseVisualStyleBackColor = false;
@@ -465,12 +465,12 @@ namespace PBET
             // button12
             // 
             this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button12.BackColor = System.Drawing.Color.SteelBlue;
-            this.button12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button12.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(191, 42);
+            this.button12.Location = new System.Drawing.Point(177, 94);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(184, 28);
+            this.button12.Size = new System.Drawing.Size(165, 40);
             this.button12.TabIndex = 33;
             this.button12.Text = "D500 - Mold Change";
             this.button12.UseVisualStyleBackColor = false;
@@ -479,12 +479,12 @@ namespace PBET
             // button13
             // 
             this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button13.BackColor = System.Drawing.Color.SteelBlue;
-            this.button13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button13.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(191, 8);
+            this.button13.Location = new System.Drawing.Point(177, 49);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(184, 28);
+            this.button13.Size = new System.Drawing.Size(165, 40);
             this.button13.TabIndex = 32;
             this.button13.Text = "D132 - Color Change";
             this.button13.UseVisualStyleBackColor = false;
@@ -493,14 +493,14 @@ namespace PBET
             // button7
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button7.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(1, 178);
+            this.button7.Location = new System.Drawing.Point(177, 3);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(184, 28);
+            this.button7.Size = new System.Drawing.Size(165, 40);
             this.button7.TabIndex = 31;
-            this.button7.Text = "D120 - Quality/Rework";
+            this.button7.Text = "D120 - Rework";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -508,11 +508,11 @@ namespace PBET
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(1, 144);
+            this.button6.Location = new System.Drawing.Point(6, 186);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(184, 28);
+            this.button6.Size = new System.Drawing.Size(165, 40);
             this.button6.TabIndex = 30;
             this.button6.Text = "D113 - Contamination";
             this.button6.UseVisualStyleBackColor = false;
@@ -522,11 +522,11 @@ namespace PBET
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(1, 110);
+            this.button5.Location = new System.Drawing.Point(6, 140);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(184, 28);
+            this.button5.Size = new System.Drawing.Size(165, 40);
             this.button5.TabIndex = 29;
             this.button5.Text = "D111 - No Operator";
             this.button5.UseVisualStyleBackColor = false;
@@ -536,11 +536,11 @@ namespace PBET
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1, 76);
+            this.button4.Location = new System.Drawing.Point(6, 94);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(184, 28);
+            this.button4.Size = new System.Drawing.Size(165, 40);
             this.button4.TabIndex = 28;
             this.button4.Text = "D110 - Meeting";
             this.button4.UseVisualStyleBackColor = false;
@@ -550,11 +550,11 @@ namespace PBET
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1, 42);
+            this.button3.Location = new System.Drawing.Point(6, 49);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 28);
+            this.button3.Size = new System.Drawing.Size(165, 40);
             this.button3.TabIndex = 27;
             this.button3.Text = "D101 - PUR Problems";
             this.button3.UseVisualStyleBackColor = false;
@@ -564,11 +564,11 @@ namespace PBET
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1, 8);
+            this.button1.Location = new System.Drawing.Point(6, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 28);
+            this.button1.Size = new System.Drawing.Size(165, 40);
             this.button1.TabIndex = 26;
             this.button1.Text = "D100 - Material Handler";
             this.button1.UseVisualStyleBackColor = false;
@@ -599,19 +599,19 @@ namespace PBET
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(563, 220);
+            this.tabPage2.Size = new System.Drawing.Size(688, 230);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Scrap Reason";
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(380, 178);
+            this.button2.Location = new System.Drawing.Point(517, 98);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 28);
+            this.button2.Size = new System.Drawing.Size(165, 40);
             this.button2.TabIndex = 61;
             this.button2.Text = "S29 - Contamination";
             this.button2.UseVisualStyleBackColor = false;
@@ -620,12 +620,12 @@ namespace PBET
             // button20
             // 
             this.button20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button20.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button20.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button20.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.White;
-            this.button20.Location = new System.Drawing.Point(380, 144);
+            this.button20.Location = new System.Drawing.Point(517, 52);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(184, 28);
+            this.button20.Size = new System.Drawing.Size(165, 40);
             this.button20.TabIndex = 60;
             this.button20.Text = "S25 - Dimensions";
             this.button20.UseVisualStyleBackColor = false;
@@ -634,12 +634,12 @@ namespace PBET
             // button21
             // 
             this.button21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button21.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button21.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button21.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Location = new System.Drawing.Point(380, 110);
+            this.button21.Location = new System.Drawing.Point(517, 6);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(184, 28);
+            this.button21.Size = new System.Drawing.Size(165, 40);
             this.button21.TabIndex = 59;
             this.button21.Text = "S24 - Bad Trim/Gouges";
             this.button21.UseVisualStyleBackColor = false;
@@ -649,11 +649,11 @@ namespace PBET
             // 
             this.button22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button22.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button22.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.ForeColor = System.Drawing.Color.White;
-            this.button22.Location = new System.Drawing.Point(380, 76);
+            this.button22.Location = new System.Drawing.Point(346, 184);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(184, 28);
+            this.button22.Size = new System.Drawing.Size(165, 40);
             this.button22.TabIndex = 58;
             this.button22.Text = "S23 - Streaks";
             this.button22.UseVisualStyleBackColor = false;
@@ -663,11 +663,11 @@ namespace PBET
             // 
             this.button23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button23.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button23.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button23.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.ForeColor = System.Drawing.Color.White;
-            this.button23.Location = new System.Drawing.Point(380, 42);
+            this.button23.Location = new System.Drawing.Point(347, 142);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(184, 28);
+            this.button23.Size = new System.Drawing.Size(165, 40);
             this.button23.TabIndex = 57;
             this.button23.Text = "S22 - Scratches";
             this.button23.UseVisualStyleBackColor = false;
@@ -677,11 +677,11 @@ namespace PBET
             // 
             this.button24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button24.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button24.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button24.ForeColor = System.Drawing.Color.White;
-            this.button24.Location = new System.Drawing.Point(380, 8);
+            this.button24.Location = new System.Drawing.Point(346, 98);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(184, 28);
+            this.button24.Size = new System.Drawing.Size(165, 40);
             this.button24.TabIndex = 56;
             this.button24.Text = "S21 - Bubbles";
             this.button24.UseVisualStyleBackColor = false;
@@ -690,12 +690,12 @@ namespace PBET
             // button25
             // 
             this.button25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button25.BackColor = System.Drawing.Color.SteelBlue;
-            this.button25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button25.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button25.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.ForeColor = System.Drawing.Color.White;
-            this.button25.Location = new System.Drawing.Point(191, 178);
+            this.button25.Location = new System.Drawing.Point(346, 52);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(184, 28);
+            this.button25.Size = new System.Drawing.Size(165, 40);
             this.button25.TabIndex = 55;
             this.button25.Text = "S17 - Cracked/Bent";
             this.button25.UseVisualStyleBackColor = false;
@@ -704,12 +704,12 @@ namespace PBET
             // button26
             // 
             this.button26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button26.BackColor = System.Drawing.Color.SteelBlue;
-            this.button26.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button26.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button26.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Location = new System.Drawing.Point(191, 144);
+            this.button26.Location = new System.Drawing.Point(347, 6);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(184, 28);
+            this.button26.Size = new System.Drawing.Size(165, 40);
             this.button26.TabIndex = 54;
             this.button26.Text = "S14 - Oil/Grease";
             this.button26.UseVisualStyleBackColor = false;
@@ -718,12 +718,12 @@ namespace PBET
             // button27
             // 
             this.button27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button27.BackColor = System.Drawing.Color.SteelBlue;
-            this.button27.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button27.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button27.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button27.ForeColor = System.Drawing.Color.White;
-            this.button27.Location = new System.Drawing.Point(191, 110);
+            this.button27.Location = new System.Drawing.Point(176, 184);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(184, 28);
+            this.button27.Size = new System.Drawing.Size(165, 40);
             this.button27.TabIndex = 53;
             this.button27.Text = "S10 - Off Color";
             this.button27.UseVisualStyleBackColor = false;
@@ -732,12 +732,12 @@ namespace PBET
             // button28
             // 
             this.button28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button28.BackColor = System.Drawing.Color.SteelBlue;
-            this.button28.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button28.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button28.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button28.ForeColor = System.Drawing.Color.White;
-            this.button28.Location = new System.Drawing.Point(191, 76);
+            this.button28.Location = new System.Drawing.Point(175, 142);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(184, 28);
+            this.button28.Size = new System.Drawing.Size(165, 40);
             this.button28.TabIndex = 52;
             this.button28.Text = "S09 - Pulling";
             this.button28.UseVisualStyleBackColor = false;
@@ -746,12 +746,12 @@ namespace PBET
             // button29
             // 
             this.button29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button29.BackColor = System.Drawing.Color.SteelBlue;
-            this.button29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button29.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button29.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button29.ForeColor = System.Drawing.Color.White;
-            this.button29.Location = new System.Drawing.Point(191, 42);
+            this.button29.Location = new System.Drawing.Point(175, 98);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(184, 28);
+            this.button29.Size = new System.Drawing.Size(165, 40);
             this.button29.TabIndex = 51;
             this.button29.Text = "S08 - Startup";
             this.button29.UseVisualStyleBackColor = false;
@@ -760,12 +760,12 @@ namespace PBET
             // button30
             // 
             this.button30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button30.BackColor = System.Drawing.Color.SteelBlue;
-            this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button30.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button30.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button30.ForeColor = System.Drawing.Color.White;
-            this.button30.Location = new System.Drawing.Point(191, 8);
+            this.button30.Location = new System.Drawing.Point(175, 52);
             this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(184, 28);
+            this.button30.Size = new System.Drawing.Size(165, 40);
             this.button30.TabIndex = 50;
             this.button30.Text = "S07 - Replacement";
             this.button30.UseVisualStyleBackColor = false;
@@ -774,12 +774,12 @@ namespace PBET
             // button31
             // 
             this.button31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button31.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button31.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button31.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button31.ForeColor = System.Drawing.Color.White;
-            this.button31.Location = new System.Drawing.Point(1, 178);
+            this.button31.Location = new System.Drawing.Point(175, 6);
             this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(184, 28);
+            this.button31.Size = new System.Drawing.Size(165, 40);
             this.button31.TabIndex = 49;
             this.button31.Text = "S06 - Warp";
             this.button31.UseVisualStyleBackColor = false;
@@ -789,11 +789,11 @@ namespace PBET
             // 
             this.button32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button32.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button32.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button32.ForeColor = System.Drawing.Color.White;
-            this.button32.Location = new System.Drawing.Point(1, 144);
+            this.button32.Location = new System.Drawing.Point(5, 184);
             this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(184, 28);
+            this.button32.Size = new System.Drawing.Size(165, 40);
             this.button32.TabIndex = 48;
             this.button32.Text = "S05 - Sinks";
             this.button32.UseVisualStyleBackColor = false;
@@ -803,11 +803,11 @@ namespace PBET
             // 
             this.button33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button33.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button33.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button33.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button33.ForeColor = System.Drawing.Color.White;
-            this.button33.Location = new System.Drawing.Point(1, 110);
+            this.button33.Location = new System.Drawing.Point(6, 142);
             this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(184, 28);
+            this.button33.Size = new System.Drawing.Size(165, 40);
             this.button33.TabIndex = 47;
             this.button33.Text = "S04 - Knit/Weld";
             this.button33.UseVisualStyleBackColor = false;
@@ -817,11 +817,11 @@ namespace PBET
             // 
             this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button34.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button34.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button34.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button34.ForeColor = System.Drawing.Color.White;
-            this.button34.Location = new System.Drawing.Point(1, 76);
+            this.button34.Location = new System.Drawing.Point(6, 98);
             this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(184, 28);
+            this.button34.Size = new System.Drawing.Size(165, 40);
             this.button34.TabIndex = 46;
             this.button34.Text = "S03 - Splay";
             this.button34.UseVisualStyleBackColor = false;
@@ -831,11 +831,11 @@ namespace PBET
             // 
             this.button35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button35.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button35.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button35.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button35.ForeColor = System.Drawing.Color.White;
-            this.button35.Location = new System.Drawing.Point(1, 42);
+            this.button35.Location = new System.Drawing.Point(5, 52);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(184, 28);
+            this.button35.Size = new System.Drawing.Size(165, 40);
             this.button35.TabIndex = 45;
             this.button35.Text = "S02 - Short";
             this.button35.UseVisualStyleBackColor = false;
@@ -845,11 +845,11 @@ namespace PBET
             // 
             this.button36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button36.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button36.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button36.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button36.ForeColor = System.Drawing.Color.White;
-            this.button36.Location = new System.Drawing.Point(1, 8);
+            this.button36.Location = new System.Drawing.Point(5, 6);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(184, 28);
+            this.button36.Size = new System.Drawing.Size(165, 40);
             this.button36.TabIndex = 44;
             this.button36.Text = "S01 - Flash";
             this.button36.UseVisualStyleBackColor = false;
@@ -858,8 +858,8 @@ namespace PBET
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(583, 22);
+            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(628, 29);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 23);
             this.label7.TabIndex = 27;
@@ -867,11 +867,11 @@ namespace PBET
             // 
             // scrapReasonTxtBox
             // 
-            this.scrapReasonTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.scrapReasonTxtBox.Location = new System.Drawing.Point(583, 47);
+            this.scrapReasonTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.scrapReasonTxtBox.Location = new System.Drawing.Point(628, 51);
             this.scrapReasonTxtBox.Name = "scrapReasonTxtBox";
             this.scrapReasonTxtBox.ReadOnly = true;
-            this.scrapReasonTxtBox.Size = new System.Drawing.Size(239, 33);
+            this.scrapReasonTxtBox.Size = new System.Drawing.Size(205, 33);
             this.scrapReasonTxtBox.TabIndex = 26;
             // 
             // clearBtn
@@ -881,11 +881,11 @@ namespace PBET
             this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
             this.clearBtn.FlatAppearance.BorderSize = 3;
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearBtn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clearBtn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
             this.clearBtn.ForeColor = System.Drawing.Color.White;
-            this.clearBtn.Location = new System.Drawing.Point(735, 148);
+            this.clearBtn.Location = new System.Drawing.Point(760, 143);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(87, 42);
+            this.clearBtn.Size = new System.Drawing.Size(75, 36);
             this.clearBtn.TabIndex = 28;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = false;
@@ -893,9 +893,9 @@ namespace PBET
             // 
             // AddHourPopUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 437);
+            this.ClientSize = new System.Drawing.Size(845, 495);
             this.ControlBox = false;
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.label7);

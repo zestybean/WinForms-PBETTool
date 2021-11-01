@@ -43,9 +43,9 @@ namespace PBET
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(144, 118);
+            this.label10.Location = new System.Drawing.Point(114, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 29);
             this.label10.TabIndex = 15;
@@ -54,10 +54,10 @@ namespace PBET
             // 
             // machineTxtBox
             // 
-            this.machineTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.machineTxtBox.Location = new System.Drawing.Point(257, 114);
+            this.machineTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.machineTxtBox.Location = new System.Drawing.Point(220, 99);
             this.machineTxtBox.Name = "machineTxtBox";
-            this.machineTxtBox.Size = new System.Drawing.Size(239, 33);
+            this.machineTxtBox.Size = new System.Drawing.Size(205, 33);
             this.machineTxtBox.TabIndex = 16;
             this.machineTxtBox.TextChanged += new System.EventHandler(this.machineTxtBox_TextChanged);
             // 
@@ -68,11 +68,11 @@ namespace PBET
             this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.cancelBtn.FlatAppearance.BorderSize = 3;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cancelBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(12, 300);
+            this.cancelBtn.Location = new System.Drawing.Point(10, 260);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(259, 54);
+            this.cancelBtn.Size = new System.Drawing.Size(222, 47);
             this.cancelBtn.TabIndex = 17;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -85,11 +85,11 @@ namespace PBET
             this.submitBtn.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.submitBtn.FlatAppearance.BorderSize = 3;
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(429, 300);
+            this.submitBtn.Location = new System.Drawing.Point(368, 260);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(259, 54);
+            this.submitBtn.Size = new System.Drawing.Size(222, 47);
             this.submitBtn.TabIndex = 18;
             this.submitBtn.Text = "Save";
             this.submitBtn.UseVisualStyleBackColor = false;
@@ -99,9 +99,9 @@ namespace PBET
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(257, 9);
+            this.label1.Location = new System.Drawing.Point(220, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 29);
             this.label1.TabIndex = 19;
@@ -112,9 +112,9 @@ namespace PBET
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(133, 182);
+            this.label2.Location = new System.Drawing.Point(105, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 29);
             this.label2.TabIndex = 20;
@@ -123,10 +123,10 @@ namespace PBET
             // 
             // passwordTxtBox
             // 
-            this.passwordTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passwordTxtBox.Location = new System.Drawing.Point(257, 178);
+            this.passwordTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.passwordTxtBox.Location = new System.Drawing.Point(220, 154);
             this.passwordTxtBox.Name = "passwordTxtBox";
-            this.passwordTxtBox.Size = new System.Drawing.Size(239, 33);
+            this.passwordTxtBox.Size = new System.Drawing.Size(205, 33);
             this.passwordTxtBox.TabIndex = 21;
             this.passwordTxtBox.UseSystemPasswordChar = true;
             this.passwordTxtBox.TextChanged += new System.EventHandler(this.passwordTxtBox_TextChanged);
@@ -134,9 +134,9 @@ namespace PBET
             // errorLbl
             // 
             this.errorLbl.AutoSize = true;
-            this.errorLbl.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.errorLbl.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.errorLbl.ForeColor = System.Drawing.Color.Red;
-            this.errorLbl.Location = new System.Drawing.Point(257, 160);
+            this.errorLbl.Location = new System.Drawing.Point(220, 139);
             this.errorLbl.Name = "errorLbl";
             this.errorLbl.Size = new System.Drawing.Size(37, 14);
             this.errorLbl.TabIndex = 22;
@@ -145,10 +145,10 @@ namespace PBET
             // 
             // AdminPopUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(700, 366);
+            this.ClientSize = new System.Drawing.Size(600, 317);
             this.ControlBox = false;
             this.Controls.Add(this.errorLbl);
             this.Controls.Add(this.passwordTxtBox);

@@ -19,7 +19,6 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netcoreapp3.1\PBET.Generat
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netcoreapp3.1\PBET.AssemblyInfoInputs.cache
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netcoreapp3.1\PBET.AssemblyInfo.cs
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netcoreapp3.1\PBET.csproj.CoreCompileInputs.cache
-C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netcoreapp3.1\PBET.csproj.CopyComplete
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netcoreapp3.1\PBET.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netcoreapp3.1\PBET.pdb
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netcoreapp3.1\PBET.genruntimeconfig.cache

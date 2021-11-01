@@ -1,0 +1,12 @@
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.csproj.AssemblyReference.cache
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.AddCartPopUp.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.AddHourPopUp.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.AdminPopUp.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.MainWindow.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.Properties.Resources.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.SubmitPopUp.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.csproj.GenerateResource.cache
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.AssemblyInfoInputs.cache
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.AssemblyInfo.cs
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\netstandard2.0\PBET.csproj.CoreCompileInputs.cache
