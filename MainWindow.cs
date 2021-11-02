@@ -288,6 +288,7 @@ namespace PBET
                 workbook.Worksheets.Add(hoursTable, "HRxHR Parts");
                 workbook.Worksheets.Add(cartsTable, "HRxHR Carts");
 
+                //Try for network
                 try
                 {
                     workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");

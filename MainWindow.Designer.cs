@@ -51,20 +51,10 @@ namespace PBET
             this.clearCartBtn = new System.Windows.Forms.Button();
             this.submitBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.oeeLbl = new System.Windows.Forms.Label();
-            this.qualLbl = new System.Windows.Forms.Label();
-            this.perfLbl = new System.Windows.Forms.Label();
-            this.availLbl = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.downtimeLbl = new System.Windows.Forms.Label();
-            this.scrapLbl = new System.Windows.Forms.Label();
-            this.varLbl = new System.Windows.Forms.Label();
-            this.actualLbl = new System.Windows.Forms.Label();
-            this.goalLbl = new System.Windows.Forms.Label();
-            this.hrLbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -72,14 +62,24 @@ namespace PBET
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.downtimeLbl = new System.Windows.Forms.Label();
+            this.scrapLbl = new System.Windows.Forms.Label();
+            this.varLbl = new System.Windows.Forms.Label();
+            this.actualLbl = new System.Windows.Forms.Label();
+            this.goalLbl = new System.Windows.Forms.Label();
+            this.hrLbl = new System.Windows.Forms.Label();
+            this.oeeLbl = new System.Windows.Forms.Label();
+            this.qualLbl = new System.Windows.Forms.Label();
+            this.perfLbl = new System.Windows.Forms.Label();
+            this.availLbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.reworkLbl = new System.Windows.Forms.Label();
-            this.quantityLbl = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.cartsLbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.reworkLbl = new System.Windows.Forms.Label();
+            this.quantityLbl = new System.Windows.Forms.Label();
+            this.cartsLbl = new System.Windows.Forms.Label();
             this.autoSaveTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -283,8 +283,8 @@ namespace PBET
             // 
             // addHourBtn
             // 
-            this.addHourBtn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.addHourBtn.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.addHourBtn.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addHourBtn.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
             this.addHourBtn.FlatAppearance.BorderSize = 3;
             this.addHourBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addHourBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
@@ -300,8 +300,8 @@ namespace PBET
             // addCartBtn
             // 
             this.addCartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addCartBtn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.addCartBtn.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.addCartBtn.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.addCartBtn.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
             this.addCartBtn.FlatAppearance.BorderSize = 3;
             this.addCartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addCartBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
@@ -378,54 +378,6 @@ namespace PBET
             this.panel3.Size = new System.Drawing.Size(577, 228);
             this.panel3.TabIndex = 2;
             // 
-            // oeeLbl
-            // 
-            this.oeeLbl.AutoSize = true;
-            this.oeeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.oeeLbl.ForeColor = System.Drawing.Color.White;
-            this.oeeLbl.Location = new System.Drawing.Point(482, 155);
-            this.oeeLbl.Name = "oeeLbl";
-            this.oeeLbl.Size = new System.Drawing.Size(23, 27);
-            this.oeeLbl.TabIndex = 20;
-            this.oeeLbl.Text = "0";
-            this.oeeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // qualLbl
-            // 
-            this.qualLbl.AutoSize = true;
-            this.qualLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.qualLbl.ForeColor = System.Drawing.Color.White;
-            this.qualLbl.Location = new System.Drawing.Point(339, 155);
-            this.qualLbl.Name = "qualLbl";
-            this.qualLbl.Size = new System.Drawing.Size(23, 27);
-            this.qualLbl.TabIndex = 19;
-            this.qualLbl.Text = "0";
-            this.qualLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // perfLbl
-            // 
-            this.perfLbl.AutoSize = true;
-            this.perfLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.perfLbl.ForeColor = System.Drawing.Color.White;
-            this.perfLbl.Location = new System.Drawing.Point(180, 155);
-            this.perfLbl.Name = "perfLbl";
-            this.perfLbl.Size = new System.Drawing.Size(23, 27);
-            this.perfLbl.TabIndex = 18;
-            this.perfLbl.Text = "0";
-            this.perfLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // availLbl
-            // 
-            this.availLbl.AutoSize = true;
-            this.availLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.availLbl.ForeColor = System.Drawing.Color.White;
-            this.availLbl.Location = new System.Drawing.Point(43, 155);
-            this.availLbl.Name = "availLbl";
-            this.availLbl.Size = new System.Drawing.Size(23, 27);
-            this.availLbl.TabIndex = 17;
-            this.availLbl.Text = "0";
-            this.availLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -473,78 +425,6 @@ namespace PBET
             this.label12.TabIndex = 13;
             this.label12.Text = "Availability";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // downtimeLbl
-            // 
-            this.downtimeLbl.AutoSize = true;
-            this.downtimeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.downtimeLbl.ForeColor = System.Drawing.Color.White;
-            this.downtimeLbl.Location = new System.Drawing.Point(423, 68);
-            this.downtimeLbl.Name = "downtimeLbl";
-            this.downtimeLbl.Size = new System.Drawing.Size(23, 27);
-            this.downtimeLbl.TabIndex = 12;
-            this.downtimeLbl.Text = "0";
-            this.downtimeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scrapLbl
-            // 
-            this.scrapLbl.AutoSize = true;
-            this.scrapLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.scrapLbl.ForeColor = System.Drawing.Color.White;
-            this.scrapLbl.Location = new System.Drawing.Point(355, 68);
-            this.scrapLbl.Name = "scrapLbl";
-            this.scrapLbl.Size = new System.Drawing.Size(23, 27);
-            this.scrapLbl.TabIndex = 11;
-            this.scrapLbl.Text = "0";
-            this.scrapLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // varLbl
-            // 
-            this.varLbl.AutoSize = true;
-            this.varLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.varLbl.ForeColor = System.Drawing.Color.White;
-            this.varLbl.Location = new System.Drawing.Point(259, 68);
-            this.varLbl.Name = "varLbl";
-            this.varLbl.Size = new System.Drawing.Size(23, 27);
-            this.varLbl.TabIndex = 10;
-            this.varLbl.Text = "0";
-            this.varLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // actualLbl
-            // 
-            this.actualLbl.AutoSize = true;
-            this.actualLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.actualLbl.ForeColor = System.Drawing.Color.White;
-            this.actualLbl.Location = new System.Drawing.Point(180, 68);
-            this.actualLbl.Name = "actualLbl";
-            this.actualLbl.Size = new System.Drawing.Size(23, 27);
-            this.actualLbl.TabIndex = 9;
-            this.actualLbl.Text = "0";
-            this.actualLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // goalLbl
-            // 
-            this.goalLbl.AutoSize = true;
-            this.goalLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.goalLbl.ForeColor = System.Drawing.Color.White;
-            this.goalLbl.Location = new System.Drawing.Point(116, 68);
-            this.goalLbl.Name = "goalLbl";
-            this.goalLbl.Size = new System.Drawing.Size(23, 27);
-            this.goalLbl.TabIndex = 8;
-            this.goalLbl.Text = "0";
-            this.goalLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // hrLbl
-            // 
-            this.hrLbl.AutoSize = true;
-            this.hrLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.hrLbl.ForeColor = System.Drawing.Color.White;
-            this.hrLbl.Location = new System.Drawing.Point(43, 68);
-            this.hrLbl.Name = "hrLbl";
-            this.hrLbl.Size = new System.Drawing.Size(23, 27);
-            this.hrLbl.TabIndex = 7;
-            this.hrLbl.Text = "0";
-            this.hrLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -630,6 +510,126 @@ namespace PBET
             this.label2.Text = "Hour Summary:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // downtimeLbl
+            // 
+            this.downtimeLbl.AutoSize = true;
+            this.downtimeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.downtimeLbl.ForeColor = System.Drawing.Color.White;
+            this.downtimeLbl.Location = new System.Drawing.Point(423, 68);
+            this.downtimeLbl.Name = "downtimeLbl";
+            this.downtimeLbl.Size = new System.Drawing.Size(23, 27);
+            this.downtimeLbl.TabIndex = 12;
+            this.downtimeLbl.Text = "0";
+            this.downtimeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scrapLbl
+            // 
+            this.scrapLbl.AutoSize = true;
+            this.scrapLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.scrapLbl.ForeColor = System.Drawing.Color.White;
+            this.scrapLbl.Location = new System.Drawing.Point(355, 68);
+            this.scrapLbl.Name = "scrapLbl";
+            this.scrapLbl.Size = new System.Drawing.Size(23, 27);
+            this.scrapLbl.TabIndex = 11;
+            this.scrapLbl.Text = "0";
+            this.scrapLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // varLbl
+            // 
+            this.varLbl.AutoSize = true;
+            this.varLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.varLbl.ForeColor = System.Drawing.Color.White;
+            this.varLbl.Location = new System.Drawing.Point(259, 68);
+            this.varLbl.Name = "varLbl";
+            this.varLbl.Size = new System.Drawing.Size(23, 27);
+            this.varLbl.TabIndex = 10;
+            this.varLbl.Text = "0";
+            this.varLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // actualLbl
+            // 
+            this.actualLbl.AutoSize = true;
+            this.actualLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.actualLbl.ForeColor = System.Drawing.Color.White;
+            this.actualLbl.Location = new System.Drawing.Point(180, 68);
+            this.actualLbl.Name = "actualLbl";
+            this.actualLbl.Size = new System.Drawing.Size(23, 27);
+            this.actualLbl.TabIndex = 9;
+            this.actualLbl.Text = "0";
+            this.actualLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // goalLbl
+            // 
+            this.goalLbl.AutoSize = true;
+            this.goalLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.goalLbl.ForeColor = System.Drawing.Color.White;
+            this.goalLbl.Location = new System.Drawing.Point(116, 68);
+            this.goalLbl.Name = "goalLbl";
+            this.goalLbl.Size = new System.Drawing.Size(23, 27);
+            this.goalLbl.TabIndex = 8;
+            this.goalLbl.Text = "0";
+            this.goalLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // hrLbl
+            // 
+            this.hrLbl.AutoSize = true;
+            this.hrLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.hrLbl.ForeColor = System.Drawing.Color.White;
+            this.hrLbl.Location = new System.Drawing.Point(43, 68);
+            this.hrLbl.Name = "hrLbl";
+            this.hrLbl.Size = new System.Drawing.Size(23, 27);
+            this.hrLbl.TabIndex = 7;
+            this.hrLbl.Text = "0";
+            this.hrLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // oeeLbl
+            // 
+            this.oeeLbl.AutoSize = true;
+            this.oeeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.oeeLbl.ForeColor = System.Drawing.Color.White;
+            this.oeeLbl.Location = new System.Drawing.Point(482, 155);
+            this.oeeLbl.Name = "oeeLbl";
+            this.oeeLbl.Size = new System.Drawing.Size(23, 27);
+            this.oeeLbl.TabIndex = 20;
+            this.oeeLbl.Text = "0";
+            this.oeeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // qualLbl
+            // 
+            this.qualLbl.AutoSize = true;
+            this.qualLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.qualLbl.ForeColor = System.Drawing.Color.White;
+            this.qualLbl.Location = new System.Drawing.Point(339, 155);
+            this.qualLbl.Name = "qualLbl";
+            this.qualLbl.Size = new System.Drawing.Size(23, 27);
+            this.qualLbl.TabIndex = 19;
+            this.qualLbl.Text = "0";
+            this.qualLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // perfLbl
+            // 
+            this.perfLbl.AutoSize = true;
+            this.perfLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.perfLbl.ForeColor = System.Drawing.Color.White;
+            this.perfLbl.Location = new System.Drawing.Point(180, 155);
+            this.perfLbl.Name = "perfLbl";
+            this.perfLbl.Size = new System.Drawing.Size(23, 27);
+            this.perfLbl.TabIndex = 18;
+            this.perfLbl.Text = "0";
+            this.perfLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // availLbl
+            // 
+            this.availLbl.AutoSize = true;
+            this.availLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.availLbl.ForeColor = System.Drawing.Color.White;
+            this.availLbl.Location = new System.Drawing.Point(43, 155);
+            this.availLbl.Name = "availLbl";
+            this.availLbl.Size = new System.Drawing.Size(23, 27);
+            this.availLbl.TabIndex = 17;
+            this.availLbl.Text = "0";
+            this.availLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -646,30 +646,6 @@ namespace PBET
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(481, 156);
             this.panel4.TabIndex = 10;
-            // 
-            // reworkLbl
-            // 
-            this.reworkLbl.AutoSize = true;
-            this.reworkLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.reworkLbl.ForeColor = System.Drawing.Color.White;
-            this.reworkLbl.Location = new System.Drawing.Point(300, 68);
-            this.reworkLbl.Name = "reworkLbl";
-            this.reworkLbl.Size = new System.Drawing.Size(23, 27);
-            this.reworkLbl.TabIndex = 17;
-            this.reworkLbl.Text = "0";
-            this.reworkLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // quantityLbl
-            // 
-            this.quantityLbl.AutoSize = true;
-            this.quantityLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.quantityLbl.ForeColor = System.Drawing.Color.White;
-            this.quantityLbl.Location = new System.Drawing.Point(201, 68);
-            this.quantityLbl.Name = "quantityLbl";
-            this.quantityLbl.Size = new System.Drawing.Size(23, 27);
-            this.quantityLbl.TabIndex = 16;
-            this.quantityLbl.Text = "0";
-            this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
@@ -695,18 +671,6 @@ namespace PBET
             this.label13.Text = "Quantity";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cartsLbl
-            // 
-            this.cartsLbl.AutoSize = true;
-            this.cartsLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.cartsLbl.ForeColor = System.Drawing.Color.White;
-            this.cartsLbl.Location = new System.Drawing.Point(119, 68);
-            this.cartsLbl.Name = "cartsLbl";
-            this.cartsLbl.Size = new System.Drawing.Size(23, 27);
-            this.cartsLbl.TabIndex = 13;
-            this.cartsLbl.Text = "0";
-            this.cartsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -730,6 +694,42 @@ namespace PBET
             this.label9.TabIndex = 13;
             this.label9.Text = "Cart Summary:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // reworkLbl
+            // 
+            this.reworkLbl.AutoSize = true;
+            this.reworkLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.reworkLbl.ForeColor = System.Drawing.Color.White;
+            this.reworkLbl.Location = new System.Drawing.Point(300, 68);
+            this.reworkLbl.Name = "reworkLbl";
+            this.reworkLbl.Size = new System.Drawing.Size(23, 27);
+            this.reworkLbl.TabIndex = 17;
+            this.reworkLbl.Text = "0";
+            this.reworkLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // quantityLbl
+            // 
+            this.quantityLbl.AutoSize = true;
+            this.quantityLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.quantityLbl.ForeColor = System.Drawing.Color.White;
+            this.quantityLbl.Location = new System.Drawing.Point(201, 68);
+            this.quantityLbl.Name = "quantityLbl";
+            this.quantityLbl.Size = new System.Drawing.Size(23, 27);
+            this.quantityLbl.TabIndex = 16;
+            this.quantityLbl.Text = "0";
+            this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cartsLbl
+            // 
+            this.cartsLbl.AutoSize = true;
+            this.cartsLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.cartsLbl.ForeColor = System.Drawing.Color.White;
+            this.cartsLbl.Location = new System.Drawing.Point(119, 68);
+            this.cartsLbl.Name = "cartsLbl";
+            this.cartsLbl.Size = new System.Drawing.Size(23, 27);
+            this.cartsLbl.TabIndex = 13;
+            this.cartsLbl.Text = "0";
+            this.cartsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // autoSaveTimer
             // 
