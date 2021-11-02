@@ -21,6 +21,7 @@ namespace PBET
             InitializeComponent();
 
             machineTxtBox.Text = Settings.Default["Machine"].ToString();
+           
         }
 
         /// <summary>
@@ -34,8 +35,6 @@ namespace PBET
         /// <summary>
         /// SAVE BUTTON
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void submitBtn_Click(object sender, EventArgs e)
         {
             errorLbl.Visible = false;

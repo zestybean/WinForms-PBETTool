@@ -881,11 +881,11 @@ namespace PBET
             this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
             this.clearBtn.FlatAppearance.BorderSize = 3;
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearBtn.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
+            this.clearBtn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBtn.ForeColor = System.Drawing.Color.White;
             this.clearBtn.Location = new System.Drawing.Point(760, 143);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(75, 36);
+            this.clearBtn.Size = new System.Drawing.Size(75, 39);
             this.clearBtn.TabIndex = 28;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = false;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBET.Properties;
 using ClosedXML.Excel;
+using System.Globalization;
 
 namespace PBET
 {
@@ -24,6 +25,9 @@ namespace PBET
 
         //CART POPUP TEMPS
         private string colorCartTemp = "";
+
+        //TESTING CHECK
+        private bool appTesting = Convert.ToBoolean(Settings.Default["Testing"]);
 
         //Data for each of the data grid views on the main screen
         List<string> hoursColStrings = new List<string> { "Hour", "Goal", "Actual", "Variance", "Part Number", "Scrap", "Downtime", "Scrap Reason", "Downtime Reason" };
@@ -183,9 +187,32 @@ namespace PBET
                 qualLbl.Text = "0";
                 oeeLbl.Text = "0";
             }
+        }
 
-           
+        /// <summary>
+        /// GEN RANDOM 4
+        /// </summary>
+        private int GenerateCode()
+        {
+            int min = 1000;
+            int max = 9999;
 
+            Random rdm = new Random();
+            return rdm.Next(min, max);
+        }
+
+        /// <summary>
+        /// RETURNS THE WEEK OF CURRENT YEAR
+        /// </summary>
+        private int weekOfYearNum()
+        {
+            var date = DateTime.Now;
+            CultureInfo myCI = new CultureInfo("en-US");
+            Calendar myCal = myCI.Calendar;
+            CalendarWeekRule myCWR = myCI.DateTimeFormat.CalendarWeekRule;
+            DayOfWeek myFirstDOW = myCI.DateTimeFormat.FirstDayOfWeek;
+            int weekOfYear = myCal.GetWeekOfYear(date, myCWR, myFirstDOW);
+            return weekOfYear;
         }
 
         //BS function that returns 0 to avoid crashes
@@ -246,16 +273,33 @@ namespace PBET
         /// </summary>
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            
+            int shiftNum;
+            string machine = Settings.Default["Machine"].ToString().ToUpper();
             SubmitPopUp submitPopUp = new SubmitPopUp();
 
             if (submitPopUp.ShowDialog(this) == DialogResult.OK)
             {
+                shiftNum = submitPopUp.shift;
+                var date = DateTime.Now;
+
                 var workbook = new XLWorkbook();
 
                 workbook.Worksheets.Add(hoursTable, "HRxHR Parts");
                 workbook.Worksheets.Add(cartsTable, "HRxHR Carts");
 
-                workbook.SaveAs($@"C:\Test\Temp.xlsx");
+                try
+                {
+                    workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
+                }catch(Exception error)
+                {
+                    MessageBox.Show("ERROR: Network down, please report to supervisor immediately. Data saved to local folder.", "ERROR",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine(error);
+
+                    //ERROR SAVING
+                    workbook.SaveAs($@"C:\PBET-Backup\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
+                }
+               
 
                 //CLEAR EVERYTHING
                 //DONE WITH SHIFT

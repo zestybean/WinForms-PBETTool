@@ -37,6 +37,7 @@ namespace PBET
             this.label2 = new System.Windows.Forms.Label();
             this.passwordTxtBox = new System.Windows.Forms.TextBox();
             this.errorLbl = new System.Windows.Forms.Label();
+            this.appTestingChkBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label10
@@ -114,7 +115,7 @@ namespace PBET
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(105, 158);
+            this.label2.Location = new System.Drawing.Point(105, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 29);
             this.label2.TabIndex = 20;
@@ -124,7 +125,7 @@ namespace PBET
             // passwordTxtBox
             // 
             this.passwordTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.passwordTxtBox.Location = new System.Drawing.Point(220, 154);
+            this.passwordTxtBox.Location = new System.Drawing.Point(220, 199);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.Size = new System.Drawing.Size(205, 33);
             this.passwordTxtBox.TabIndex = 21;
@@ -136,12 +137,24 @@ namespace PBET
             this.errorLbl.AutoSize = true;
             this.errorLbl.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.errorLbl.ForeColor = System.Drawing.Color.Red;
-            this.errorLbl.Location = new System.Drawing.Point(220, 139);
+            this.errorLbl.Location = new System.Drawing.Point(220, 184);
             this.errorLbl.Name = "errorLbl";
             this.errorLbl.Size = new System.Drawing.Size(37, 14);
             this.errorLbl.TabIndex = 22;
             this.errorLbl.Text = "label3";
             this.errorLbl.Visible = false;
+            // 
+            // appTestingChkBox
+            // 
+            this.appTestingChkBox.AutoSize = true;
+            this.appTestingChkBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appTestingChkBox.Location = new System.Drawing.Point(220, 138);
+            this.appTestingChkBox.Name = "appTestingChkBox";
+            this.appTestingChkBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.appTestingChkBox.Size = new System.Drawing.Size(165, 23);
+            this.appTestingChkBox.TabIndex = 24;
+            this.appTestingChkBox.Text = ": Application Testing";
+            this.appTestingChkBox.UseVisualStyleBackColor = true;
             // 
             // AdminPopUp
             // 
@@ -150,6 +163,7 @@ namespace PBET
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(600, 317);
             this.ControlBox = false;
+            this.Controls.Add(this.appTestingChkBox);
             this.Controls.Add(this.errorLbl);
             this.Controls.Add(this.passwordTxtBox);
             this.Controls.Add(this.label2);
@@ -179,5 +193,6 @@ namespace PBET
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox passwordTxtBox;
         private System.Windows.Forms.Label errorLbl;
+        private System.Windows.Forms.CheckBox appTestingChkBox;
     }
 }

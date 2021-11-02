@@ -46,5 +46,17 @@ namespace PBET.Properties {
                 this["AppVersion"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Testing {
+            get {
+                return ((bool)(this["Testing"]));
+            }
+            set {
+                this["Testing"] = value;
+            }
+        }
     }
 }
