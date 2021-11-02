@@ -39,8 +39,8 @@ namespace PBET
             this.shiftTxtBox = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.codeLbl = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorLbl = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.shiftTxtBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,7 @@ namespace PBET
             this.opTxtBox.Name = "opTxtBox";
             this.opTxtBox.Size = new System.Drawing.Size(205, 33);
             this.opTxtBox.TabIndex = 1;
+            this.opTxtBox.Click += new System.EventHandler(this.opTxtBox_Click);
             this.opTxtBox.TextChanged += new System.EventHandler(this.opTxtBox_TextChanged);
             // 
             // submitBtn
@@ -170,17 +171,6 @@ namespace PBET
             this.codeLbl.TabIndex = 67;
             this.codeLbl.Text = "1111";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pictureBox1.Image = global::PBET.Properties.Resources.ckt_logo_white300;
-            this.pictureBox1.Location = new System.Drawing.Point(-25, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(455, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 68;
-            this.pictureBox1.TabStop = false;
-            // 
             // errorLbl
             // 
             this.errorLbl.AutoSize = true;
@@ -192,6 +182,17 @@ namespace PBET
             this.errorLbl.TabIndex = 69;
             this.errorLbl.Text = "Error: Code is not correct.";
             this.errorLbl.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBox1.Image = global::PBET.Properties.Resources.ckt_logo_white300;
+            this.pictureBox1.Location = new System.Drawing.Point(-25, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(455, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 68;
+            this.pictureBox1.TabStop = false;
             // 
             // SubmitPopUp
             // 

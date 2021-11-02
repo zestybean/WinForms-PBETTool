@@ -80,5 +80,15 @@ namespace PBET
 
             this.DialogResult = DialogResult.OK;
         }
+        /// <summary>
+        /// TESTING
+        /// </summary>
+        //IF TOUCH IS ENABLED
+        private void opTxtBox_Click(object sender, EventArgs e)
+        {
+            InputPopUp input = new InputPopUp();
+
+            input.ShowDialog();
+        }
     }
 }
