@@ -86,9 +86,30 @@ namespace PBET
         //IF TOUCH IS ENABLED
         private void opTxtBox_Click(object sender, EventArgs e)
         {
-            InputPopUp input = new InputPopUp();
+            InputPopUp input = new InputPopUp(numOnly: false);
 
-            input.ShowDialog();
+            if (input.ShowDialog(this) == DialogResult.OK)
+            {
+                opTxtBox.Text = input.textReturn;
+            }
+            else
+            {
+                //Cancel
+            }
+        }
+
+        private void codeTxtBox_Click(object sender, EventArgs e)
+        {
+            InputPopUp input = new InputPopUp(numOnly: false);
+
+            if (input.ShowDialog(this) == DialogResult.OK)
+            {
+                codeTxtBox.Text = input.textReturn;
+            }
+            else
+            {
+                //Cancel
+            }
         }
     }
 }

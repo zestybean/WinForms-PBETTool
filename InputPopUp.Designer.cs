@@ -73,17 +73,19 @@ namespace PBET
             this.button38 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // inputTxtBox
             // 
             this.inputTxtBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.inputTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.inputTxtBox.Location = new System.Drawing.Point(163, 76);
+            this.inputTxtBox.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputTxtBox.Location = new System.Drawing.Point(80, 29);
             this.inputTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.inputTxtBox.Name = "inputTxtBox";
             this.inputTxtBox.ReadOnly = true;
-            this.inputTxtBox.Size = new System.Drawing.Size(261, 33);
+            this.inputTxtBox.Size = new System.Drawing.Size(434, 43);
             this.inputTxtBox.TabIndex = 2;
             this.inputTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -102,6 +104,7 @@ namespace PBET
             this.cancelBtn.TabIndex = 5;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // submitBtn
             // 
@@ -118,6 +121,7 @@ namespace PBET
             this.submitBtn.TabIndex = 6;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = false;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // button1
             // 
@@ -251,7 +255,7 @@ namespace PBET
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(49, 47);
             this.button8.TabIndex = 14;
-            this.button8.Text = "88";
+            this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.numInput);
             // 
@@ -302,8 +306,9 @@ namespace PBET
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(49, 47);
             this.button11.TabIndex = 26;
-            this.button11.Text = "0";
+            this.button11.Text = "J";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.textInput);
             // 
             // button12
             // 
@@ -318,8 +323,9 @@ namespace PBET
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(49, 47);
             this.button12.TabIndex = 25;
-            this.button12.Text = "9";
+            this.button12.Text = "I";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.textInput);
             // 
             // button13
             // 
@@ -334,8 +340,9 @@ namespace PBET
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(49, 47);
             this.button13.TabIndex = 24;
-            this.button13.Text = "88";
+            this.button13.Text = "H";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.textInput);
             // 
             // button14
             // 
@@ -350,8 +357,9 @@ namespace PBET
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(49, 47);
             this.button14.TabIndex = 23;
-            this.button14.Text = "7";
+            this.button14.Text = "G";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.textInput);
             // 
             // button15
             // 
@@ -366,8 +374,9 @@ namespace PBET
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(49, 47);
             this.button15.TabIndex = 22;
-            this.button15.Text = "6";
+            this.button15.Text = "F";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.textInput);
             // 
             // button16
             // 
@@ -382,8 +391,9 @@ namespace PBET
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(49, 47);
             this.button16.TabIndex = 21;
-            this.button16.Text = "5";
+            this.button16.Text = "E";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.textInput);
             // 
             // button17
             // 
@@ -398,8 +408,9 @@ namespace PBET
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(49, 47);
             this.button17.TabIndex = 20;
-            this.button17.Text = "4";
+            this.button17.Text = "D";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.textInput);
             // 
             // button18
             // 
@@ -414,8 +425,9 @@ namespace PBET
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(49, 47);
             this.button18.TabIndex = 19;
-            this.button18.Text = "3";
+            this.button18.Text = "C";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.textInput);
             // 
             // button19
             // 
@@ -430,8 +442,9 @@ namespace PBET
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(49, 47);
             this.button19.TabIndex = 18;
-            this.button19.Text = "2";
+            this.button19.Text = "B";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.textInput);
             // 
             // button20
             // 
@@ -446,8 +459,9 @@ namespace PBET
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(49, 47);
             this.button20.TabIndex = 17;
-            this.button20.Text = "1";
+            this.button20.Text = "A";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.textInput);
             // 
             // button21
             // 
@@ -462,8 +476,9 @@ namespace PBET
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(49, 47);
             this.button21.TabIndex = 36;
-            this.button21.Text = "0";
+            this.button21.Text = "T";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.textInput);
             // 
             // button22
             // 
@@ -478,8 +493,9 @@ namespace PBET
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(49, 47);
             this.button22.TabIndex = 35;
-            this.button22.Text = "9";
+            this.button22.Text = "S";
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.textInput);
             // 
             // button23
             // 
@@ -494,8 +510,9 @@ namespace PBET
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(49, 47);
             this.button23.TabIndex = 34;
-            this.button23.Text = "88";
+            this.button23.Text = "R";
             this.button23.UseVisualStyleBackColor = false;
+            this.button23.Click += new System.EventHandler(this.textInput);
             // 
             // button24
             // 
@@ -510,8 +527,9 @@ namespace PBET
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(49, 47);
             this.button24.TabIndex = 33;
-            this.button24.Text = "7";
+            this.button24.Text = "Q";
             this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.textInput);
             // 
             // button25
             // 
@@ -526,8 +544,9 @@ namespace PBET
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(49, 47);
             this.button25.TabIndex = 32;
-            this.button25.Text = "6";
+            this.button25.Text = "P";
             this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.textInput);
             // 
             // button26
             // 
@@ -542,8 +561,9 @@ namespace PBET
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(49, 47);
             this.button26.TabIndex = 31;
-            this.button26.Text = "5";
+            this.button26.Text = "O";
             this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.textInput);
             // 
             // button27
             // 
@@ -558,8 +578,9 @@ namespace PBET
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(49, 47);
             this.button27.TabIndex = 30;
-            this.button27.Text = "4";
+            this.button27.Text = "N";
             this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.textInput);
             // 
             // button28
             // 
@@ -574,8 +595,9 @@ namespace PBET
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(49, 47);
             this.button28.TabIndex = 29;
-            this.button28.Text = "3";
+            this.button28.Text = "M";
             this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.textInput);
             // 
             // button29
             // 
@@ -590,8 +612,9 @@ namespace PBET
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(49, 47);
             this.button29.TabIndex = 28;
-            this.button29.Text = "2";
+            this.button29.Text = "L";
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.textInput);
             // 
             // button30
             // 
@@ -606,14 +629,15 @@ namespace PBET
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(49, 47);
             this.button30.TabIndex = 27;
-            this.button30.Text = "1";
+            this.button30.Text = "K";
             this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.textInput);
             // 
             // button31
             // 
             this.button31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button31.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button31.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.button31.BackColor = System.Drawing.Color.MediumPurple;
+            this.button31.FlatAppearance.BorderColor = System.Drawing.Color.DarkViolet;
             this.button31.FlatAppearance.BorderSize = 3;
             this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button31.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
@@ -622,14 +646,15 @@ namespace PBET
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(49, 47);
             this.button31.TabIndex = 46;
-            this.button31.Text = "0";
+            this.button31.Text = "/";
             this.button31.UseVisualStyleBackColor = false;
+            this.button31.Click += new System.EventHandler(this.textInput);
             // 
             // button32
             // 
             this.button32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button32.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button32.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.button32.BackColor = System.Drawing.Color.MediumPurple;
+            this.button32.FlatAppearance.BorderColor = System.Drawing.Color.DarkViolet;
             this.button32.FlatAppearance.BorderSize = 3;
             this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button32.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
@@ -638,14 +663,15 @@ namespace PBET
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(49, 47);
             this.button32.TabIndex = 45;
-            this.button32.Text = "9";
+            this.button32.Text = "-";
             this.button32.UseVisualStyleBackColor = false;
+            this.button32.Click += new System.EventHandler(this.textInput);
             // 
             // button33
             // 
             this.button33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button33.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button33.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.button33.BackColor = System.Drawing.Color.MediumPurple;
+            this.button33.FlatAppearance.BorderColor = System.Drawing.Color.DarkViolet;
             this.button33.FlatAppearance.BorderSize = 3;
             this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button33.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
@@ -654,14 +680,15 @@ namespace PBET
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(49, 47);
             this.button33.TabIndex = 44;
-            this.button33.Text = "88";
+            this.button33.Text = ")";
             this.button33.UseVisualStyleBackColor = false;
+            this.button33.Click += new System.EventHandler(this.textInput);
             // 
             // button34
             // 
             this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button34.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button34.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.button34.BackColor = System.Drawing.Color.MediumPurple;
+            this.button34.FlatAppearance.BorderColor = System.Drawing.Color.DarkViolet;
             this.button34.FlatAppearance.BorderSize = 3;
             this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button34.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
@@ -670,8 +697,9 @@ namespace PBET
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(49, 47);
             this.button34.TabIndex = 43;
-            this.button34.Text = "7";
+            this.button34.Text = "(";
             this.button34.UseVisualStyleBackColor = false;
+            this.button34.Click += new System.EventHandler(this.textInput);
             // 
             // button35
             // 
@@ -686,8 +714,9 @@ namespace PBET
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(49, 47);
             this.button35.TabIndex = 42;
-            this.button35.Text = "6";
+            this.button35.Text = "Z";
             this.button35.UseVisualStyleBackColor = false;
+            this.button35.Click += new System.EventHandler(this.textInput);
             // 
             // button36
             // 
@@ -702,8 +731,9 @@ namespace PBET
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(49, 47);
             this.button36.TabIndex = 41;
-            this.button36.Text = "5";
+            this.button36.Text = "Y";
             this.button36.UseVisualStyleBackColor = false;
+            this.button36.Click += new System.EventHandler(this.textInput);
             // 
             // button37
             // 
@@ -718,8 +748,9 @@ namespace PBET
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(49, 47);
             this.button37.TabIndex = 40;
-            this.button37.Text = "4";
+            this.button37.Text = "X";
             this.button37.UseVisualStyleBackColor = false;
+            this.button37.Click += new System.EventHandler(this.textInput);
             // 
             // button38
             // 
@@ -734,8 +765,9 @@ namespace PBET
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(49, 47);
             this.button38.TabIndex = 39;
-            this.button38.Text = "3";
+            this.button38.Text = "W";
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.textInput);
             // 
             // button39
             // 
@@ -750,8 +782,9 @@ namespace PBET
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(49, 47);
             this.button39.TabIndex = 38;
-            this.button39.Text = "2";
+            this.button39.Text = "V";
             this.button39.UseVisualStyleBackColor = false;
+            this.button39.Click += new System.EventHandler(this.textInput);
             // 
             // button40
             // 
@@ -766,15 +799,53 @@ namespace PBET
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(49, 47);
             this.button40.TabIndex = 37;
-            this.button40.Text = "1";
+            this.button40.Text = "U";
             this.button40.UseVisualStyleBackColor = false;
+            this.button40.Click += new System.EventHandler(this.textInput);
+            // 
+            // clearBtn
+            // 
+            this.clearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearBtn.BackColor = System.Drawing.Color.Crimson;
+            this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.clearBtn.FlatAppearance.BorderSize = 3;
+            this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.clearBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBtn.Location = new System.Drawing.Point(407, 96);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(107, 47);
+            this.clearBtn.TabIndex = 47;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
+            // backBtn
+            // 
+            this.backBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.backBtn.BackColor = System.Drawing.Color.Crimson;
+            this.backBtn.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.backBtn.FlatAppearance.BorderSize = 3;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.backBtn.ForeColor = System.Drawing.Color.White;
+            this.backBtn.Location = new System.Drawing.Point(80, 96);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(107, 47);
+            this.backBtn.TabIndex = 48;
+            this.backBtn.Text = "<-";
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // InputPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(581, 478);
             this.ControlBox = false;
+            this.Controls.Add(this.backBtn);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.button31);
             this.Controls.Add(this.button32);
             this.Controls.Add(this.button33);
@@ -822,6 +893,7 @@ namespace PBET
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "InputPopUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Input Keyboard";
             this.TopMost = true;
             this.ResumeLayout(false);
@@ -874,5 +946,7 @@ namespace PBET
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
+        private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.Button backBtn;
     }
 }

@@ -109,6 +109,7 @@ namespace PBET
             this.codeTxtBox.Name = "codeTxtBox";
             this.codeTxtBox.Size = new System.Drawing.Size(205, 33);
             this.codeTxtBox.TabIndex = 3;
+            this.codeTxtBox.Click += new System.EventHandler(this.codeTxtBox_Click);
             this.codeTxtBox.TextChanged += new System.EventHandler(this.codeTxtBox_TextChanged);
             // 
             // label1
