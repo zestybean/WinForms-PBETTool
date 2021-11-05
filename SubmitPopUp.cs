@@ -86,7 +86,7 @@ namespace PBET
         //IF TOUCH IS ENABLED
         private void opTxtBox_Click(object sender, EventArgs e)
         {
-            InputPopUp input = new InputPopUp(numOnly: false);
+            TextInputPopUp input = new TextInputPopUp();
 
             if (input.ShowDialog(this) == DialogResult.OK)
             {
@@ -100,7 +100,7 @@ namespace PBET
 
         private void codeTxtBox_Click(object sender, EventArgs e)
         {
-            InputPopUp input = new InputPopUp(numOnly: false);
+            TextInputPopUp input = new TextInputPopUp();
 
             if (input.ShowDialog(this) == DialogResult.OK)
             {

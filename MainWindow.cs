@@ -136,8 +136,6 @@ namespace PBET
             double quality = 0.0;
             double oee = 0.0;
 
-            
-
             //HOUR SUMMARY
             hrLbl.Text = dataGridView1.RowCount.ToString();
             goalLbl.Text = tableComputedSum(hoursTable, "Goal");
@@ -156,8 +154,6 @@ namespace PBET
             double actual = Convert.ToInt32(actualLbl.Text);
             double downtime = Convert.ToInt32(downtimeLbl.Text);
             double scrap = Convert.ToInt32(scrapLbl.Text);
-
-            
 
             if(goal > 0)
             {
@@ -309,6 +305,11 @@ namespace PBET
                 hoursTable.WriteXml("temp1.xml");
                 cartsTable.WriteXml("temp2.xml");
 
+                //RESET TEMPS
+                goalHourTemp = 0;
+                seqHourTemp = "";
+                colorCartTemp = "";
+
             }
             else
             {
@@ -354,10 +355,6 @@ namespace PBET
             deleteRowConfirm(dataGridView2);
         }
 
-        
-
-
-        
         /// <summary>
         /// EDIT ROWS IN HOUR DATA GRID
         /// </summary>
@@ -392,7 +389,6 @@ namespace PBET
                 hoursTable.Rows[e.RowIndex]["Downtime Reason"] = addHourPopUp.downtimeReason;
 
                 calcSummaryLabels();
-
 
             }
             else

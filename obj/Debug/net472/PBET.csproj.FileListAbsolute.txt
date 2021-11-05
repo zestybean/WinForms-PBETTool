@@ -19,4 +19,4 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.csproj.CoreCom
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.exe
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.pdb
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.csproj.AssemblyReference.cache
-C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.InputPopUp.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.TextInputPopUp.resources

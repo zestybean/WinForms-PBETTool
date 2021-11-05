@@ -10,17 +10,14 @@ using System.Windows.Forms;
 
 namespace PBET
 {
-    public partial class InputPopUp : Form
+    public partial class TextInputPopUp : Form
     {
-        bool numOnly = false;
-
-        public int numReturn = 0;
         public string textReturn = "";
 
-        public InputPopUp(bool numOnly)
+        public TextInputPopUp()
         {
             InitializeComponent();
-            this.numOnly = numOnly;
+           
         }
 
         /// <summary>
@@ -32,17 +29,7 @@ namespace PBET
 
             inputTxtBox.Text += inputButton.Text;
 
-            if (numOnly)
-            {
-                if (inputTxtBox.Text == string.Empty)
-                {
-                    numReturn = 0;
-                }
-                else
-                {
-                    numReturn = Convert.ToInt32(inputTxtBox.Text);
-                }
-            }
+            textReturn = inputTxtBox.Text;
         }
         
         /// <summary>
@@ -50,10 +37,6 @@ namespace PBET
         /// </summary>
         private void textInput(object sender, EventArgs e)
         {
-            if (numOnly)
-            {
-                return;
-            }
 
             Button inputButton = sender as Button;
 

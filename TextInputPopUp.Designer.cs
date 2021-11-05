@@ -1,7 +1,7 @@
 ﻿
 namespace PBET
 {
-    partial class InputPopUp
+    partial class TextInputPopUp
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace PBET
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InputPopUp));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextInputPopUp));
             this.inputTxtBox = new System.Windows.Forms.TextBox();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.submitBtn = new System.Windows.Forms.Button();
