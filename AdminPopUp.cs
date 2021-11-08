@@ -14,13 +14,18 @@ namespace PBET
     public partial class AdminPopUp : Form
     {
         public string machineName = "";
+        public bool touch = false;
+
         string password = "";
 
-        public AdminPopUp()
+        public AdminPopUp(bool touch)
         {
             InitializeComponent();
 
+            this.touch = touch;
+
             machineTxtBox.Text = Settings.Default["Machine"].ToString();
+            touchCheckBox.Checked = touch;
            
         }
 
@@ -42,6 +47,7 @@ namespace PBET
             if(password == "adminPBET")
             {
                 Settings.Default["Machine"] = machineName;
+                Settings.Default["Touch"] = touch;
                 Settings.Default.Save();
 
                 this.DialogResult = DialogResult.OK;
@@ -68,6 +74,12 @@ namespace PBET
             password = passwordTxtBox.Text;
         }
 
-        
+        /// <summary>
+        /// TOGGLE APP TOUCH
+        /// </summary>
+        private void touchCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            touch = touchCheckBox.Checked;
+        }
     }
 }

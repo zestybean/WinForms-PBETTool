@@ -28,6 +28,7 @@ namespace PBET
 
         //TESTING CHECK
         private bool appTesting = Convert.ToBoolean(Settings.Default["Testing"]);
+        bool touch = Convert.ToBoolean(Settings.Default["Touch"]);
 
         //Data for each of the data grid views on the main screen
         List<string> hoursColStrings = new List<string> { "Hour", "Goal", "Actual", "Variance", "Part Number", "Scrap", "Downtime", "Scrap Reason", "Downtime Reason" };
@@ -272,7 +273,7 @@ namespace PBET
             
             int shiftNum;
             string machine = Settings.Default["Machine"].ToString().ToUpper();
-            SubmitPopUp submitPopUp = new SubmitPopUp();
+            SubmitPopUp submitPopUp = new SubmitPopUp(touch: touch);
 
             if (submitPopUp.ShowDialog(this) == DialogResult.OK)
             {
@@ -490,11 +491,12 @@ namespace PBET
         //needs admin password
         private void adminPanelBtn_Click(object sender, EventArgs e)
         {
-            AdminPopUp adminPopUp = new AdminPopUp();
+            AdminPopUp adminPopUp = new AdminPopUp(touch: touch);
 
             if (adminPopUp.ShowDialog(this) == DialogResult.OK)
             {
                 machineNameLbl.Text = adminPopUp.machineName;
+                touch = adminPopUp.touch;
             }
             else
             {

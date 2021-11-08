@@ -58,5 +58,17 @@ namespace PBET.Properties {
                 this["Testing"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Touch {
+            get {
+                return ((bool)(this["Touch"]));
+            }
+            set {
+                this["Touch"] = value;
+            }
+        }
     }
 }

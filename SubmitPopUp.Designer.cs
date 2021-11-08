@@ -148,6 +148,7 @@ namespace PBET
             this.shiftTxtBox.TabIndex = 2;
             this.shiftTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.shiftTxtBox.ValueChanged += new System.EventHandler(this.shiftTxtBox_ValueChanged);
+            this.shiftTxtBox.Click += new System.EventHandler(this.shiftTxtBox_Click);
             // 
             // label3
             // 

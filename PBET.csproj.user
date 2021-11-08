@@ -10,6 +10,9 @@
     <Compile Update="AdminPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="NumInputPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="TextInputPopUp.cs">
       <SubType>Form</SubType>
     </Compile>

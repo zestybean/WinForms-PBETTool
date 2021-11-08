@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PBET
 {
     public partial class SubmitPopUp : Form
@@ -15,15 +16,17 @@ namespace PBET
         public string operatorName = "";
         public int shift = 0;
         public string codeString = "";
-        
 
+
+        bool touch = false;
         int code = 0;
 
-        public SubmitPopUp()
+        public SubmitPopUp(bool touch)
         {
             InitializeComponent();
             code = GenerateCode();
             codeLbl.Text = code.ToString();
+            this.touch = touch;
         }
 
         private void opTxtBox_TextChanged(object sender, EventArgs e)
@@ -86,6 +89,12 @@ namespace PBET
         //IF TOUCH IS ENABLED
         private void opTxtBox_Click(object sender, EventArgs e)
         {
+            //RETURN IF TOUCH IS DISABLED
+            if (!touch)
+            {
+                return;
+            }
+
             TextInputPopUp input = new TextInputPopUp();
 
             if (input.ShowDialog(this) == DialogResult.OK)
@@ -98,8 +107,40 @@ namespace PBET
             }
         }
 
+        private void shiftTxtBox_Click(object sender, EventArgs e)
+        {
+            //RETURN IF TOUCH IS DISABLED
+            if (!touch)
+            {
+                return;
+            }
+
+            NumInputPopUp input = new NumInputPopUp();
+
+            if (input.ShowDialog(this) == DialogResult.OK)
+            {
+                if (input.numReturn > shiftTxtBox.Maximum)
+                {
+                    shiftTxtBox.Value = shiftTxtBox.Maximum;
+                    return;
+                }
+
+                shiftTxtBox.Value = input.numReturn;
+            }
+            else
+            {
+                //Cancel
+            }
+        }
+
         private void codeTxtBox_Click(object sender, EventArgs e)
         {
+            //RETURN IF TOUCH IS DISABLED
+            if (!touch)
+            {
+                return;
+            }
+
             TextInputPopUp input = new TextInputPopUp();
 
             if (input.ShowDialog(this) == DialogResult.OK)
@@ -111,5 +152,6 @@ namespace PBET
                 //Cancel
             }
         }
+
     }
 }

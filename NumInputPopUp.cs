@@ -10,22 +10,18 @@ using System.Windows.Forms;
 
 namespace PBET
 {
-    public partial class TextInputPopUp : Form
+    public partial class NumInputPopUp : Form
     {
-        public string textReturn = "";
+        public int numReturn = 0;
 
-        public TextInputPopUp()
+        public NumInputPopUp()
         {
             InitializeComponent();
-           
         }
 
-        /// <summary>
-        /// DIGIT INPUT
-        /// </summary>
         private void numInput(object sender, EventArgs e)
         {
-            if (inputTxtBox.TextLength > 20)
+            if (inputTxtBox.TextLength > 4)
             {
                 return;
             }
@@ -34,29 +30,9 @@ namespace PBET
 
             inputTxtBox.Text += inputButton.Text;
 
-            textReturn = inputTxtBox.Text;
-        }
-        
-        /// <summary>
-        /// TEXT INPUT
-        /// </summary>
-        private void textInput(object sender, EventArgs e)
-        {
-            if(inputTxtBox.TextLength > 20)
-            {
-                return;
-            }
-
-            Button inputButton = sender as Button;
-
-            inputTxtBox.Text += inputButton.Text;
-
-            textReturn = inputTxtBox.Text;
+            numReturn = Convert.ToInt32(inputTxtBox.Text);
         }
 
-        /// <summary>
-        /// CLEAR AND BACKSPACE
-        /// </summary>
         private void clearBtn_Click(object sender, EventArgs e)
         {
             inputTxtBox.Text = "";
@@ -64,10 +40,11 @@ namespace PBET
         //BACKSPACE
         private void backBtn_Click(object sender, EventArgs e)
         {
-            if(inputTxtBox.Text == String.Empty)
+            if (inputTxtBox.Text == String.Empty)
             {
                 return;
-            } else
+            }
+            else
             {
                 inputTxtBox.Text = inputTxtBox.Text.Remove(inputTxtBox.Text.Length - 1);
             }
@@ -85,6 +62,5 @@ namespace PBET
         {
             this.DialogResult = DialogResult.OK;
         }
-
     }
 }

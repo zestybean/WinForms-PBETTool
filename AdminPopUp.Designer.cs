@@ -38,6 +38,7 @@ namespace PBET
             this.passwordTxtBox = new System.Windows.Forms.TextBox();
             this.errorLbl = new System.Windows.Forms.Label();
             this.appTestingChkBox = new System.Windows.Forms.CheckBox();
+            this.touchCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label10
@@ -46,7 +47,7 @@ namespace PBET
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(114, 102);
+            this.label10.Location = new System.Drawing.Point(117, 71);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 29);
             this.label10.TabIndex = 15;
@@ -56,7 +57,7 @@ namespace PBET
             // machineTxtBox
             // 
             this.machineTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.machineTxtBox.Location = new System.Drawing.Point(220, 99);
+            this.machineTxtBox.Location = new System.Drawing.Point(223, 68);
             this.machineTxtBox.Name = "machineTxtBox";
             this.machineTxtBox.Size = new System.Drawing.Size(205, 33);
             this.machineTxtBox.TabIndex = 16;
@@ -148,13 +149,26 @@ namespace PBET
             // 
             this.appTestingChkBox.AutoSize = true;
             this.appTestingChkBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appTestingChkBox.Location = new System.Drawing.Point(220, 138);
+            this.appTestingChkBox.Location = new System.Drawing.Point(223, 107);
             this.appTestingChkBox.Name = "appTestingChkBox";
             this.appTestingChkBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.appTestingChkBox.Size = new System.Drawing.Size(165, 23);
             this.appTestingChkBox.TabIndex = 24;
             this.appTestingChkBox.Text = ": Application Testing";
             this.appTestingChkBox.UseVisualStyleBackColor = true;
+            // 
+            // touchCheckBox
+            // 
+            this.touchCheckBox.AutoSize = true;
+            this.touchCheckBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.touchCheckBox.Location = new System.Drawing.Point(223, 136);
+            this.touchCheckBox.Name = "touchCheckBox";
+            this.touchCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.touchCheckBox.Size = new System.Drawing.Size(136, 23);
+            this.touchCheckBox.TabIndex = 25;
+            this.touchCheckBox.Text = ": Touch Enabled";
+            this.touchCheckBox.UseVisualStyleBackColor = true;
+            this.touchCheckBox.CheckedChanged += new System.EventHandler(this.touchCheckBox_CheckedChanged);
             // 
             // AdminPopUp
             // 
@@ -163,6 +177,7 @@ namespace PBET
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(600, 317);
             this.ControlBox = false;
+            this.Controls.Add(this.touchCheckBox);
             this.Controls.Add(this.appTestingChkBox);
             this.Controls.Add(this.errorLbl);
             this.Controls.Add(this.passwordTxtBox);
@@ -194,5 +209,6 @@ namespace PBET
         private System.Windows.Forms.TextBox passwordTxtBox;
         private System.Windows.Forms.Label errorLbl;
         private System.Windows.Forms.CheckBox appTestingChkBox;
+        private System.Windows.Forms.CheckBox touchCheckBox;
     }
 }
