@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using PBET.Properties;
 using ClosedXML.Excel;
 using System.Globalization;
+using System.Data.SqlClient;
 
 namespace PBET
 {
@@ -286,18 +287,40 @@ namespace PBET
                 workbook.Worksheets.Add(cartsTable, "HRxHR Carts");
 
                 //Try for network
-                try
-                {
-                    workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
-                }catch(Exception error)
-                {
-                    MessageBox.Show("ERROR: Network down, please report to supervisor immediately. Data saved to local folder.", "ERROR",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Console.WriteLine(error);
+                //try
+                //{
+                //    workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
+                //}catch(Exception error)
+                //{
+                //    //FAIL
+                //    //LOCAL SAVE
+                //    MessageBox.Show("ERROR: Network down, please report to supervisor immediately. Data saved to local folder.", "ERROR",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    Console.WriteLine(error);
 
-                    //ERROR SAVING
-                    workbook.SaveAs($@"C:\PBET-Backup\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
-                }
+                //    //ERROR SAVING
+                //    workbook.SaveAs($@"C:\PBET-Backup\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
+                //}
+
                
+
+                //SQL TEST
+                SqlConnection sqlConnection = new SqlConnection(@"Data Source=samtah\sqlexpress;Initial Catalog=PBET_DB;Integrated Security=True");
+
+                sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand($@"INSERT INTO tbl_MainlineCarts(ID, TIMESTAMP, TIMEIN, PARTDESCRIPTION, PARTSEQUENCE, QUANTITY, COLOR, REWORK) 
+                                                                            VALUES ({100}, '{date.Date}', '6:00AM', 'HZ TEST', 'HZ SEQ TEST', {4}, '31000', {1})", sqlConnection);
+
+                int i = sqlCommand.ExecuteNonQuery();
+
+                if (i != 0)
+                {
+                    MessageBox.Show("Data Saved");
+                }
+                else
+                {
+                    MessageBox.Show("Error!");
+                }
 
                 //CLEAR EVERYTHING
                 //DONE WITH SHIFT
@@ -310,6 +333,8 @@ namespace PBET
                 goalHourTemp = 0;
                 seqHourTemp = "";
                 colorCartTemp = "";
+
+                
 
             }
             else
