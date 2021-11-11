@@ -308,19 +308,25 @@ namespace PBET
 
                 sqlConnection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand($@"INSERT INTO tbl_MainlineCarts(ID, TIMESTAMP, TIMEIN, PARTDESCRIPTION, PARTSEQUENCE, QUANTITY, COLOR, REWORK) 
-                                                                            VALUES ({100}, '{date.Date}', '6:00AM', 'HZ TEST', 'HZ SEQ TEST', {4}, '31000', {1})", sqlConnection);
+                //SqlCommand sqlCommand = new SqlCommand($@"INSERT INTO tbl_MainlineCarts(ID, TIMESTAMP, TIMEIN, PARTDESCRIPTION, PARTSEQUENCE, QUANTITY, COLOR, REWORK) 
+                                                                            //VALUES ({100}, '{date.Date}', '6:00AM', 'HZ TEST', 'HZ SEQ TEST', {4}, '31000', {1})", sqlConnection);
 
-                int i = sqlCommand.ExecuteNonQuery();
+                for(int row = 0;row<cartsTable.Rows.Count; row++)
+                {
+                    // "Time In", "Part Description", "Part Sequence", "Quantity", "Color", "Rework"
+                    SqlCommand sqlCommand = new SqlCommand($@"INSERT INTO tbl_MainlineCarts(ID, TIMESTAMP, TIMEIN, PARTDESCRIPTION, PARTSEQUENCE, QUANTITY, COLOR, REWORK) 
+                                                                            VALUES ({100},
+                                                                            '{date.Date}', 
+                                                                            '{cartsTable.Rows[row]["Time In"]}', 
+                                                                            '{cartsTable.Rows[row]["Part Description"]}',
+                                                                            '{cartsTable.Rows[row]["Part Sequence"]}', 
+                                                                            {cartsTable.Rows[row]["Quantity"]}, 
+                                                                            '{cartsTable.Rows[row]["Color"]}', 
+                                                                            {Convert.ToByte(cartsTable.Rows[row]["Rework"])})", 
+                                                                            sqlConnection);
+                    sqlCommand.ExecuteNonQuery();
+                }
 
-                if (i != 0)
-                {
-                    MessageBox.Show("Data Saved");
-                }
-                else
-                {
-                    MessageBox.Show("Error!");
-                }
 
                 //CLEAR EVERYTHING
                 //DONE WITH SHIFT
