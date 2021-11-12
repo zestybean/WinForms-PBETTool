@@ -313,9 +313,10 @@ namespace PBET
 
                 for(int row = 0;row<cartsTable.Rows.Count; row++)
                 {
+
                     // "Time In", "Part Description", "Part Sequence", "Quantity", "Color", "Rework"
-                    SqlCommand sqlCommand = new SqlCommand($@"INSERT INTO tbl_MainlineCarts(ID, TIMESTAMP, TIMEIN, PARTDESCRIPTION, PARTSEQUENCE, QUANTITY, COLOR, REWORK) 
-                                                                            VALUES ({100},
+                    SqlCommand sqlCommand = new SqlCommand($@"INSERT INTO tbl_MainlineCarts(TIMESTAMP, TIMEIN, PARTDESCRIPTION, PARTSEQUENCE, QUANTITY, COLOR, REWORK) 
+                                                                            VALUES (
                                                                             '{date.Date}', 
                                                                             '{cartsTable.Rows[row]["Time In"]}', 
                                                                             '{cartsTable.Rows[row]["Part Description"]}',
