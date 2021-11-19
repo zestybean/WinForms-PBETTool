@@ -291,7 +291,7 @@ namespace PBET
                 //Try for network
                 try
                 {
-                    //workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
+                    workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
                     
                     //SQL TEST
                     using (SqlConnection sqlConnection = new SqlConnection(@"Data Source=samtah\sqlexpress;Initial Catalog=PBET_DB;Integrated Security=True"))
@@ -362,7 +362,7 @@ namespace PBET
                     Console.WriteLine(error);
 
                     //ERROR SAVING
-                    //workbook.SaveAs($@"C:\PBET-Backup\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
+                    workbook.SaveAs($@"C:\PBET-Backup\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
                 }
             }
             else
