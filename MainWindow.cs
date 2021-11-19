@@ -279,6 +279,7 @@ namespace PBET
             if (submitPopUp.ShowDialog(this) == DialogResult.OK)
             {
                 shiftNum = submitPopUp.shift;
+
                 var date = DateTime.Now;
 
                 var workbook = new XLWorkbook();
@@ -301,32 +302,36 @@ namespace PBET
                 //    workbook.SaveAs($@"C:\PBET-Backup\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
                 //}
 
-               
+
 
                 //SQL TEST
-                SqlConnection sqlConnection = new SqlConnection(@"Data Source=samtah\sqlexpress;Initial Catalog=PBET_DB;Integrated Security=True");
-
-                sqlConnection.Open();
-
-                //SqlCommand sqlCommand = new SqlCommand($@"INSERT INTO tbl_MainlineCarts(ID, TIMESTAMP, TIMEIN, PARTDESCRIPTION, PARTSEQUENCE, QUANTITY, COLOR, REWORK) 
-                                                                            //VALUES ({100}, '{date.Date}', '6:00AM', 'HZ TEST', 'HZ SEQ TEST', {4}, '31000', {1})", sqlConnection);
-
-                for(int row = 0;row<cartsTable.Rows.Count; row++)
+                using (SqlConnection sqlConnection = new SqlConnection(@"Data Source=samtah\sqlexpress;Initial Catalog=PBET_DB;Integrated Security=True"))
                 {
+                    sqlConnection.Open();
+                    if(machine == "TEST" || machine == "MAINLINE" || machine == "SPOVEN 1" || machine == "SPOVEN 2" || machine == "SPOVEN 3")
+                    {
+                        for (int row = 0; row < cartsTable.Rows.Count; row++)
+                        {
+                            using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineCarts", sqlConnection))
+                            {
+                                sqlCommand.CommandType = CommandType.StoredProcedure;
+                                sqlCommand.Parameters.Add("@SHIFT", SqlDbType.Int).Value = shiftNum;
+                                sqlCommand.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = machine;
+                                sqlCommand.Parameters.Add("@TIMESTAMP", SqlDbType.Date).Value = date.Date;
+                                sqlCommand.Parameters.Add("@TIMEIN", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Time In"];
+                                sqlCommand.Parameters.Add("@PARTDESCRIPTION", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Part Description"];
+                                sqlCommand.Parameters.Add("@PARTSEQUENCE", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Part Sequence"];
+                                sqlCommand.Parameters.Add("@QUANTITY", SqlDbType.Int).Value = cartsTable.Rows[row]["Quantity"];
+                                sqlCommand.Parameters.Add("@COLOR", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Color"];
+                                sqlCommand.Parameters.Add("@REWORK", SqlDbType.Bit).Value = Convert.ToByte(cartsTable.Rows[row]["Rework"]);
+                                sqlCommand.ExecuteNonQuery();
+                            }
 
-                    // "Time In", "Part Description", "Part Sequence", "Quantity", "Color", "Rework"
-                    SqlCommand sqlCommand = new SqlCommand($@"INSERT INTO tbl_MainlineCarts(TIMESTAMP, TIMEIN, PARTDESCRIPTION, PARTSEQUENCE, QUANTITY, COLOR, REWORK) 
-                                                                            VALUES (
-                                                                            '{date.Date}', 
-                                                                            '{cartsTable.Rows[row]["Time In"]}', 
-                                                                            '{cartsTable.Rows[row]["Part Description"]}',
-                                                                            '{cartsTable.Rows[row]["Part Sequence"]}', 
-                                                                            {cartsTable.Rows[row]["Quantity"]}, 
-                                                                            '{cartsTable.Rows[row]["Color"]}', 
-                                                                            {Convert.ToByte(cartsTable.Rows[row]["Rework"])})", 
-                                                                            sqlConnection);
-                    sqlCommand.ExecuteNonQuery();
+                        }
+                    }
+                    sqlConnection.Close();
                 }
+
 
 
                 //CLEAR EVERYTHING
