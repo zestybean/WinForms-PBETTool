@@ -645,18 +645,18 @@ namespace PBET
             // reworkChkBox
             // 
             this.reworkChkBox.AutoSize = true;
-            this.reworkChkBox.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.reworkChkBox.BackColor = System.Drawing.Color.BlueViolet;
             this.reworkChkBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.reworkChkBox.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.reworkChkBox.FlatAppearance.BorderSize = 3;
-            this.reworkChkBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.reworkChkBox.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.reworkChkBox.FlatAppearance.BorderSize = 100;
+            this.reworkChkBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.reworkChkBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.reworkChkBox.ForeColor = System.Drawing.Color.Transparent;
-            this.reworkChkBox.Location = new System.Drawing.Point(290, 487);
+            this.reworkChkBox.Location = new System.Drawing.Point(288, 487);
             this.reworkChkBox.Margin = new System.Windows.Forms.Padding(0);
             this.reworkChkBox.Name = "reworkChkBox";
-            this.reworkChkBox.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.reworkChkBox.Size = new System.Drawing.Size(103, 27);
+            this.reworkChkBox.Padding = new System.Windows.Forms.Padding(10);
+            this.reworkChkBox.Size = new System.Drawing.Size(115, 47);
             this.reworkChkBox.TabIndex = 53;
             this.reworkChkBox.Text = "Rework:";
             this.reworkChkBox.UseVisualStyleBackColor = false;

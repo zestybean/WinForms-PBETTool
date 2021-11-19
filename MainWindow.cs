@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using PBET.Properties;
 using ClosedXML.Excel;
 using System.Globalization;
+using System.Data.SqlClient;
 
 namespace PBET
 {
@@ -278,6 +279,7 @@ namespace PBET
             if (submitPopUp.ShowDialog(this) == DialogResult.OK)
             {
                 shiftNum = submitPopUp.shift;
+
                 var date = DateTime.Now;
 
                 var workbook = new XLWorkbook();
@@ -285,40 +287,89 @@ namespace PBET
                 workbook.Worksheets.Add(hoursTable, "HRxHR Parts");
                 workbook.Worksheets.Add(cartsTable, "HRxHR Carts");
 
+
                 //Try for network
                 try
                 {
                     workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
-                }catch(Exception error)
+                    
+                    //SQL TEST
+                    using (SqlConnection sqlConnection = new SqlConnection(@"Data Source=samtah\sqlexpress;Initial Catalog=PBET_DB;Integrated Security=True"))
+                    {
+                        sqlConnection.Open();
+                        if (machine == "TEST" || machine == "MAINLINE" || machine == "SPOVEN 1" || machine == "SPOVEN 2" || machine == "SPOVEN 3")
+                        {
+                            for (int row = 0; row < hoursTable.Rows.Count; row++)
+                            {
+                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineHours", sqlConnection))
+                                {
+                                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                                    sqlCommand.Parameters.Add("@SHIFT", SqlDbType.Int).Value = shiftNum;
+                                    sqlCommand.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = machine;
+                                    sqlCommand.Parameters.Add("@TIMESTAMP", SqlDbType.Date).Value = date.Date;
+                                    sqlCommand.Parameters.Add("@HOUR", SqlDbType.VarChar).Value = hoursTable.Rows[row]["Hour"];
+                                    sqlCommand.Parameters.Add("@GOAL", SqlDbType.Int).Value = hoursTable.Rows[row]["Goal"];
+                                    sqlCommand.Parameters.Add("@ACTUAL", SqlDbType.Int).Value = hoursTable.Rows[row]["Actual"];
+                                    sqlCommand.Parameters.Add("@VARIANCE", SqlDbType.Int).Value = hoursTable.Rows[row]["Variance"];
+                                    sqlCommand.Parameters.Add("@PARTNUMBER", SqlDbType.VarChar).Value = hoursTable.Rows[row]["Part Number"];
+                                    sqlCommand.Parameters.Add("@SCRAP", SqlDbType.Int).Value = hoursTable.Rows[row]["Scrap"];
+                                    sqlCommand.Parameters.Add("@DOWNTIME", SqlDbType.Int).Value = hoursTable.Rows[row]["Downtime"];
+                                    sqlCommand.Parameters.Add("@SCRAPREASON", SqlDbType.VarChar).Value = hoursTable.Rows[row]["Scrap Reason"];
+                                    sqlCommand.Parameters.Add("@DOWNTIMEREASON", SqlDbType.VarChar).Value = hoursTable.Rows[row]["Downtime Reason"];
+                                    sqlCommand.ExecuteNonQuery();
+                                }
+                            }
+
+                            for (int row = 0; row < cartsTable.Rows.Count; row++)
+                            {
+                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineCarts", sqlConnection))
+                                {
+                                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                                    sqlCommand.Parameters.Add("@SHIFT", SqlDbType.Int).Value = shiftNum;
+                                    sqlCommand.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = machine;
+                                    sqlCommand.Parameters.Add("@TIMESTAMP", SqlDbType.Date).Value = date.Date;
+                                    sqlCommand.Parameters.Add("@TIMEIN", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Time In"];
+                                    sqlCommand.Parameters.Add("@PARTDESCRIPTION", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Part Description"];
+                                    sqlCommand.Parameters.Add("@PARTSEQUENCE", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Part Sequence"];
+                                    sqlCommand.Parameters.Add("@QUANTITY", SqlDbType.Int).Value = cartsTable.Rows[row]["Quantity"];
+                                    sqlCommand.Parameters.Add("@COLOR", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Color"];
+                                    sqlCommand.Parameters.Add("@REWORK", SqlDbType.Bit).Value = Convert.ToByte(cartsTable.Rows[row]["Rework"]);
+                                    sqlCommand.ExecuteNonQuery();
+                                }
+
+                            }
+                        }
+                        sqlConnection.Close();
+                    }
+
+                    //CLEAR EVERYTHING
+                    //DONE WITH SHIFT
+                    hoursTable.Clear();
+                    cartsTable.Clear();
+                    hoursTable.WriteXml("temp1.xml");
+                    cartsTable.WriteXml("temp2.xml");
+
+                    //RESET TEMPS
+                    goalHourTemp = 0;
+                    seqHourTemp = "";
+                    colorCartTemp = "";
+                }
+                catch (Exception error)
                 {
-                    MessageBox.Show("ERROR: Network down, please report to supervisor immediately. Data saved to local folder.", "ERROR",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //FAIL
+                    //LOCAL SAVE
+                    MessageBox.Show("ERROR: Network down, please report to supervisor immediately. Data saved to local folder.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Console.WriteLine(error);
 
                     //ERROR SAVING
                     workbook.SaveAs($@"C:\PBET-Backup\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
                 }
-               
-
-                //CLEAR EVERYTHING
-                //DONE WITH SHIFT
-                hoursTable.Clear();
-                cartsTable.Clear();
-                hoursTable.WriteXml("temp1.xml");
-                cartsTable.WriteXml("temp2.xml");
-
-                //RESET TEMPS
-                goalHourTemp = 0;
-                seqHourTemp = "";
-                colorCartTemp = "";
-
             }
             else
             {
                 //Cancel
             }
         }
-
-        
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
