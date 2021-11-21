@@ -361,6 +361,9 @@ namespace PBET
                     MessageBox.Show("ERROR: Network down, please report to supervisor immediately. Data saved to local folder.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Console.WriteLine(error);
 
+                    //MAKE A LOG FOR CRASHES
+                    WriteLogFile.WriteLog("ConsoleLog", String.Format("{0} @ {1}", error.ToString(), DateTime.Now));
+
                     //ERROR SAVING
                     workbook.SaveAs($@"C:\PBET-Backup\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
                 }
