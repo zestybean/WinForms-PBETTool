@@ -246,7 +246,7 @@ namespace PBET
         /// </summary>
         private void addHourBtn_Click(object sender, EventArgs e)
         {
-            AddHourPopUp addHourPopUp = new AddHourPopUp(goalHourTemp, 0, seqHourTemp, 0, 0, "", "");
+            AddHourPopUp addHourPopUp = new AddHourPopUp(goalHourTemp, 0, seqHourTemp, 0, 0, "", "", touch);
 
             if(addHourPopUp.ShowDialog(this) == DialogResult.OK)
             {
@@ -429,7 +429,7 @@ namespace PBET
             string scrapReason = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
             string downtimeReason = this.dataGridView1.CurrentRow.Cells[8].Value.ToString();
 
-            AddHourPopUp addHourPopUp = new AddHourPopUp(goal, actual, sequence, scrap, downtime, scrapReason, downtimeReason);
+            AddHourPopUp addHourPopUp = new AddHourPopUp(goal, actual, sequence, scrap, downtime, scrapReason, downtimeReason, touch);
 
             if (addHourPopUp.ShowDialog(this) == DialogResult.OK)
             {
@@ -457,7 +457,7 @@ namespace PBET
         /// </summary>
         private void addCartBtn_Click(object sender, EventArgs e)
         {
-            AddCartPopUp addCartPopUp = new AddCartPopUp("", "", 0, colorCartTemp, false);
+            AddCartPopUp addCartPopUp = new AddCartPopUp("", "", 0, colorCartTemp, false, touch);
 
             if (addCartPopUp.ShowDialog(this) == DialogResult.OK)
             {
@@ -500,7 +500,7 @@ namespace PBET
             string color = this.dataGridView2.CurrentRow.Cells[4].Value.ToString();
             bool rework = Convert.ToBoolean(this.dataGridView2.CurrentRow.Cells[5].Value);
 
-            AddCartPopUp addHourPopUp = new AddCartPopUp(description, sequence, quantity, color, rework);
+            AddCartPopUp addHourPopUp = new AddCartPopUp(description, sequence, quantity, color, rework, touch);
 
             if (addHourPopUp.ShowDialog(this) == DialogResult.OK)
             {

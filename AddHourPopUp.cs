@@ -21,7 +21,9 @@ namespace PBET
         public string downtimeReason;
         public string scrapReason;
 
-        public AddHourPopUp(int goal, int actual,string sequence, int scrap, int downtime, string scrapReason, string downtimeReason)
+        bool touch;
+
+        public AddHourPopUp(int goal, int actual,string sequence, int scrap, int downtime, string scrapReason, string downtimeReason, bool touch)
         {
             InitializeComponent();
 
@@ -33,6 +35,8 @@ namespace PBET
             this.downtimeReason = downtimeReason;
             this.scrapReason = scrapReason;
 
+            this.touch = touch;
+
             goalTxtBox.Value = goal;
             actualTxtBox.Value = actual;
             seqTxtBox.Text = sequence;
@@ -40,6 +44,8 @@ namespace PBET
             downTxtBox.Value = downtime;
             scrapReasonTxtBox.Text = scrapReason;
             downtimeReasonTxtBox.Text = downtimeReason;
+
+            
 
         }
 
@@ -142,11 +148,59 @@ namespace PBET
         //HIGLIGHT NUM UP DOWN ON CLICK OR TAB
         private void numUpDownEnter(object sender, EventArgs e)
         {
+
+
             if (sender is NumericUpDown)
             {
                 (sender as NumericUpDown).Select(0, (sender as NumericUpDown).Text.Length);
             }
+
+            //RETURN IF TOUCH IS DISABLED
+            if (!touch)
+            {
+                return;
+            }
+
+            NumInputPopUp input = new NumInputPopUp();
+
+            if (input.ShowDialog(this) == DialogResult.OK)
+            {
+                if (sender is NumericUpDown)
+                {
+                    if (input.numReturn > (sender as NumericUpDown).Maximum)
+                    {
+                        (sender as NumericUpDown).Value = (sender as NumericUpDown).Maximum;
+                        return;
+                    }
+
+                    (sender as NumericUpDown).Value = input.numReturn;
+                }
+
+            }
+            else
+            {
+                //Cancel
+            }
         }
 
+        private void seqTxtBoxClicked(object sender, EventArgs e)
+        {
+            //RETURN IF TOUCH IS DISABLED
+            if (!touch)
+            {
+                return;
+            }
+
+            TextInputPopUp input = new TextInputPopUp();
+
+            if (input.ShowDialog(this) == DialogResult.OK)
+            {
+                seqTxtBox.Text = input.textReturn;
+            }
+            else
+            {
+                //Cancel
+            }
+        }
     }
 }

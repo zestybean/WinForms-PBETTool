@@ -135,6 +135,7 @@ namespace PBET
             this.seqTxtBox.Name = "seqTxtBox";
             this.seqTxtBox.Size = new System.Drawing.Size(205, 33);
             this.seqTxtBox.TabIndex = 3;
+            this.seqTxtBox.Click += new System.EventHandler(this.seqTxtBoxClicked);
             this.seqTxtBox.TextChanged += new System.EventHandler(this.seqTxtBox_TextChanged);
             // 
             // downtimeReasonTxtBox

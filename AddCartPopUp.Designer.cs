@@ -431,6 +431,7 @@ namespace PBET
             this.seqTxtBox.Name = "seqTxtBox";
             this.seqTxtBox.Size = new System.Drawing.Size(205, 33);
             this.seqTxtBox.TabIndex = 50;
+            this.seqTxtBox.Click += new System.EventHandler(this.TxtBoxClicked);
             this.seqTxtBox.TextChanged += new System.EventHandler(this.seqTxtBox_TextChanged);
             // 
             // colorTxtBox
@@ -441,6 +442,7 @@ namespace PBET
             this.colorTxtBox.Name = "colorTxtBox";
             this.colorTxtBox.Size = new System.Drawing.Size(111, 33);
             this.colorTxtBox.TabIndex = 52;
+            this.colorTxtBox.Click += new System.EventHandler(this.TxtBoxClicked);
             this.colorTxtBox.TextChanged += new System.EventHandler(this.colorTxtBox_TextChanged);
             // 
             // label5

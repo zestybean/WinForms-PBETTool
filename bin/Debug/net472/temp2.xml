@@ -24,4 +24,12 @@
     <Color>Clear</Color>
     <Rework>false</Rework>
   </cartsTable>
+  <cartsTable>
+    <Time_x0020_In>19:36 PM</Time_x0020_In>
+    <Part_x0020_Description>HZ Front</Part_x0020_Description>
+    <Part_x0020_Sequence>NNNN</Part_x0020_Sequence>
+    <Quantity>55</Quantity>
+    <Color>888</Color>
+    <Rework>false</Rework>
+  </cartsTable>
 </DocumentElement>

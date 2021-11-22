@@ -18,7 +18,9 @@ namespace PBET
         public string partColor;
         public bool partRework;
 
-        public AddCartPopUp(string partDescription, string partNumber, int partQuantity, string partColor, bool partRework)
+        bool touch;
+
+        public AddCartPopUp(string partDescription, string partNumber, int partQuantity, string partColor, bool partRework, bool touch)
         {
             InitializeComponent();
 
@@ -27,6 +29,8 @@ namespace PBET
             this.partQuantity = partQuantity;
             this.partColor = partColor;
             this.partRework = partRework;
+
+            this.touch = touch;
 
             partDescTxtBox.Text = partDescription;
             seqTxtBox.Text = partNumber;
@@ -133,6 +137,51 @@ namespace PBET
             if (sender is NumericUpDown)
             {
                 (sender as NumericUpDown).Select(0, (sender as NumericUpDown).Text.Length);
+            }
+
+            NumInputPopUp input = new NumInputPopUp();
+
+            if (input.ShowDialog(this) == DialogResult.OK)
+            {
+                if (sender is NumericUpDown)
+                {
+                    if (input.numReturn > (sender as NumericUpDown).Maximum)
+                    {
+                        (sender as NumericUpDown).Value = (sender as NumericUpDown).Maximum;
+                        return;
+                    }
+
+                    (sender as NumericUpDown).Value = input.numReturn;
+                }
+
+            }
+            else
+            {
+                //Cancel
+            }
+        }
+
+        private void TxtBoxClicked(object sender, EventArgs e)
+        {
+            //RETURN IF TOUCH IS DISABLED
+            if (!touch)
+            {
+                return;
+            }
+
+            TextInputPopUp input = new TextInputPopUp();
+
+            if (input.ShowDialog(this) == DialogResult.OK)
+            {
+                if(sender is TextBox)
+                {
+                    (sender as TextBox).Text = input.textReturn;
+                }
+                
+            }
+            else
+            {
+                //Cancel
             }
         }
     }
