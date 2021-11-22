@@ -139,6 +139,12 @@ namespace PBET
                 (sender as NumericUpDown).Select(0, (sender as NumericUpDown).Text.Length);
             }
 
+            //RETURN IF TOUCH IS DISABLED
+            if (!touch)
+            {
+                return;
+            }
+
             NumInputPopUp input = new NumInputPopUp();
 
             if (input.ShowDialog(this) == DialogResult.OK)

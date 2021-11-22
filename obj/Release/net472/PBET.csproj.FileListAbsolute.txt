@@ -5,13 +5,14 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Release\net472\ClosedXML.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Release\net472\DocumentFormat.OpenXml.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Release\net472\ExcelNumberFormat.dll
 C:\Users\brando.lugo\source\repos\PBET\PBET\bin\Release\net472\System.IO.Packaging.dll
-C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.csproj.AssemblyReference.cache
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.AddCartPopUp.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.AddHourPopUp.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.AdminPopUp.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.MainWindow.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.NumInputPopUp.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.Properties.Resources.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.SubmitPopUp.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.TextInputPopUp.resources
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.csproj.GenerateResource.cache
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.AssemblyInfoInputs.cache
@@ -19,5 +20,4 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.AssemblyInfo
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.csproj.CoreCompileInputs.cache
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.exe
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.pdb
-C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.NumInputPopUp.resources
-C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.TextInputPopUp.resources
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Release\net472\PBET.csproj.AssemblyReference.cache
