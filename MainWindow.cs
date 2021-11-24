@@ -43,7 +43,8 @@ namespace PBET
             //Grab the machine name from the settings
             //at the start of the application
             //you can edit this setting using the admin panel in settings
-            machineNameLbl.Text = Settings.Default["Machine"].ToString();
+            machineNameLbl.Text = Settings.Default["Machine"].ToString().ToUpper();
+            areaNameLbl.Text = Settings.Default["Area"].ToString().ToUpper();
 
             //Datagridview table inits
             this.hoursTable = new DataTable("hoursTable");
@@ -274,6 +275,8 @@ namespace PBET
             
             int shiftNum;
             string machine = Settings.Default["Machine"].ToString().ToUpper();
+            string area = Settings.Default["Area"].ToString().ToUpper();
+
             SubmitPopUp submitPopUp = new SubmitPopUp(touch: touch);
 
             if (submitPopUp.ShowDialog(this) == DialogResult.OK)
@@ -291,23 +294,24 @@ namespace PBET
                 //Try for network
                 try
                 {
-                    workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
+                    //workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
                     
                     //SQL TEST
                     using (SqlConnection sqlConnection = new SqlConnection(@"Data Source=samtah\sqlexpress;Initial Catalog=PBET_DB;Integrated Security=True"))
                     {
                         sqlConnection.Open();
-                        if (machine == "TEST" || machine == "MAINLINE" || machine == "SPOVEN 1" || machine == "SPOVEN 2" || machine == "SPOVEN 3")
+                        if (area == "PAINTLINE")
                         {
+                            
                             for (int row = 0; row < hoursTable.Rows.Count; row++)
                             {
-                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineHours", sqlConnection))
+                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineHoursTEST", sqlConnection))
                                 {
                                     sqlCommand.CommandType = CommandType.StoredProcedure;
                                     sqlCommand.Parameters.Add("@SHIFT", SqlDbType.Int).Value = shiftNum;
                                     sqlCommand.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = machine;
-                                    sqlCommand.Parameters.Add("@TIMESTAMP", SqlDbType.Date).Value = date.Date;
-                                    sqlCommand.Parameters.Add("@HOUR", SqlDbType.VarChar).Value = hoursTable.Rows[row]["Hour"];
+                                    //sqlCommand.Parameters.Add("@TIMESTAMP", SqlDbType.Date).Value = date.Date;
+                                    sqlCommand.Parameters.Add("@TIMEIN", SqlDbType.DateTime).Value = hoursTable.Rows[row]["Hour"];
                                     sqlCommand.Parameters.Add("@GOAL", SqlDbType.Int).Value = hoursTable.Rows[row]["Goal"];
                                     sqlCommand.Parameters.Add("@ACTUAL", SqlDbType.Int).Value = hoursTable.Rows[row]["Actual"];
                                     sqlCommand.Parameters.Add("@VARIANCE", SqlDbType.Int).Value = hoursTable.Rows[row]["Variance"];
@@ -322,13 +326,13 @@ namespace PBET
 
                             for (int row = 0; row < cartsTable.Rows.Count; row++)
                             {
-                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineCarts", sqlConnection))
+                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineCartsTEST", sqlConnection))
                                 {
                                     sqlCommand.CommandType = CommandType.StoredProcedure;
                                     sqlCommand.Parameters.Add("@SHIFT", SqlDbType.Int).Value = shiftNum;
                                     sqlCommand.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = machine;
-                                    sqlCommand.Parameters.Add("@TIMESTAMP", SqlDbType.Date).Value = date.Date;
-                                    sqlCommand.Parameters.Add("@TIMEIN", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Time In"];
+                                    //sqlCommand.Parameters.Add("@TIMESTAMP", SqlDbType.Date).Value = date.Date;
+                                    sqlCommand.Parameters.Add("@TIMEIN", SqlDbType.DateTime).Value = cartsTable.Rows[row]["Time In"];
                                     sqlCommand.Parameters.Add("@PARTDESCRIPTION", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Part Description"];
                                     sqlCommand.Parameters.Add("@PARTSEQUENCE", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Part Sequence"];
                                     sqlCommand.Parameters.Add("@QUANTITY", SqlDbType.Int).Value = cartsTable.Rows[row]["Quantity"];
@@ -358,7 +362,7 @@ namespace PBET
                 {
                     //FAIL
                     //LOCAL SAVE
-                    MessageBox.Show("ERROR: Network down, please report to supervisor immediately. Data saved to local folder.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"ERROR: Network down, please report to supervisor immediately. Data saved to local folder. \n {error.ToString()}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Console.WriteLine(error);
 
                     //MAKE A LOG FOR CRASHES
@@ -549,7 +553,8 @@ namespace PBET
 
             if (adminPopUp.ShowDialog(this) == DialogResult.OK)
             {
-                machineNameLbl.Text = adminPopUp.machineName;
+                areaNameLbl.Text = adminPopUp.areaName.ToUpper();
+                machineNameLbl.Text = adminPopUp.machineName.ToUpper();
                 touch = adminPopUp.touch;
             }
             else

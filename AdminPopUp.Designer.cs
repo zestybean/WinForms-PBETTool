@@ -39,6 +39,8 @@ namespace PBET
             this.errorLbl = new System.Windows.Forms.Label();
             this.appTestingChkBox = new System.Windows.Forms.CheckBox();
             this.touchCheckBox = new System.Windows.Forms.CheckBox();
+            this.areaTxtBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label10
@@ -47,7 +49,7 @@ namespace PBET
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(117, 71);
+            this.label10.Location = new System.Drawing.Point(114, 110);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 29);
             this.label10.TabIndex = 15;
@@ -57,7 +59,7 @@ namespace PBET
             // machineTxtBox
             // 
             this.machineTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.machineTxtBox.Location = new System.Drawing.Point(223, 68);
+            this.machineTxtBox.Location = new System.Drawing.Point(220, 107);
             this.machineTxtBox.Name = "machineTxtBox";
             this.machineTxtBox.Size = new System.Drawing.Size(205, 33);
             this.machineTxtBox.TabIndex = 16;
@@ -72,7 +74,7 @@ namespace PBET
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(10, 260);
+            this.cancelBtn.Location = new System.Drawing.Point(10, 323);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(222, 47);
             this.cancelBtn.TabIndex = 17;
@@ -89,7 +91,7 @@ namespace PBET
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(368, 260);
+            this.submitBtn.Location = new System.Drawing.Point(368, 323);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(222, 47);
             this.submitBtn.TabIndex = 18;
@@ -103,7 +105,7 @@ namespace PBET
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(220, 8);
+            this.label1.Location = new System.Drawing.Point(215, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 29);
             this.label1.TabIndex = 19;
@@ -116,7 +118,7 @@ namespace PBET
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(105, 203);
+            this.label2.Location = new System.Drawing.Point(105, 252);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 29);
             this.label2.TabIndex = 20;
@@ -126,7 +128,7 @@ namespace PBET
             // passwordTxtBox
             // 
             this.passwordTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.passwordTxtBox.Location = new System.Drawing.Point(220, 199);
+            this.passwordTxtBox.Location = new System.Drawing.Point(220, 248);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.Size = new System.Drawing.Size(205, 33);
             this.passwordTxtBox.TabIndex = 21;
@@ -138,7 +140,7 @@ namespace PBET
             this.errorLbl.AutoSize = true;
             this.errorLbl.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.errorLbl.ForeColor = System.Drawing.Color.Red;
-            this.errorLbl.Location = new System.Drawing.Point(220, 184);
+            this.errorLbl.Location = new System.Drawing.Point(220, 233);
             this.errorLbl.Name = "errorLbl";
             this.errorLbl.Size = new System.Drawing.Size(37, 14);
             this.errorLbl.TabIndex = 22;
@@ -149,7 +151,7 @@ namespace PBET
             // 
             this.appTestingChkBox.AutoSize = true;
             this.appTestingChkBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appTestingChkBox.Location = new System.Drawing.Point(223, 107);
+            this.appTestingChkBox.Location = new System.Drawing.Point(220, 146);
             this.appTestingChkBox.Name = "appTestingChkBox";
             this.appTestingChkBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.appTestingChkBox.Size = new System.Drawing.Size(165, 23);
@@ -161,7 +163,7 @@ namespace PBET
             // 
             this.touchCheckBox.AutoSize = true;
             this.touchCheckBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.touchCheckBox.Location = new System.Drawing.Point(223, 136);
+            this.touchCheckBox.Location = new System.Drawing.Point(220, 175);
             this.touchCheckBox.Name = "touchCheckBox";
             this.touchCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.touchCheckBox.Size = new System.Drawing.Size(136, 23);
@@ -170,13 +172,37 @@ namespace PBET
             this.touchCheckBox.UseVisualStyleBackColor = true;
             this.touchCheckBox.CheckedChanged += new System.EventHandler(this.touchCheckBox_CheckedChanged);
             // 
+            // areaTxtBox
+            // 
+            this.areaTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.areaTxtBox.Location = new System.Drawing.Point(220, 68);
+            this.areaTxtBox.Name = "areaTxtBox";
+            this.areaTxtBox.Size = new System.Drawing.Size(205, 33);
+            this.areaTxtBox.TabIndex = 27;
+            this.areaTxtBox.TextChanged += new System.EventHandler(this.areaTxtBox_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(153, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 29);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Area:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // AdminPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(600, 317);
+            this.ClientSize = new System.Drawing.Size(600, 380);
             this.ControlBox = false;
+            this.Controls.Add(this.areaTxtBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.touchCheckBox);
             this.Controls.Add(this.appTestingChkBox);
             this.Controls.Add(this.errorLbl);
@@ -210,5 +236,7 @@ namespace PBET
         private System.Windows.Forms.Label errorLbl;
         private System.Windows.Forms.CheckBox appTestingChkBox;
         private System.Windows.Forms.CheckBox touchCheckBox;
+        private System.Windows.Forms.TextBox areaTxtBox;
+        private System.Windows.Forms.Label label3;
     }
 }

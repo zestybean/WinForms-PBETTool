@@ -70,5 +70,17 @@ namespace PBET.Properties {
                 this["Touch"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Test")]
+        public string Area {
+            get {
+                return ((string)(this["Area"]));
+            }
+            set {
+                this["Area"] = value;
+            }
+        }
     }
 }

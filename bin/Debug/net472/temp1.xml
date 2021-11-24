@@ -1,25 +1,2 @@
 <?xml version="1.0" standalone="yes"?>
-<DocumentElement>
-  <hoursTable>
-    <Hour>19:21 PM</Hour>
-    <Goal>9</Goal>
-    <Actual>5</Actual>
-    <Variance>-4</Variance>
-    <Part_x0020_Number />
-    <Scrap>0</Scrap>
-    <Downtime>0</Downtime>
-    <Scrap_x0020_Reason>S07 - Replacement</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason>D120 - Rework</Downtime_x0020_Reason>
-  </hoursTable>
-  <hoursTable>
-    <Hour>19:26 PM</Hour>
-    <Goal>5</Goal>
-    <Actual>6</Actual>
-    <Variance>1</Variance>
-    <Part_x0020_Number />
-    <Scrap>1</Scrap>
-    <Downtime>0</Downtime>
-    <Scrap_x0020_Reason>S06 - Warp</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason />
-  </hoursTable>
-</DocumentElement>
+<DocumentElement />

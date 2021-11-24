@@ -21,7 +21,8 @@ namespace PBET
                 return true;  
             }  
             catch(Exception ex)  
-            {  
+            {
+                Console.WriteLine(ex);
                 return false;  
             }  
         }  

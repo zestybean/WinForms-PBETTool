@@ -408,7 +408,7 @@ namespace PBET
             // quantityTxtBox
             // 
             this.quantityTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F);
-            this.quantityTxtBox.Location = new System.Drawing.Point(467, 420);
+            this.quantityTxtBox.Location = new System.Drawing.Point(471, 422);
             this.quantityTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.quantityTxtBox.Maximum = new decimal(new int[] {
             500,
@@ -416,7 +416,7 @@ namespace PBET
             0,
             0});
             this.quantityTxtBox.Name = "quantityTxtBox";
-            this.quantityTxtBox.Size = new System.Drawing.Size(61, 31);
+            this.quantityTxtBox.Size = new System.Drawing.Size(75, 31);
             this.quantityTxtBox.TabIndex = 51;
             this.quantityTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.quantityTxtBox.ValueChanged += new System.EventHandler(this.quantityTxtBox_ValueChanged);

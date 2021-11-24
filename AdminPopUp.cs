@@ -14,6 +14,7 @@ namespace PBET
     public partial class AdminPopUp : Form
     {
         public string machineName = "";
+        public string areaName = "";
         public bool touch = false;
 
         string password = "";
@@ -24,6 +25,7 @@ namespace PBET
 
             this.touch = touch;
 
+            areaTxtBox.Text = Settings.Default["Area"].ToString();
             machineTxtBox.Text = Settings.Default["Machine"].ToString();
             touchCheckBox.Checked = touch;
            
@@ -46,6 +48,7 @@ namespace PBET
 
             if(password == "adminPBET")
             {
+                Settings.Default["Area"] = areaName;
                 Settings.Default["Machine"] = machineName;
                 Settings.Default["Touch"] = touch;
                 Settings.Default.Save();
@@ -59,7 +62,15 @@ namespace PBET
         }
 
         /// <summary>
-        /// MACHINE TXT
+        /// AREA TXT BOX
+        /// </summary>
+        private void areaTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            areaName = areaTxtBox.Text;
+        }
+
+        /// <summary>
+        /// MACHINE TXT BOX
         /// </summary>
         private void machineTxtBox_TextChanged(object sender, EventArgs e)
         {

@@ -83,6 +83,8 @@ namespace PBET
             this.quantityLbl = new System.Windows.Forms.Label();
             this.cartsLbl = new System.Windows.Forms.Label();
             this.autoSaveTimer = new System.Windows.Forms.Timer(this.components);
+            this.label18 = new System.Windows.Forms.Label();
+            this.areaNameLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -144,6 +146,8 @@ namespace PBET
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.areaNameLbl);
+            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.adminPanelBtn);
             this.panel1.Controls.Add(this.machineNameLbl);
             this.panel1.Controls.Add(this.label10);
@@ -171,11 +175,11 @@ namespace PBET
             // 
             this.machineNameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.machineNameLbl.AutoSize = true;
-            this.machineNameLbl.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold);
+            this.machineNameLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.machineNameLbl.ForeColor = System.Drawing.Color.White;
-            this.machineNameLbl.Location = new System.Drawing.Point(1046, 18);
+            this.machineNameLbl.Location = new System.Drawing.Point(1043, 39);
             this.machineNameLbl.Name = "machineNameLbl";
-            this.machineNameLbl.Size = new System.Drawing.Size(63, 36);
+            this.machineNameLbl.Size = new System.Drawing.Size(53, 29);
             this.machineNameLbl.TabIndex = 15;
             this.machineNameLbl.Text = "Test";
             this.machineNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,7 +190,7 @@ namespace PBET
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(949, 23);
+            this.label10.Location = new System.Drawing.Point(943, 39);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 29);
             this.label10.TabIndex = 14;
@@ -754,6 +758,32 @@ namespace PBET
             this.autoSaveTimer.Interval = 5000;
             this.autoSaveTimer.Tick += new System.EventHandler(this.autoSaveTimer_Tick);
             // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(982, 7);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 29);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "Area:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // areaNameLbl
+            // 
+            this.areaNameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.areaNameLbl.AutoSize = true;
+            this.areaNameLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.areaNameLbl.ForeColor = System.Drawing.Color.White;
+            this.areaNameLbl.Location = new System.Drawing.Point(1043, 7);
+            this.areaNameLbl.Name = "areaNameLbl";
+            this.areaNameLbl.Size = new System.Drawing.Size(53, 29);
+            this.areaNameLbl.TabIndex = 17;
+            this.areaNameLbl.Text = "Test";
+            this.areaNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -838,6 +868,8 @@ namespace PBET
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Timer autoSaveTimer;
+        private System.Windows.Forms.Label areaNameLbl;
+        private System.Windows.Forms.Label label18;
     }
 }
 

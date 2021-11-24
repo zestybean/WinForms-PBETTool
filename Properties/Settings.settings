@@ -14,5 +14,8 @@
     <Setting Name="Touch" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="Area" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Test</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
