@@ -49,7 +49,7 @@ namespace PBET
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(102, 81);
+            this.label5.Location = new System.Drawing.Point(98, 78);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 23);
@@ -116,7 +116,7 @@ namespace PBET
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(102, 257);
+            this.label1.Location = new System.Drawing.Point(98, 254);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 23);
@@ -127,7 +127,7 @@ namespace PBET
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(102, 139);
+            this.label2.Location = new System.Drawing.Point(98, 135);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 23);
@@ -178,7 +178,7 @@ namespace PBET
             this.errorLbl.AutoSize = true;
             this.errorLbl.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.errorLbl.ForeColor = System.Drawing.Color.Red;
-            this.errorLbl.Location = new System.Drawing.Point(103, 310);
+            this.errorLbl.Location = new System.Drawing.Point(99, 310);
             this.errorLbl.Name = "errorLbl";
             this.errorLbl.Size = new System.Drawing.Size(131, 14);
             this.errorLbl.TabIndex = 69;

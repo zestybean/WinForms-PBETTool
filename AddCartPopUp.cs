@@ -24,6 +24,11 @@ namespace PBET
         {
             InitializeComponent();
 
+            if (touch)
+            {
+                quantityTxtBox.Controls[0].Enabled = false;
+            }
+
             this.partDescription = partDescription;
             this.partNumber = partNumber;
             this.partQuantity = partQuantity;

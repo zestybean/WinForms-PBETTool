@@ -22,7 +22,6 @@ namespace PBET
         public AdminPopUp(bool touch)
         {
             InitializeComponent();
-
             this.touch = touch;
 
             areaTxtBox.Text = Settings.Default["Area"].ToString();

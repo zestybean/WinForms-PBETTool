@@ -24,6 +24,12 @@ namespace PBET
         public SubmitPopUp(bool touch)
         {
             InitializeComponent();
+
+            if (touch)
+            {
+                shiftTxtBox.Controls[0].Enabled = false;
+            }
+
             code = GenerateCode();
             codeLbl.Text = code.ToString();
             this.touch = touch;

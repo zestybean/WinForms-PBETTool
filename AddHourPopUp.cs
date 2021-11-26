@@ -27,6 +27,14 @@ namespace PBET
         {
             InitializeComponent();
 
+            if (touch)
+            {
+                goalTxtBox.Controls[0].Enabled = false;
+                actualTxtBox.Controls[0].Enabled = false;
+                scrapTxtBox.Controls[0].Enabled = false;
+                downTxtBox.Controls[0].Enabled = false;
+            }
+
             this.goal = goal;
             this.actual = actual;
             this.sequence = sequence;

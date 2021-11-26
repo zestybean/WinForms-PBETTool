@@ -449,7 +449,7 @@ namespace PBET
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(253, 397);
+            this.label5.Location = new System.Drawing.Point(249, 394);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 23);
@@ -471,7 +471,7 @@ namespace PBET
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(9, 398);
+            this.label7.Location = new System.Drawing.Point(6, 394);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 23);
@@ -674,10 +674,8 @@ namespace PBET
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.partDescTxtBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.reworkChkBox);
             this.Controls.Add(this.colorTxtBox);
             this.Controls.Add(this.seqTxtBox);
@@ -685,6 +683,8 @@ namespace PBET
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddCartPopUp";

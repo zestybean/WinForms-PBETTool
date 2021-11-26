@@ -294,7 +294,7 @@ namespace PBET
                 //Try for network
                 try
                 {
-                    //workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
+                    workbook.SaveAs($@"\\hail\Shared\Pace Board\PaceboardData\BV\Week-{weekOfYearNum() - 1}\{date.DayOfWeek}\Shift-{shiftNum}\SHIFT-{shiftNum}-{machine}-{date.ToString(@"MM-dd-yy")}-#ID-{GenerateCode().ToString()}.xlsx");
                     
                     //SQL TEST
                     using (SqlConnection sqlConnection = new SqlConnection(@"Data Source=samtah\sqlexpress;Initial Catalog=PBET_DB;Integrated Security=True"))
@@ -305,12 +305,11 @@ namespace PBET
                             
                             for (int row = 0; row < hoursTable.Rows.Count; row++)
                             {
-                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineHoursTEST", sqlConnection))
+                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineHours", sqlConnection))
                                 {
                                     sqlCommand.CommandType = CommandType.StoredProcedure;
                                     sqlCommand.Parameters.Add("@SHIFT", SqlDbType.Int).Value = shiftNum;
                                     sqlCommand.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = machine;
-                                    //sqlCommand.Parameters.Add("@TIMESTAMP", SqlDbType.Date).Value = date.Date;
                                     sqlCommand.Parameters.Add("@TIMEIN", SqlDbType.DateTime).Value = hoursTable.Rows[row]["Hour"];
                                     sqlCommand.Parameters.Add("@GOAL", SqlDbType.Int).Value = hoursTable.Rows[row]["Goal"];
                                     sqlCommand.Parameters.Add("@ACTUAL", SqlDbType.Int).Value = hoursTable.Rows[row]["Actual"];
@@ -326,12 +325,11 @@ namespace PBET
 
                             for (int row = 0; row < cartsTable.Rows.Count; row++)
                             {
-                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineCartsTEST", sqlConnection))
+                                using (SqlCommand sqlCommand = new SqlCommand("spInsertPaintlineCarts", sqlConnection))
                                 {
                                     sqlCommand.CommandType = CommandType.StoredProcedure;
                                     sqlCommand.Parameters.Add("@SHIFT", SqlDbType.Int).Value = shiftNum;
                                     sqlCommand.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = machine;
-                                    //sqlCommand.Parameters.Add("@TIMESTAMP", SqlDbType.Date).Value = date.Date;
                                     sqlCommand.Parameters.Add("@TIMEIN", SqlDbType.DateTime).Value = cartsTable.Rows[row]["Time In"];
                                     sqlCommand.Parameters.Add("@PARTDESCRIPTION", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Part Description"];
                                     sqlCommand.Parameters.Add("@PARTSEQUENCE", SqlDbType.VarChar).Value = cartsTable.Rows[row]["Part Sequence"];
@@ -341,6 +339,29 @@ namespace PBET
                                     sqlCommand.ExecuteNonQuery();
                                 }
 
+                            }
+                        }
+
+                        if (area == "ASSEMBLY")
+                        {
+                            for (int row = 0; row < hoursTable.Rows.Count; row++)
+                            {
+                                using (SqlCommand sqlCommand = new SqlCommand("spInsertAssemblyHours", sqlConnection))
+                                {
+                                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                                    sqlCommand.Parameters.Add("@SHIFT", SqlDbType.Int).Value = shiftNum;
+                                    sqlCommand.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = machine;
+                                    sqlCommand.Parameters.Add("@TIMEIN", SqlDbType.DateTime).Value = hoursTable.Rows[row]["Hour"];
+                                    sqlCommand.Parameters.Add("@GOAL", SqlDbType.Int).Value = hoursTable.Rows[row]["Goal"];
+                                    sqlCommand.Parameters.Add("@ACTUAL", SqlDbType.Int).Value = hoursTable.Rows[row]["Actual"];
+                                    sqlCommand.Parameters.Add("@VARIANCE", SqlDbType.Int).Value = hoursTable.Rows[row]["Variance"];
+                                    sqlCommand.Parameters.Add("@PARTNUMBER", SqlDbType.VarChar).Value = hoursTable.Rows[row]["Part Number"];
+                                    sqlCommand.Parameters.Add("@SCRAP", SqlDbType.Int).Value = hoursTable.Rows[row]["Scrap"];
+                                    sqlCommand.Parameters.Add("@DOWNTIME", SqlDbType.Int).Value = hoursTable.Rows[row]["Downtime"];
+                                    sqlCommand.Parameters.Add("@SCRAPREASON", SqlDbType.VarChar).Value = hoursTable.Rows[row]["Scrap Reason"];
+                                    sqlCommand.Parameters.Add("@DOWNTIMEREASON", SqlDbType.VarChar).Value = hoursTable.Rows[row]["Downtime Reason"];
+                                    sqlCommand.ExecuteNonQuery();
+                                }
                             }
                         }
                         sqlConnection.Close();
