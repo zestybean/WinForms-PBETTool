@@ -58,7 +58,11 @@ namespace PBET
 
                 //Some of the strings represent different data types
                 //Depending on the strings, strings and doubles
-                if(hoursColStrings[i] == "Goal" || hoursColStrings[i] == "Actual" || hoursColStrings[i] == "Variance" || hoursColStrings[i] == "Scrap" || hoursColStrings[i] == "Downtime")
+                if(hoursColStrings[i] == "Hour")
+                {
+                    hourCol = new DataColumn(hoursColStrings[i], typeof(DateTime));
+                }
+                else if(hoursColStrings[i] == "Goal" || hoursColStrings[i] == "Actual" || hoursColStrings[i] == "Variance" || hoursColStrings[i] == "Scrap" || hoursColStrings[i] == "Downtime")
                 {
                     hourCol = new DataColumn(hoursColStrings[i], typeof(double));
                 } else
@@ -79,7 +83,11 @@ namespace PBET
                 //Some of the strings represent different data types
                 //Depending on the strings, strings, double and bool for
                 //the rework check boxes
-                if (cartColStrings[i] == "Rework")
+                if(cartColStrings[i] == "Time In")
+                {
+                    cartCol = new DataColumn(cartColStrings[i], typeof(DateTime));
+                }
+                else if (cartColStrings[i] == "Rework")
                 {
                      cartCol = new DataColumn(cartColStrings[i], typeof(bool));
                 }
@@ -94,6 +102,7 @@ namespace PBET
 
                 //Finally add the column
                 this.cartsTable.Columns.Add(cartCol);
+
             }
 
             //After the columns are created 
@@ -119,6 +128,11 @@ namespace PBET
 
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+
+            //Format data grid columns for date
+            dataGridView1.Columns[0].DefaultCellStyle.Format = "HH:mm";
+            dataGridView2.Columns[0].DefaultCellStyle.Format = "HH:mm";
+
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -240,6 +254,8 @@ namespace PBET
 
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Bold);
             dataGridView2.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Bold);
+
+            
         }
 
         /// <summary>
@@ -256,7 +272,7 @@ namespace PBET
                 seqHourTemp = addHourPopUp.sequence;
 
                 //"Hour", "Goal" , "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason"
-                hoursTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), addHourPopUp.goal, addHourPopUp.actual, addHourPopUp.variance, addHourPopUp.sequence, 
+                hoursTable.Rows.Add(DateTime.Now, addHourPopUp.goal, addHourPopUp.actual, addHourPopUp.variance, addHourPopUp.sequence, 
                     addHourPopUp.scrap, addHourPopUp.downtime, addHourPopUp.scrapReason, addHourPopUp.downtimeReason);
             } else
             {
@@ -489,7 +505,7 @@ namespace PBET
                 //Backup color temp
                 colorCartTemp = addCartPopUp.partColor;  
 
-                cartsTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), addCartPopUp.partDescription, addCartPopUp.partNumber, addCartPopUp.partQuantity, addCartPopUp.partColor, addCartPopUp.partRework);
+                cartsTable.Rows.Add(DateTime.Now, addCartPopUp.partDescription, addCartPopUp.partNumber, addCartPopUp.partQuantity, addCartPopUp.partColor, addCartPopUp.partRework);
             }
             else
             {
@@ -505,7 +521,7 @@ namespace PBET
         /// </summary>
         private void clearCartBtn_Click(object sender, EventArgs e)
         {
-            cartsTable.Rows.Add(DateTime.Now.ToString("HH:mm tt"), "Clear", "Clear", 0, "Clear", false);
+            cartsTable.Rows.Add(DateTime.Now, "Clear", "Clear", 0, "Clear", false);
         }
 
         /// <summary>

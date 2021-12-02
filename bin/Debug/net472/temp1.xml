@@ -1,2 +1,14 @@
 <?xml version="1.0" standalone="yes"?>
-<DocumentElement />
+<DocumentElement>
+  <hoursTable>
+    <Hour>2021-12-02T09:47:03.5599221-06:00</Hour>
+    <Goal>5</Goal>
+    <Actual>0</Actual>
+    <Variance>-5</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+</DocumentElement>
