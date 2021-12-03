@@ -33,9 +33,14 @@ namespace PBET
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.areaNameLbl = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.adminPanelBtn = new System.Windows.Forms.Button();
             this.machineNameLbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -83,8 +88,7 @@ namespace PBET
             this.quantityLbl = new System.Windows.Forms.Label();
             this.cartsLbl = new System.Windows.Forms.Label();
             this.autoSaveTimer = new System.Windows.Forms.Timer(this.components);
-            this.label18 = new System.Windows.Forms.Label();
-            this.areaNameLbl = new System.Windows.Forms.Label();
+            this.performanceChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,6 +96,7 @@ namespace PBET
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceChart)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -157,6 +162,32 @@ namespace PBET
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1292, 70);
             this.panel1.TabIndex = 4;
+            // 
+            // areaNameLbl
+            // 
+            this.areaNameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.areaNameLbl.AutoSize = true;
+            this.areaNameLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.areaNameLbl.ForeColor = System.Drawing.Color.White;
+            this.areaNameLbl.Location = new System.Drawing.Point(1043, 7);
+            this.areaNameLbl.Name = "areaNameLbl";
+            this.areaNameLbl.Size = new System.Drawing.Size(53, 29);
+            this.areaNameLbl.TabIndex = 17;
+            this.areaNameLbl.Text = "Test";
+            this.areaNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(982, 7);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 29);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "Area:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // adminPanelBtn
             // 
@@ -758,37 +789,30 @@ namespace PBET
             this.autoSaveTimer.Interval = 5000;
             this.autoSaveTimer.Tick += new System.EventHandler(this.autoSaveTimer_Tick);
             // 
-            // label18
+            // performanceChart
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(982, 7);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(68, 29);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "Area:";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // areaNameLbl
-            // 
-            this.areaNameLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.areaNameLbl.AutoSize = true;
-            this.areaNameLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaNameLbl.ForeColor = System.Drawing.Color.White;
-            this.areaNameLbl.Location = new System.Drawing.Point(1043, 7);
-            this.areaNameLbl.Name = "areaNameLbl";
-            this.areaNameLbl.Size = new System.Drawing.Size(53, 29);
-            this.areaNameLbl.TabIndex = 17;
-            this.areaNameLbl.Text = "Test";
-            this.areaNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.performanceChart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.performanceChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.performanceChart.Legends.Add(legend1);
+            this.performanceChart.Location = new System.Drawing.Point(593, 524);
+            this.performanceChart.Name = "performanceChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Goal";
+            this.performanceChart.Series.Add(series1);
+            this.performanceChart.Size = new System.Drawing.Size(202, 280);
+            this.performanceChart.TabIndex = 11;
+            this.performanceChart.Text = "chart1";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 816);
+            this.Controls.Add(this.performanceChart);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.submitBtn);
@@ -812,6 +836,7 @@ namespace PBET
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -870,6 +895,7 @@ namespace PBET
         private System.Windows.Forms.Timer autoSaveTimer;
         private System.Windows.Forms.Label areaNameLbl;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataVisualization.Charting.Chart performanceChart;
     }
 }
 

@@ -274,6 +274,31 @@ namespace PBET
                 //"Hour", "Goal" , "Actual", "Variance", "Part Number", "Scrap", "Downtime (Minutes)", "Scrap Reason", "Downtime Reason"
                 hoursTable.Rows.Add(DateTime.Now, addHourPopUp.goal, addHourPopUp.actual, addHourPopUp.variance, addHourPopUp.sequence, 
                     addHourPopUp.scrap, addHourPopUp.downtime, addHourPopUp.scrapReason, addHourPopUp.downtimeReason);
+
+                var chartObj = performanceChart.ChartAreas[0];
+
+                chartObj.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+                //Hours
+                chartObj.AxisX.Minimum = 0;
+                chartObj.AxisX.Maximum = 12;
+
+                chartObj.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+                chartObj.AxisY.Minimum = 0;
+                chartObj.AxisY.Maximum = 20;
+
+                performanceChart.Series.Clear();
+
+                performanceChart.Series.Add("Goal");
+                performanceChart.Series.Add("Actual");
+                performanceChart.Series["Actual"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+                performanceChart.Series["Goal"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+                //
+                for (int row = 0; row < hoursTable.Rows.Count; row++)
+                {
+                    performanceChart.Series["Goal"].Points.AddXY(row,hoursTable.Rows[row]["Goal"]);
+                    performanceChart.Series["Actual"].Points.AddXY(row, hoursTable.Rows[row]["Actual"]);
+                }
+
             } else
             {
                 //Cancel
