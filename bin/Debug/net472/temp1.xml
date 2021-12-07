@@ -1,10 +1,32 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <hoursTable>
-    <Hour>2021-12-02T16:13:26.1093725-06:00</Hour>
-    <Goal>15</Goal>
+    <Hour>2021-12-07T15:15:26.6909235-06:00</Hour>
+    <Goal>20</Goal>
+    <Actual>10</Actual>
+    <Variance>-10</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>2021-12-07T15:15:38.1333937-06:00</Hour>
+    <Goal>20</Goal>
+    <Actual>10</Actual>
+    <Variance>-10</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>2021-12-07T15:15:41.7561478-06:00</Hour>
+    <Goal>20</Goal>
     <Actual>12</Actual>
-    <Variance>-3</Variance>
+    <Variance>-8</Variance>
     <Part_x0020_Number />
     <Scrap>0</Scrap>
     <Downtime>0</Downtime>
@@ -12,10 +34,21 @@
     <Downtime_x0020_Reason />
   </hoursTable>
   <hoursTable>
-    <Hour>2021-12-02T16:13:30.2324231-06:00</Hour>
-    <Goal>15</Goal>
+    <Hour>2021-12-07T15:15:44.246888-06:00</Hour>
+    <Goal>20</Goal>
+    <Actual>13</Actual>
+    <Variance>-7</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>2021-12-07T15:15:47.8522426-06:00</Hour>
+    <Goal>20</Goal>
     <Actual>14</Actual>
-    <Variance>-1</Variance>
+    <Variance>-6</Variance>
     <Part_x0020_Number />
     <Scrap>0</Scrap>
     <Downtime>0</Downtime>
@@ -23,10 +56,10 @@
     <Downtime_x0020_Reason />
   </hoursTable>
   <hoursTable>
-    <Hour>2021-12-02T16:13:40.9400198-06:00</Hour>
-    <Goal>15</Goal>
-    <Actual>14</Actual>
-    <Variance>-1</Variance>
+    <Hour>2021-12-07T15:15:50.9113314-06:00</Hour>
+    <Goal>20</Goal>
+    <Actual>15</Actual>
+    <Variance>-5</Variance>
     <Part_x0020_Number />
     <Scrap>0</Scrap>
     <Downtime>0</Downtime>
@@ -34,10 +67,32 @@
     <Downtime_x0020_Reason />
   </hoursTable>
   <hoursTable>
-    <Hour>2021-12-02T16:13:50.1256912-06:00</Hour>
-    <Goal>15</Goal>
+    <Hour>2021-12-07T15:27:43.3175206-06:00</Hour>
+    <Goal>30</Goal>
     <Actual>20</Actual>
-    <Variance>5</Variance>
+    <Variance>-10</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>2021-12-07T15:27:58.127239-06:00</Hour>
+    <Goal>40</Goal>
+    <Actual>50</Actual>
+    <Variance>10</Variance>
+    <Part_x0020_Number />
+    <Scrap>0</Scrap>
+    <Downtime>0</Downtime>
+    <Scrap_x0020_Reason />
+    <Downtime_x0020_Reason />
+  </hoursTable>
+  <hoursTable>
+    <Hour>2021-12-07T15:28:19.167465-06:00</Hour>
+    <Goal>40</Goal>
+    <Actual>30</Actual>
+    <Variance>-10</Variance>
     <Part_x0020_Number />
     <Scrap>0</Scrap>
     <Downtime>0</Downtime>

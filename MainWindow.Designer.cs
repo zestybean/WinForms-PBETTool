@@ -36,6 +36,7 @@ namespace PBET
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -89,6 +90,7 @@ namespace PBET
             this.cartsLbl = new System.Windows.Forms.Label();
             this.autoSaveTimer = new System.Windows.Forms.Timer(this.components);
             this.performanceChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnLamp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -393,7 +395,7 @@ namespace PBET
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(1060, 758);
+            this.submitBtn.Location = new System.Drawing.Point(1060, 841);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(222, 47);
             this.submitBtn.TabIndex = 9;
@@ -404,7 +406,9 @@ namespace PBET
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnLamp);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label15);
@@ -697,7 +701,7 @@ namespace PBET
             this.panel4.Controls.Add(this.cartsLbl);
             this.panel4.Location = new System.Drawing.Point(801, 576);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(481, 156);
+            this.panel4.Size = new System.Drawing.Size(481, 228);
             this.panel4.TabIndex = 10;
             // 
             // label14
@@ -793,25 +797,56 @@ namespace PBET
             // 
             this.performanceChart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.performanceChart.BackColor = System.Drawing.SystemColors.Highlight;
+            this.performanceChart.BorderlineColor = System.Drawing.Color.Black;
+            this.performanceChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            chartArea1.BackImage = "C:\\Users\\brando.lugo\\source\\repos\\PBET\\PBET\\Resources\\ckt-logo-white300.png";
+            chartArea1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            chartArea1.BackImageTransparentColor = System.Drawing.SystemColors.GradientActiveCaption;
+            chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Unscaled;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
             chartArea1.Name = "ChartArea1";
             this.performanceChart.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.performanceChart.Legends.Add(legend1);
             this.performanceChart.Location = new System.Drawing.Point(593, 524);
             this.performanceChart.Name = "performanceChart";
+            this.performanceChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";
+            series1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series1.Legend = "Legend1";
             series1.Name = "Goal";
             this.performanceChart.Series.Add(series1);
             this.performanceChart.Size = new System.Drawing.Size(202, 280);
             this.performanceChart.TabIndex = 11;
             this.performanceChart.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.White;
+            title1.Name = "Title1";
+            title1.Text = "Performance Metric";
+            this.performanceChart.Titles.Add(title1);
+            // 
+            // btnLamp
+            // 
+            this.btnLamp.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnLamp.Enabled = false;
+            this.btnLamp.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamp.ForeColor = System.Drawing.Color.White;
+            this.btnLamp.Location = new System.Drawing.Point(3, 196);
+            this.btnLamp.Name = "btnLamp";
+            this.btnLamp.Size = new System.Drawing.Size(569, 27);
+            this.btnLamp.TabIndex = 21;
+            this.btnLamp.Text = "Production: Good";
+            this.btnLamp.UseVisualStyleBackColor = false;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 816);
+            this.ClientSize = new System.Drawing.Size(1292, 899);
             this.Controls.Add(this.performanceChart);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -896,6 +931,7 @@ namespace PBET
         private System.Windows.Forms.Label areaNameLbl;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DataVisualization.Charting.Chart performanceChart;
+        private System.Windows.Forms.Button btnLamp;
     }
 }
 

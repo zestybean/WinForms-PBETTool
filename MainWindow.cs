@@ -133,6 +133,8 @@ namespace PBET
             dataGridView1.Columns[0].DefaultCellStyle.Format = "HH:mm";
             dataGridView2.Columns[0].DefaultCellStyle.Format = "HH:mm";
 
+            //Reset graph
+            resetPerformanceMetric(Convert.ToInt32(hoursTable.Compute("max([Goal])", string.Empty)), Convert.ToInt32(hoursTable.Compute("max([Actual])", string.Empty)));
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -171,6 +173,17 @@ namespace PBET
             double actual = Convert.ToInt32(actualLbl.Text);
             double downtime = Convert.ToInt32(downtimeLbl.Text);
             double scrap = Convert.ToInt32(scrapLbl.Text);
+
+            if (actual < goal)
+            {
+                btnLamp.BackColor = Color.Coral;
+                btnLamp.Text = "Production: Low";
+            }
+            else
+            {
+                btnLamp.BackColor = Color.MediumSeaGreen;
+                btnLamp.Text = "Production: Normal";
+            }
 
             if(goal > 0)
             {
@@ -275,30 +288,10 @@ namespace PBET
                 hoursTable.Rows.Add(DateTime.Now, addHourPopUp.goal, addHourPopUp.actual, addHourPopUp.variance, addHourPopUp.sequence, 
                     addHourPopUp.scrap, addHourPopUp.downtime, addHourPopUp.scrapReason, addHourPopUp.downtimeReason);
 
-                var chartObj = performanceChart.ChartAreas[0];
 
-                chartObj.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-                //Hours
-                chartObj.AxisX.Minimum = 0;
-                chartObj.AxisX.Maximum = 12;
 
-                chartObj.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-                chartObj.AxisY.Minimum = 0;
-                chartObj.AxisY.Maximum = 20;
-
-                performanceChart.Series.Clear();
-
-                performanceChart.Series.Add("Goal");
-                performanceChart.Series.Add("Actual");
-                performanceChart.Series["Actual"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-                performanceChart.Series["Goal"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-                //
-                for (int row = 0; row < hoursTable.Rows.Count; row++)
-                {
-                    performanceChart.Series["Goal"].Points.AddXY(row,hoursTable.Rows[row]["Goal"]);
-                    performanceChart.Series["Actual"].Points.AddXY(row, hoursTable.Rows[row]["Actual"]);
-                }
-
+                //Reset graph
+                resetPerformanceMetric(Convert.ToInt32(hoursTable.Compute("max([Goal])", string.Empty)), Convert.ToInt32(hoursTable.Compute("max([Actual])", string.Empty)));
             } else
             {
                 //Cancel
@@ -470,6 +463,9 @@ namespace PBET
         private void deleteHourRowBtn_Click(object sender, EventArgs e)
         {
             deleteRowConfirm(dataGridView1);
+
+            //Reset graph
+            resetPerformanceMetric(Convert.ToInt32(hoursTable.Compute("max([Goal])", string.Empty)), Convert.ToInt32(hoursTable.Compute("max([Actual])", string.Empty)));
         }
         private void deleteCartRowBtn_Click(object sender, EventArgs e)
         {
@@ -509,7 +505,12 @@ namespace PBET
                 hoursTable.Rows[e.RowIndex]["Scrap Reason"] = addHourPopUp.scrapReason;
                 hoursTable.Rows[e.RowIndex]["Downtime Reason"] = addHourPopUp.downtimeReason;
 
+                //Reset oee
                 calcSummaryLabels();
+
+
+                //Reset graph
+                resetPerformanceMetric(Convert.ToInt32(hoursTable.Compute("max([Goal])", string.Empty)), Convert.ToInt32(hoursTable.Compute("max([Actual])", string.Empty)));
 
             }
             else
@@ -630,6 +631,72 @@ namespace PBET
             //SAVE every 20min
             this.hoursTable.WriteXml("temp1.xml");
             this.cartsTable.WriteXml("temp2.xml");
+        }
+
+        private void resetPerformanceMetric(int goal, int actual)
+        {
+            int yMax = goal;
+
+            //Rare case that actual surpasses goal
+            if(actual > goal)
+            {
+                yMax = actual;
+            }
+            
+
+            var chartObj = performanceChart.ChartAreas[0];
+
+            chartObj.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            //Hours
+            chartObj.AxisX.Minimum = 0;
+            chartObj.AxisX.Maximum = 12;
+            chartObj.AxisX.LabelStyle.ForeColor = Color.White;
+            chartObj.AxisX.Title = "Hours";
+            chartObj.AxisX.TitleFont = new System.Drawing.Font("Calibri", 14, System.Drawing.FontStyle.Bold);
+            chartObj.AxisX.TitleForeColor = Color.White;
+
+            //Goal Actual
+            chartObj.AxisY.LabelStyle.ForeColor = Color.White;
+            chartObj.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartObj.AxisY.Minimum = 0;
+            chartObj.AxisY.Maximum = round(yMax + 5);
+            chartObj.AxisY.Title = "Goal / Actual Parts";
+            chartObj.AxisY.TitleFont = new System.Drawing.Font("Calibri", 14, System.Drawing.FontStyle.Bold);
+            chartObj.AxisY.TitleForeColor = Color.White;
+
+
+            performanceChart.Series.Clear();
+
+
+            performanceChart.Series.Add("Goal");
+            performanceChart.Series.Add("Actual");
+
+            performanceChart.Series["Actual"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            performanceChart.Series["Goal"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            //
+            for (int row = 0; row < hoursTable.Rows.Count; row++)
+            {
+                performanceChart.Series["Goal"].Points.AddXY(row, hoursTable.Rows[row]["Goal"]);
+                performanceChart.Series["Goal"].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+                performanceChart.Series["Goal"].BorderWidth = 2;
+                performanceChart.Series["Goal"].MarkerSize = 8;
+
+                performanceChart.Series["Actual"].Points.AddXY(row, hoursTable.Rows[row]["Actual"]);
+                performanceChart.Series["Actual"].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+                performanceChart.Series["Actual"].BorderWidth = 2;
+                performanceChart.Series["Actual"].MarkerSize = 8;
+
+            }
+        }
+
+        //Round to near 10
+        private int round(int n)
+        {
+            int a = (n / 10) * 10;
+
+            int b = a + 10;
+
+            return (n - a > b - n) ? b : a;
         }
     }
 
