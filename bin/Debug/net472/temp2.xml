@@ -1,11 +1,2 @@
 <?xml version="1.0" standalone="yes"?>
-<DocumentElement>
-  <cartsTable>
-    <Time_x0020_In>2021-12-03T15:30:09.6583606-06:00</Time_x0020_In>
-    <Part_x0020_Description>PROSTAR Fender</Part_x0020_Description>
-    <Part_x0020_Sequence />
-    <Quantity>3</Quantity>
-    <Color>r4</Color>
-    <Rework>false</Rework>
-  </cartsTable>
-</DocumentElement>
+<DocumentElement />

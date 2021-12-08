@@ -134,7 +134,7 @@ namespace PBET
             dataGridView2.Columns[0].DefaultCellStyle.Format = "HH:mm";
 
             //Reset graph
-            resetPerformanceMetric(Convert.ToInt32(hoursTable.Compute("max([Goal])", string.Empty)), Convert.ToInt32(hoursTable.Compute("max([Actual])", string.Empty)));
+            resetPerformanceMetric(computedColumnHoursTable("Goal"), computedColumnHoursTable("Actual"));
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -193,19 +193,40 @@ namespace PBET
                 perfLbl.Text = String.Format("{0:F2}%", performance);
                 availLbl.Text = String.Format("{0:F2}%", availability);
 
-                if (scrap > 0)
+                if(areaNameLbl.Text == "ASSEMBLY")
                 {
-                    quality = (1.0 - (scrap / actual)) * 100.0;
-                    oee = ((quality / 100.0) * (performance / 100.0) * (availability / 100.0)) * 100.0;
+                    if(actual > 0)
+                    {
+                        quality = (1.0 - (scrap / actual)) * 100.0;
+                        oee = ((quality / 100.0) * (performance / 100.0) * (availability / 100.0)) * 100.0;
 
-                    qualLbl.Text = String.Format("{0:F2}%", quality);
-                    oeeLbl.Text = String.Format("{0:F2}%", oee);
+                        qualLbl.Text = String.Format("{0:F2}%", quality);
+                        oeeLbl.Text = String.Format("{0:F2}%", oee);
+                    }
+                    else
+                    {
+                        qualLbl.Text = "0";
+                        oeeLbl.Text = "0";
+                    }
+                        
                 }
                 else
                 {
-                    qualLbl.Text = "0";
-                    oeeLbl.Text = "0";
+                    if (scrap > 0)
+                    {
+                        quality = (1.0 - (scrap / actual)) * 100.0;
+                        oee = ((quality / 100.0) * (performance / 100.0) * (availability / 100.0)) * 100.0;
+
+                        qualLbl.Text = String.Format("{0:F2}%", quality);
+                        oeeLbl.Text = String.Format("{0:F2}%", oee);
+                    }
+                    else
+                    {
+                        qualLbl.Text = "0";
+                        oeeLbl.Text = "0";
+                    }
                 }
+
             } else
             {
                 perfLbl.Text = "0";
@@ -291,7 +312,7 @@ namespace PBET
 
 
                 //Reset graph
-                resetPerformanceMetric(Convert.ToInt32(hoursTable.Compute("max([Goal])", string.Empty)), Convert.ToInt32(hoursTable.Compute("max([Actual])", string.Empty)));
+                resetPerformanceMetric(computedColumnHoursTable("Goal"), computedColumnHoursTable("Actual"));
             } else
             {
                 //Cancel
@@ -465,7 +486,7 @@ namespace PBET
             deleteRowConfirm(dataGridView1);
 
             //Reset graph
-            resetPerformanceMetric(Convert.ToInt32(hoursTable.Compute("max([Goal])", string.Empty)), Convert.ToInt32(hoursTable.Compute("max([Actual])", string.Empty)));
+            resetPerformanceMetric(computedColumnHoursTable("Goal"), computedColumnHoursTable("Actual"));
         }
         private void deleteCartRowBtn_Click(object sender, EventArgs e)
         {
@@ -508,9 +529,9 @@ namespace PBET
                 //Reset oee
                 calcSummaryLabels();
 
-
+                //TODO:FIXNULL
                 //Reset graph
-                resetPerformanceMetric(Convert.ToInt32(hoursTable.Compute("max([Goal])", string.Empty)), Convert.ToInt32(hoursTable.Compute("max([Actual])", string.Empty)));
+                resetPerformanceMetric(computedColumnHoursTable("Goal"), computedColumnHoursTable("Actual"));
 
             }
             else
@@ -619,6 +640,7 @@ namespace PBET
                 areaNameLbl.Text = adminPopUp.areaName.ToUpper();
                 machineNameLbl.Text = adminPopUp.machineName.ToUpper();
                 touch = adminPopUp.touch;
+                calcSummaryLabels();
             }
             else
             {
@@ -697,6 +719,18 @@ namespace PBET
             int b = a + 10;
 
             return (n - a > b - n) ? b : a;
+        }
+
+        private int computedColumnHoursTable(string columnName)
+        {
+            if (DBNull.Value.Equals(hoursTable.Compute("max([Goal])", string.Empty)))
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(hoursTable.Compute($"max([{columnName}])", string.Empty));
+            }
         }
     }
 
