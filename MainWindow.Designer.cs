@@ -59,6 +59,7 @@ namespace PBET
             this.clearCartBtn = new System.Windows.Forms.Button();
             this.submitBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnLamp = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -90,7 +91,6 @@ namespace PBET
             this.cartsLbl = new System.Windows.Forms.Label();
             this.autoSaveTimer = new System.Windows.Forms.Timer(this.components);
             this.performanceChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnLamp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -128,7 +128,7 @@ namespace PBET
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(774, 403);
+            this.dataGridView1.Size = new System.Drawing.Size(965, 403);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
@@ -143,7 +143,7 @@ namespace PBET
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1292, 70);
+            this.label1.Size = new System.Drawing.Size(1483, 70);
             this.label1.TabIndex = 2;
             this.label1.Text = "CK TECHNOLOGIES\r\nPACE BOARD ENTRY TOOL";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -162,7 +162,7 @@ namespace PBET
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1292, 70);
+            this.panel1.Size = new System.Drawing.Size(1483, 70);
             this.panel1.TabIndex = 4;
             // 
             // areaNameLbl
@@ -171,7 +171,7 @@ namespace PBET
             this.areaNameLbl.AutoSize = true;
             this.areaNameLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.areaNameLbl.ForeColor = System.Drawing.Color.White;
-            this.areaNameLbl.Location = new System.Drawing.Point(1043, 7);
+            this.areaNameLbl.Location = new System.Drawing.Point(1234, 7);
             this.areaNameLbl.Name = "areaNameLbl";
             this.areaNameLbl.Size = new System.Drawing.Size(53, 29);
             this.areaNameLbl.TabIndex = 17;
@@ -184,7 +184,7 @@ namespace PBET
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(982, 7);
+            this.label18.Location = new System.Drawing.Point(1173, 7);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(68, 29);
             this.label18.TabIndex = 16;
@@ -197,7 +197,7 @@ namespace PBET
             this.adminPanelBtn.BackColor = System.Drawing.Color.Goldenrod;
             this.adminPanelBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adminPanelBtn.BackgroundImage")));
             this.adminPanelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.adminPanelBtn.Location = new System.Drawing.Point(1253, 7);
+            this.adminPanelBtn.Location = new System.Drawing.Point(1444, 7);
             this.adminPanelBtn.Name = "adminPanelBtn";
             this.adminPanelBtn.Size = new System.Drawing.Size(37, 33);
             this.adminPanelBtn.TabIndex = 2;
@@ -210,7 +210,7 @@ namespace PBET
             this.machineNameLbl.AutoSize = true;
             this.machineNameLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.machineNameLbl.ForeColor = System.Drawing.Color.White;
-            this.machineNameLbl.Location = new System.Drawing.Point(1043, 39);
+            this.machineNameLbl.Location = new System.Drawing.Point(1234, 39);
             this.machineNameLbl.Name = "machineNameLbl";
             this.machineNameLbl.Size = new System.Drawing.Size(53, 29);
             this.machineNameLbl.TabIndex = 15;
@@ -223,7 +223,7 @@ namespace PBET
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(943, 39);
+            this.label10.Location = new System.Drawing.Point(1134, 39);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 29);
             this.label10.TabIndex = 14;
@@ -252,7 +252,7 @@ namespace PBET
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Location = new System.Drawing.Point(10, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1272, 440);
+            this.panel2.Size = new System.Drawing.Size(1463, 440);
             this.panel2.TabIndex = 5;
             // 
             // deleteHourRowBtn
@@ -279,7 +279,7 @@ namespace PBET
             this.deleteCartRowBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.deleteCartRowBtn.FlatAppearance.BorderSize = 2;
             this.deleteCartRowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteCartRowBtn.Location = new System.Drawing.Point(791, 18);
+            this.deleteCartRowBtn.Location = new System.Drawing.Point(982, 18);
             this.deleteCartRowBtn.Name = "deleteCartRowBtn";
             this.deleteCartRowBtn.Size = new System.Drawing.Size(38, 38);
             this.deleteCartRowBtn.TabIndex = 16;
@@ -305,7 +305,7 @@ namespace PBET
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.Location = new System.Drawing.Point(789, 18);
+            this.dataGridView2.Location = new System.Drawing.Point(980, 18);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 25;
@@ -361,7 +361,7 @@ namespace PBET
             this.addCartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addCartBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.addCartBtn.ForeColor = System.Drawing.Color.White;
-            this.addCartBtn.Location = new System.Drawing.Point(801, 524);
+            this.addCartBtn.Location = new System.Drawing.Point(992, 524);
             this.addCartBtn.Name = "addCartBtn";
             this.addCartBtn.Size = new System.Drawing.Size(222, 47);
             this.addCartBtn.TabIndex = 7;
@@ -378,7 +378,7 @@ namespace PBET
             this.clearCartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearCartBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.clearCartBtn.ForeColor = System.Drawing.Color.White;
-            this.clearCartBtn.Location = new System.Drawing.Point(1060, 524);
+            this.clearCartBtn.Location = new System.Drawing.Point(1251, 524);
             this.clearCartBtn.Name = "clearCartBtn";
             this.clearCartBtn.Size = new System.Drawing.Size(222, 47);
             this.clearCartBtn.TabIndex = 8;
@@ -395,7 +395,7 @@ namespace PBET
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(1060, 841);
+            this.submitBtn.Location = new System.Drawing.Point(1251, 841);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(222, 47);
             this.submitBtn.TabIndex = 9;
@@ -434,6 +434,19 @@ namespace PBET
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(577, 228);
             this.panel3.TabIndex = 2;
+            // 
+            // btnLamp
+            // 
+            this.btnLamp.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnLamp.Enabled = false;
+            this.btnLamp.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamp.ForeColor = System.Drawing.Color.White;
+            this.btnLamp.Location = new System.Drawing.Point(3, 196);
+            this.btnLamp.Name = "btnLamp";
+            this.btnLamp.Size = new System.Drawing.Size(569, 27);
+            this.btnLamp.TabIndex = 21;
+            this.btnLamp.Text = "Production: Good";
+            this.btnLamp.UseVisualStyleBackColor = false;
             // 
             // label17
             // 
@@ -699,7 +712,7 @@ namespace PBET
             this.panel4.Controls.Add(this.reworkLbl);
             this.panel4.Controls.Add(this.quantityLbl);
             this.panel4.Controls.Add(this.cartsLbl);
-            this.panel4.Location = new System.Drawing.Point(801, 576);
+            this.panel4.Location = new System.Drawing.Point(992, 576);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(481, 228);
             this.panel4.TabIndex = 10;
@@ -820,7 +833,7 @@ namespace PBET
             series1.Legend = "Legend1";
             series1.Name = "Goal";
             this.performanceChart.Series.Add(series1);
-            this.performanceChart.Size = new System.Drawing.Size(202, 280);
+            this.performanceChart.Size = new System.Drawing.Size(393, 280);
             this.performanceChart.TabIndex = 11;
             this.performanceChart.Text = "chart1";
             title1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -829,24 +842,11 @@ namespace PBET
             title1.Text = "Performance Metric";
             this.performanceChart.Titles.Add(title1);
             // 
-            // btnLamp
-            // 
-            this.btnLamp.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnLamp.Enabled = false;
-            this.btnLamp.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamp.ForeColor = System.Drawing.Color.White;
-            this.btnLamp.Location = new System.Drawing.Point(3, 196);
-            this.btnLamp.Name = "btnLamp";
-            this.btnLamp.Size = new System.Drawing.Size(569, 27);
-            this.btnLamp.TabIndex = 21;
-            this.btnLamp.Text = "Production: Good";
-            this.btnLamp.UseVisualStyleBackColor = false;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 899);
+            this.ClientSize = new System.Drawing.Size(1483, 899);
             this.Controls.Add(this.performanceChart);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
