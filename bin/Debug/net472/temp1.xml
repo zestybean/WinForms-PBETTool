@@ -1,25 +1,2 @@
 <?xml version="1.0" standalone="yes"?>
-<DocumentElement>
-  <hoursTable>
-    <Hour>2021-12-08T15:57:00.3677108-06:00</Hour>
-    <Goal>5</Goal>
-    <Actual>5</Actual>
-    <Variance>0</Variance>
-    <Part_x0020_Number />
-    <Scrap>0</Scrap>
-    <Downtime>0</Downtime>
-    <Scrap_x0020_Reason />
-    <Downtime_x0020_Reason />
-  </hoursTable>
-  <hoursTable>
-    <Hour>2021-12-09T13:32:41.6753379-06:00</Hour>
-    <Goal>5</Goal>
-    <Actual>2</Actual>
-    <Variance>-3</Variance>
-    <Part_x0020_Number />
-    <Scrap>0</Scrap>
-    <Downtime>0</Downtime>
-    <Scrap_x0020_Reason />
-    <Downtime_x0020_Reason />
-  </hoursTable>
-</DocumentElement>
+<DocumentElement />
