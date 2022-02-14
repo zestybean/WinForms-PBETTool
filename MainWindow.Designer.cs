@@ -714,7 +714,7 @@ namespace PBET
             this.panel4.Controls.Add(this.cartsLbl);
             this.panel4.Location = new System.Drawing.Point(992, 576);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(481, 228);
+            this.panel4.Size = new System.Drawing.Size(481, 121);
             this.panel4.TabIndex = 10;
             // 
             // label14
@@ -813,12 +813,13 @@ namespace PBET
             this.performanceChart.BackColor = System.Drawing.SystemColors.Highlight;
             this.performanceChart.BorderlineColor = System.Drawing.Color.Black;
             this.performanceChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            chartArea1.BackImage = "C:\\Users\\brando.lugo\\source\\repos\\PBET\\PBET\\Resources\\ckt-logo-white300.png";
+            chartArea1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            chartArea1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DottedGrid;
             chartArea1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
             chartArea1.BackImageTransparentColor = System.Drawing.SystemColors.GradientActiveCaption;
             chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Unscaled;
             chartArea1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea1.BorderWidth = 2;
             chartArea1.Name = "ChartArea1";
             this.performanceChart.ChartAreas.Add(chartArea1);
             legend1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -930,8 +931,8 @@ namespace PBET
         private System.Windows.Forms.Timer autoSaveTimer;
         private System.Windows.Forms.Label areaNameLbl;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DataVisualization.Charting.Chart performanceChart;
         private System.Windows.Forms.Button btnLamp;
+        private System.Windows.Forms.DataVisualization.Charting.Chart performanceChart;
     }
 }
 

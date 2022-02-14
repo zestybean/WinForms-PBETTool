@@ -1,25 +1,2 @@
 <?xml version="1.0" standalone="yes"?>
-<DocumentElement>
-  <hoursTable>
-    <Hour>09:35 AM</Hour>
-    <Goal>5</Goal>
-    <Actual>5</Actual>
-    <Variance>0</Variance>
-    <Part_x0020_Number>EEEEFFF</Part_x0020_Number>
-    <Scrap>5</Scrap>
-    <Downtime>58</Downtime>
-    <Scrap_x0020_Reason>S06 - Warp</Scrap_x0020_Reason>
-    <Downtime_x0020_Reason>D541 - Waiting On Heats</Downtime_x0020_Reason>
-  </hoursTable>
-  <hoursTable>
-    <Hour>09:38 AM</Hour>
-    <Goal>5</Goal>
-    <Actual>0</Actual>
-    <Variance>-5</Variance>
-    <Part_x0020_Number />
-    <Scrap>0</Scrap>
-    <Downtime>0</Downtime>
-    <Scrap_x0020_Reason />
-    <Downtime_x0020_Reason />
-  </hoursTable>
-</DocumentElement>
+<DocumentElement />

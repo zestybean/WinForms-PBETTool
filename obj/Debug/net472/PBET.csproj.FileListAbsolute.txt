@@ -18,6 +18,6 @@ C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.GeneratedMSBui
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.AssemblyInfoInputs.cache
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.AssemblyInfo.cs
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.csproj.CoreCompileInputs.cache
+C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.csproj.CopyComplete
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.exe
 C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.pdb
-C:\Users\brando.lugo\source\repos\PBET\PBET\obj\Debug\net472\PBET.csproj.AssemblyReference.cache

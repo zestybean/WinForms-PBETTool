@@ -62,12 +62,20 @@ namespace PBET
             this.submitBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.reworkChkBox = new System.Windows.Forms.CheckBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -408,7 +416,7 @@ namespace PBET
             // quantityTxtBox
             // 
             this.quantityTxtBox.Font = new System.Drawing.Font("Calibri", 14.25F);
-            this.quantityTxtBox.Location = new System.Drawing.Point(471, 422);
+            this.quantityTxtBox.Location = new System.Drawing.Point(471, 477);
             this.quantityTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.quantityTxtBox.Maximum = new decimal(new int[] {
             500,
@@ -426,7 +434,7 @@ namespace PBET
             // seqTxtBox
             // 
             this.seqTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.seqTxtBox.Location = new System.Drawing.Point(253, 420);
+            this.seqTxtBox.Location = new System.Drawing.Point(253, 475);
             this.seqTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.seqTxtBox.Name = "seqTxtBox";
             this.seqTxtBox.Size = new System.Drawing.Size(205, 33);
@@ -437,7 +445,7 @@ namespace PBET
             // colorTxtBox
             // 
             this.colorTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.colorTxtBox.Location = new System.Drawing.Point(564, 420);
+            this.colorTxtBox.Location = new System.Drawing.Point(564, 475);
             this.colorTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.colorTxtBox.Name = "colorTxtBox";
             this.colorTxtBox.Size = new System.Drawing.Size(111, 33);
@@ -449,7 +457,7 @@ namespace PBET
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(249, 394);
+            this.label5.Location = new System.Drawing.Point(249, 449);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 23);
@@ -460,7 +468,7 @@ namespace PBET
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(564, 394);
+            this.label6.Location = new System.Drawing.Point(564, 449);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 23);
@@ -471,7 +479,7 @@ namespace PBET
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(6, 394);
+            this.label7.Location = new System.Drawing.Point(6, 449);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 23);
@@ -481,7 +489,7 @@ namespace PBET
             // partDescTxtBox
             // 
             this.partDescTxtBox.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.partDescTxtBox.Location = new System.Drawing.Point(10, 420);
+            this.partDescTxtBox.Location = new System.Drawing.Point(10, 475);
             this.partDescTxtBox.Margin = new System.Windows.Forms.Padding(0);
             this.partDescTxtBox.Name = "partDescTxtBox";
             this.partDescTxtBox.ReadOnly = true;
@@ -493,7 +501,7 @@ namespace PBET
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(467, 394);
+            this.label8.Location = new System.Drawing.Point(467, 449);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 23);
@@ -509,7 +517,7 @@ namespace PBET
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(10, 487);
+            this.cancelBtn.Location = new System.Drawing.Point(10, 527);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(222, 47);
             this.cancelBtn.TabIndex = 58;
@@ -526,7 +534,7 @@ namespace PBET
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(453, 487);
+            this.submitBtn.Location = new System.Drawing.Point(453, 527);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(222, 47);
             this.submitBtn.TabIndex = 59;
@@ -548,29 +556,88 @@ namespace PBET
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SlateGray;
+            this.panel4.Controls.Add(this.button27);
+            this.panel4.Controls.Add(this.button26);
+            this.panel4.Controls.Add(this.button23);
+            this.panel4.Controls.Add(this.button22);
             this.panel4.Controls.Add(this.button19);
+            this.panel4.Controls.Add(this.button25);
+            this.panel4.Controls.Add(this.button21);
+            this.panel4.Controls.Add(this.button24);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.button20);
             this.panel4.Controls.Add(this.button18);
             this.panel4.Controls.Add(this.button17);
             this.panel4.Controls.Add(this.button16);
             this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(10, 281);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(665, 85);
+            this.panel4.Size = new System.Drawing.Size(665, 127);
             this.panel4.TabIndex = 48;
+            // 
+            // button22
+            // 
+            this.button22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button22.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button22.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button22.FlatAppearance.BorderSize = 3;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.ForeColor = System.Drawing.Color.White;
+            this.button22.Location = new System.Drawing.Point(398, 44);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(122, 36);
+            this.button22.TabIndex = 55;
+            this.button22.Text = "HRI";
+            this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button21
+            // 
+            this.button21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button21.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button21.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button21.FlatAppearance.BorderSize = 3;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button21.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.ForeColor = System.Drawing.Color.White;
+            this.button21.Location = new System.Drawing.Point(271, 44);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(122, 36);
+            this.button21.TabIndex = 54;
+            this.button21.Text = "Sunshade Bracket";
+            this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button20
+            // 
+            this.button20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button20.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button20.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button20.FlatAppearance.BorderSize = 3;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(271, 86);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(122, 37);
+            this.button20.TabIndex = 53;
+            this.button20.Text = "Sunvisor";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.partDescriptionBtn_Click);
             // 
             // button19
             // 
             this.button19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button19.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button19.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button19.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.button19.FlatAppearance.BorderSize = 3;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(525, 29);
+            this.button19.Location = new System.Drawing.Point(525, 44);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(122, 54);
+            this.button19.Size = new System.Drawing.Size(122, 78);
             this.button19.TabIndex = 52;
             this.button19.Text = "Test Samples";
             this.button19.UseVisualStyleBackColor = false;
@@ -583,13 +650,13 @@ namespace PBET
             this.button18.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.button18.FlatAppearance.BorderSize = 3;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(398, 29);
+            this.button18.Location = new System.Drawing.Point(144, 44);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(122, 54);
+            this.button18.Size = new System.Drawing.Size(122, 36);
             this.button18.TabIndex = 51;
-            this.button18.Text = "PROSTAR Front";
+            this.button18.Text = "Door";
             this.button18.UseVisualStyleBackColor = false;
             this.button18.Click += new System.EventHandler(this.partDescriptionBtn_Click);
             // 
@@ -600,28 +667,28 @@ namespace PBET
             this.button17.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.button17.FlatAppearance.BorderSize = 3;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(271, 29);
+            this.button17.Location = new System.Drawing.Point(145, 86);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(122, 54);
+            this.button17.Size = new System.Drawing.Size(122, 37);
             this.button17.TabIndex = 50;
-            this.button17.Text = "PROSTAR Rear";
+            this.button17.Text = "Fairing";
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.partDescriptionBtn_Click);
             // 
             // button16
             // 
             this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button16.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button16.BackColor = System.Drawing.Color.Gray;
             this.button16.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.button16.FlatAppearance.BorderSize = 3;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(144, 29);
+            this.button16.Location = new System.Drawing.Point(17, 86);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(122, 54);
+            this.button16.Size = new System.Drawing.Size(122, 37);
             this.button16.TabIndex = 49;
             this.button16.Text = "PROSTAR Fender";
             this.button16.UseVisualStyleBackColor = false;
@@ -630,15 +697,15 @@ namespace PBET
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button4.BackColor = System.Drawing.Color.Gray;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.button4.FlatAppearance.BorderSize = 3;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(17, 29);
+            this.button4.Location = new System.Drawing.Point(17, 44);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 54);
+            this.button4.Size = new System.Drawing.Size(122, 37);
             this.button4.TabIndex = 48;
             this.button4.Text = "PROSTAR Bumper";
             this.button4.UseVisualStyleBackColor = false;
@@ -646,15 +713,18 @@ namespace PBET
             // 
             // reworkChkBox
             // 
+            this.reworkChkBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.reworkChkBox.AutoSize = true;
             this.reworkChkBox.BackColor = System.Drawing.Color.BlueViolet;
             this.reworkChkBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.reworkChkBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reworkChkBox.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.reworkChkBox.FlatAppearance.BorderSize = 100;
             this.reworkChkBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.reworkChkBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.reworkChkBox.ForeColor = System.Drawing.Color.Transparent;
-            this.reworkChkBox.Location = new System.Drawing.Point(288, 487);
+            this.reworkChkBox.Location = new System.Drawing.Point(288, 527);
             this.reworkChkBox.Margin = new System.Windows.Forms.Padding(0);
             this.reworkChkBox.Name = "reworkChkBox";
             this.reworkChkBox.Padding = new System.Windows.Forms.Padding(10);
@@ -664,11 +734,96 @@ namespace PBET
             this.reworkChkBox.UseVisualStyleBackColor = false;
             this.reworkChkBox.CheckedChanged += new System.EventHandler(this.reworkChkBox_CheckedChanged);
             // 
+            // button23
+            // 
+            this.button23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button23.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button23.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button23.FlatAppearance.BorderSize = 3;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.ForeColor = System.Drawing.Color.White;
+            this.button23.Location = new System.Drawing.Point(271, 3);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(122, 36);
+            this.button23.TabIndex = 56;
+            this.button23.Text = "Center";
+            this.button23.UseVisualStyleBackColor = false;
+            this.button23.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button24
+            // 
+            this.button24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button24.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button24.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button24.FlatAppearance.BorderSize = 3;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.ForeColor = System.Drawing.Color.White;
+            this.button24.Location = new System.Drawing.Point(398, 86);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(122, 36);
+            this.button24.TabIndex = 57;
+            this.button24.Text = "Endcap";
+            this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button25
+            // 
+            this.button25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button25.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button25.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button25.FlatAppearance.BorderSize = 3;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button25.ForeColor = System.Drawing.Color.White;
+            this.button25.Location = new System.Drawing.Point(398, 3);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(122, 36);
+            this.button25.TabIndex = 1000;
+            this.button25.Text = "P3";
+            this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button26
+            // 
+            this.button26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button26.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button26.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button26.FlatAppearance.BorderSize = 3;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button26.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button26.ForeColor = System.Drawing.Color.White;
+            this.button26.Location = new System.Drawing.Point(144, 3);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(122, 36);
+            this.button26.TabIndex = 1001;
+            this.button26.Text = "R/F Skirt";
+            this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
+            // button27
+            // 
+            this.button27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button27.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button27.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button27.FlatAppearance.BorderSize = 3;
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button27.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button27.ForeColor = System.Drawing.Color.White;
+            this.button27.Location = new System.Drawing.Point(525, 3);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(122, 36);
+            this.button27.TabIndex = 1002;
+            this.button27.Text = "Modesty Panel";
+            this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.partDescriptionBtn_Click);
+            // 
             // AddCartPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 544);
+            this.ClientSize = new System.Drawing.Size(686, 584);
             this.ControlBox = false;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.submitBtn);
@@ -685,6 +840,7 @@ namespace PBET
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddCartPopUp";
@@ -746,5 +902,13 @@ namespace PBET
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.CheckBox reworkChkBox;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button27;
     }
 }
